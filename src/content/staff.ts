@@ -14,7 +14,8 @@ export type StaffMember = {
  */
 export const staff: StaffMember[] = [
   { name: "Giuseppe Folino", role: "Esperto in affari sindacali" },
-  { name: "Paolo Primerano", role: "Avvocato — Affari giuridici e contenzioso" },
-  { name: "Mohamed Rahmaoui", role: "Esperto in affari aziendali e immigrazione" },
+  { name: "Paolo Primerano", role: "Avvocato — Diritto dell'immigrazione e cittadinanza italiana" },
+  { name: "Mohamed Rahmaoui", role: "Esperto in affari aziendali, imprese e partita IVA · Esame di lingua italiana" },
   { name: "Staff di supporto", role: "Servizi CAF e Patronato" },
+  { name: "Studio legale convenzionato", role: "Consulenza e assistenza legale" },
 ];
