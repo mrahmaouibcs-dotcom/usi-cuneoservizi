@@ -19,7 +19,7 @@ export default function Footer({ dict, lang }: { dict: Dictionary; lang: Locale 
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-3 mb-2">
-            <span className="flag-wave relative w-11 h-11 rounded-lg overflow-hidden grid place-items-center">
+            <span className="relative w-11 h-11 rounded-lg overflow-hidden grid place-items-center">
               <span className="absolute inset-y-0 left-0 w-1/3 bg-ita-green" />
               <span className="absolute inset-y-0 left-1/3 w-1/3 bg-white" />
               <span className="absolute inset-y-0 right-0 w-1/3 bg-ita-red" />
