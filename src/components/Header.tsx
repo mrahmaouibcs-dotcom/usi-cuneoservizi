@@ -19,6 +19,12 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between gap-4">
         <Link href={`/${lang}`} className="flex items-center gap-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-usi.jpeg"
+            alt="USI - Unione Sindacale Italiana, fondata nel 1912"
+            className="w-12 h-12 rounded-full object-contain shrink-0"
+          />
           <span className="flag-wave relative w-12 h-12 rounded-lg overflow-hidden shadow-md grid place-items-center">
             <span className="absolute inset-y-0 left-0 w-1/3 bg-ita-green" />
             <span className="absolute inset-y-0 left-1/3 w-1/3 bg-white" />
