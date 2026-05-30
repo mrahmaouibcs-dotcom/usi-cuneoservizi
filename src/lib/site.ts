@@ -1,7 +1,7 @@
 /** Dati reali dell'attività — modificabili in un solo punto */
 export const site = {
   name: "USI – CUNEOServizi",
-  legalName: "1912 - Unione Sindacale Italiana - Federazione Provinciale di Cuneo",
+  legalName: "USI 1912 - Unione Sindacale Italiana - Federazione Provinciale di Cuneo",
   phone: "+39 351 989 9800",
   phoneHref: "tel:+393519899800",
   whatsapp: "+39 327 389 4609",
