@@ -23,7 +23,7 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           <img
             src="/logo-usi.jpeg"
             alt="USI - Unione Sindacale Italiana, fondata nel 1912"
-            className="w-12 h-12 rounded-full object-contain shrink-0"
+            className="w-14 h-14 rounded-full object-contain shrink-0"
           />
           <span className="flag-wave relative w-12 h-12 rounded-lg overflow-hidden shadow-md grid place-items-center">
             <span className="absolute inset-y-0 left-0 w-1/3 bg-ita-green" />
