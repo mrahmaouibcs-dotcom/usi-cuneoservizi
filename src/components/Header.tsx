@@ -58,14 +58,14 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           <LanguageSwitcher current={lang} />
           <a
             href="#"
-            className="btn-sheen hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold transition shadow-lg shadow-ink-900/30"
+            className="btn-sheen hidden sm:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold transition shadow-lg shadow-ink-900/30"
           >
             <User className="w-4 h-4" />
             <span>{t("nav.login")}</span>
           </a>
           <Link
             href={`/${lang}/prenota`}
-            className="btn-sheen inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold transition shadow-lg shadow-ita-red/25"
+            className="btn-sheen inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold transition shadow-lg shadow-ita-red/25"
           >
             <Calendar className="w-4 h-4" />
             <span>{t("nav.book")}</span>
