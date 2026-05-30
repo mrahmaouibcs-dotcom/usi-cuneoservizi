@@ -1,0 +1,30 @@
+// Schema del database — USI CUNEOServizi
+// SQLite in locale (file dev.db). Per la produzione si può passare a PostgreSQL
+// cambiando solo "provider" e DATABASE_URL.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Booking {
+  id        String   @id @default(cuid())
+  service   String // id servizio: caf, patr, sind, lang, immig, legal
+  date      String // giorno AAAA-MM-GG
+  time      String // orario HH:MM
+  firstName String
+  lastName  String
+  email     String
+  phone     String
+  notes     String?
+  locale    String   @default("it")
+  status    String   @default("pending") // pending | confirmed | cancelled
+  createdAt DateTime @default(now())
+
+  @@index([date])
+  @@index([email])
+}
