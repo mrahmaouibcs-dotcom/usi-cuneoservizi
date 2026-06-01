@@ -17,7 +17,7 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
 
   return (
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 min-h-20 py-2.5 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-4 min-h-20 py-2.5 flex items-center justify-between gap-2 xl:gap-4">
         <Link href={`/${lang}`} className="flex items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -46,7 +46,7 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-8 text-[15px] font-semibold text-ink-700">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-8 text-[15px] font-semibold text-ink-700">
           {nav.map((n) => (
             <a key={n.href} href={n.href} className="nav-link">
               {n.label}
@@ -54,20 +54,20 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <LanguageSwitcher current={lang} />
           <a
             href="#"
-            className="btn-sheen hidden sm:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold transition shadow-lg shadow-ink-900/30"
+            className="btn-sheen hidden sm:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ink-900/30"
           >
-            <User className="w-4 h-4" />
+            <User className="w-4 h-4 shrink-0" />
             <span>{t("nav.login")}</span>
           </a>
           <Link
             href={`/${lang}/prenota`}
-            className="btn-sheen inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold transition shadow-lg shadow-ita-red/25"
+            className="btn-sheen inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ita-red/25"
           >
-            <Calendar className="w-4 h-4" />
+            <Calendar className="w-4 h-4 shrink-0" />
             <span>{t("nav.book")}</span>
           </Link>
         </div>
