@@ -7,7 +7,7 @@ import { Phone, Mail, Pin } from "@/components/icons";
 
 export default function Footer({ dict, lang }: { dict: Dictionary; lang: Locale }) {
   const t = (k: string) => dict[k] ?? k;
-  const services: (keyof typeof serviceSlug)[] = ["caf", "patr", "sind", "immig", "legal"];
+  const services: (keyof typeof serviceSlug)[] = ["caf", "patr", "sind", "immig", "legal", "tutela"];
   const info = [
     { label: t("footer.privacy"), href: `/${lang}/privacy` },
     { label: t("footer.terms"), href: `/${lang}/termini` },
@@ -53,7 +53,9 @@ export default function Footer({ dict, lang }: { dict: Dictionary; lang: Locale 
           <ul className="space-y-2 text-sm">
             <li className="flex items-start gap-2">
               <Pin className="w-4 h-4 mt-0.5 text-ita-green shrink-0" />
-              <span>{site.address}</span>
+              <a href={site.mapsHref} target="_blank" rel="noopener" className="hover:text-white transition">
+                {site.address}
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-4 h-4 text-ita-green shrink-0" />
@@ -78,7 +80,10 @@ export default function Footer({ dict, lang }: { dict: Dictionary; lang: Locale 
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-12 pt-6 border-t border-white/10 text-sm text-center text-amber-50/80">
-        © 2026 {site.name} — {t("footer.rights")}
+        <p className="font-semibold text-amber-50/90">
+          {site.usicons} · C.F. {site.taxCode}
+        </p>
+        <p className="mt-1">© 2026 {site.name} — {t("footer.rights")}</p>
       </div>
     </footer>
   );

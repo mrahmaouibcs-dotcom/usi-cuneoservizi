@@ -1,5 +1,5 @@
 /** Elenco dei servizi prenotabili. Le etichette arrivano dai dizionari (chiavi svc.<id>.t). */
-export const serviceIds = ["caf", "patr", "sind", "lang", "immig", "legal"] as const;
+export const serviceIds = ["caf", "patr", "sind", "lang", "immig", "legal", "tutela"] as const;
 export type ServiceId = (typeof serviceIds)[number];
 
 export const isServiceId = (v: string | null | undefined): v is ServiceId =>
@@ -13,6 +13,7 @@ export const serviceDuration: Record<ServiceId, number> = {
   lang: 60,
   immig: 45,
   legal: 45,
+  tutela: 30,
 };
 
 /** Slug URL leggibili per le pagine dei servizi. */
@@ -23,6 +24,7 @@ export const serviceSlug: Record<ServiceId, string> = {
   lang: "esami-lingua-italiana",
   immig: "immigrazione",
   legal: "assistenza-giuridica",
+  tutela: "tutela-consumatori",
 };
 
 const slugToId: Record<string, ServiceId> = Object.fromEntries(

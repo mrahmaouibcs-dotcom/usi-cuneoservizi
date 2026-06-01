@@ -140,4 +140,25 @@ export const serviceContent: Record<ServiceId, ServiceContent> = {
     note:
       "Per il patrocinio a spese dello Stato (gratuito patrocinio) occorre rientrare nei limiti di reddito previsti dalla legge.",
   },
+  tutela: {
+    intro:
+      "Tutela dei diritti dei consumatori e degli utenti: ti assistiamo contro pratiche scorrette, addebiti non dovuti e disservizi, anche con reclami e conciliazioni.",
+    prestazioni: [
+      "Reclami e contestazioni a fornitori di luce, gas, acqua e telefonia",
+      "Recesso, garanzia e rimborsi su acquisti e contratti a distanza",
+      "Bollette errate, conguagli e doppia fatturazione",
+      "Banche e finanziarie: conti, mutui, carte e clausole vessatorie",
+      "Conciliazioni paritetiche e procedure ADR (es. Conciliaweb AGCOM)",
+      "Segnalazioni a AGCOM, ARERA, Antitrust e Garante Privacy",
+    ],
+    documenti: [
+      "Documento d'identità e codice fiscale",
+      "Contratto e condizioni del servizio o del prodotto",
+      "Bollette, fatture, ricevute ed estratti conto contestati",
+      "Comunicazioni ricevute dall'azienda (email, lettere, SMS)",
+      "Eventuali reclami già inviati e relative risposte",
+    ],
+    note:
+      "Il servizio di tutela dei consumatori è offerto tramite USICONS A.P.S., Associazione di Promozione Sociale iscritta al RUNTS (C.F. 96324390580). Molte controversie con operatori di telefonia ed energia richiedono il tentativo obbligatorio di conciliazione prima di rivolgersi al giudice.",
+  },
 };

@@ -22,6 +22,7 @@ import {
   IconLingua,
   Globe,
   IconLegale,
+  IconTutela,
 } from "@/components/icons";
 
 const SERVICE_ICON: Record<ServiceId, (p: { className?: string }) => React.ReactElement> = {
@@ -31,6 +32,7 @@ const SERVICE_ICON: Record<ServiceId, (p: { className?: string }) => React.React
   lang: IconLingua,
   immig: Globe,
   legal: IconLegale,
+  tutela: IconTutela,
 };
 
 function startOfMonth(d: Date) {

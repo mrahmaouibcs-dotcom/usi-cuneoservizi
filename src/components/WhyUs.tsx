@@ -6,7 +6,7 @@ export default function WhyUs({ dict }: { dict: Dictionary }) {
   const stats = [
     { target: "5000", suffix: "+", color: "text-ita-green", label: t("why.stat1") },
     { target: "5", suffix: "", color: "text-ita-red", label: t("why.stat2") },
-    { target: "6", suffix: "", color: "text-ita-red", label: t("why.stat3") },
+    { target: "7", suffix: "", color: "text-ita-red", label: t("why.stat3") },
     { target: "98", suffix: "%", color: "text-ita-green", label: t("why.stat4") },
   ];
   return (

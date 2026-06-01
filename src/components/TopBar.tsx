@@ -18,7 +18,8 @@ export default function TopBar({ dict }: { dict: Dictionary }) {
           </a>
         </div>
         <div className="flex items-center gap-4">
-          <span className="hidden md:inline">{t("topbar.hours")}</span>
+          <span className="hidden md:inline text-amber-50/80">{site.usicons}</span>
+          <span className="hidden lg:inline">{t("topbar.hours")}</span>
           <a
             href={site.whatsappHref}
             target="_blank"
@@ -29,6 +30,12 @@ export default function TopBar({ dict }: { dict: Dictionary }) {
             WhatsApp
           </a>
         </div>
+      </div>
+      {/* Dicitura USICONS sempre visibile su mobile (su desktop è nella riga sopra) */}
+      <div className="md:hidden border-t border-white/10">
+        <p className="max-w-7xl mx-auto px-4 py-1.5 text-center text-[11px] leading-tight text-amber-50/80">
+          {site.usicons}
+        </p>
       </div>
     </div>
   );

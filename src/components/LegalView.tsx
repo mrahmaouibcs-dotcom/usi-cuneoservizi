@@ -61,7 +61,8 @@ export default async function LegalView({ lang, docKey }: { lang: string; docKey
               Tel: <a href={site.phoneHref} className="hover:text-ita-green">{site.phone}</a> · Email:{" "}
               <a href={`mailto:${site.email}`} className="hover:text-ita-green">{site.email}</a>
             </p>
-            <p className="mt-1 text-sm text-ink-700">P.IVA/C.F. {site.vat}</p>
+            <p className="mt-1 text-sm text-ink-700">C.F. {site.taxCode}</p>
+            <p className="mt-1 text-sm text-ink-700">{site.usicons}</p>
           </div>
         </article>
       </main>

@@ -27,6 +27,7 @@ import {
   IconLingua,
   Globe,
   IconLegale,
+  IconTutela,
 } from "@/components/icons";
 
 const ICON: Record<ServiceId, (p: { className?: string }) => React.ReactElement> = {
@@ -36,6 +37,7 @@ const ICON: Record<ServiceId, (p: { className?: string }) => React.ReactElement>
   lang: IconLingua,
   immig: Globe,
   legal: IconLegale,
+  tutela: IconTutela,
 };
 
 export function generateStaticParams() {
@@ -164,9 +166,14 @@ export default async function ServicePage({
                   >
                     WhatsApp: {site.whatsapp}
                   </a>
-                  <div className="mt-3 flex items-start gap-2 text-sm text-ink-700">
+                  <a
+                    href={site.mapsHref}
+                    target="_blank"
+                    rel="noopener"
+                    className="mt-3 flex items-start gap-2 text-sm text-ink-700 hover:text-ita-green"
+                  >
                     <Pin className="w-4 h-4 text-ita-green shrink-0 mt-0.5" /> {site.address}
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

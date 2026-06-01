@@ -8,6 +8,9 @@ export const site = {
   whatsappHref: "https://wa.me/393273894609",
   email: "info@usi-cuneoservizi.it",
   address: "Piazzale della Libertà, 7 - 12100 Cuneo (CN)",
-  vat: "01736510536",
+  mapsHref:
+    "https://www.google.com/maps/search/?api=1&query=Piazzale%20della%20Libert%C3%A0%2C%207%2C%2012100%20Cuneo%20CN",
+  taxCode: "96324390580",
+  usicons: "USICONS A.P.S. — Associazione di Promozione Sociale iscritta al RUNTS",
   paymentMethods: "Visa · Mastercard · PayPal · Apple Pay · Google Pay · SEPA · Bonifico",
 };

@@ -10,6 +10,7 @@ import {
   IconLingua,
   Globe,
   IconLegale,
+  IconTutela,
 } from "@/components/icons";
 
 const SERVICES = [
@@ -19,6 +20,7 @@ const SERVICES = [
   { key: "lang", Icon: IconLingua, accent: "red" },
   { key: "immig", Icon: Globe, accent: "green" },
   { key: "legal", Icon: IconLegale, accent: "red" },
+  { key: "tutela", Icon: IconTutela, accent: "green" },
 ] as const;
 
 export default function Services({ dict, lang }: { dict: Dictionary; lang: Locale }) {

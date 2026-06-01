@@ -9,6 +9,7 @@ export default function MarqueeBanner({ dict }: { dict: Dictionary }) {
     { label: t("svc.lang.t"), dot: "text-ita-green" },
     { label: t("svc.immig.t"), dot: "text-white" },
     { label: t("svc.legal.t"), dot: "text-ita-red" },
+    { label: t("svc.tutela.t"), dot: "text-ita-green" },
   ];
   const Row = ({ ariaHidden }: { ariaHidden?: boolean }) => (
     <span className="flex items-center gap-10" aria-hidden={ariaHidden}>
