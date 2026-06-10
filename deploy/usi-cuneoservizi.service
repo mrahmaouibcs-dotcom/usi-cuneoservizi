@@ -1,0 +1,21 @@
+# /etc/systemd/system/usi-cuneoservizi.service
+# Mantiene l'app Next.js sempre attiva e la riavvia in automatico (anche dopo reboot).
+[Unit]
+Description=USI CUNEOServizi — Next.js app
+After=network.target postgresql.service
+Wants=postgresql.service
+
+[Service]
+Type=simple
+User=usi
+WorkingDirectory=/opt/usi/usi-cuneoservizi
+# NODE_ENV e PORT impostati qui; il resto (DATABASE_URL, ADMIN_PASSWORD, SMTP_*)
+# viene letto in automatico da Next.js dal file ".env" nella WorkingDirectory.
+Environment=NODE_ENV=production
+Environment=PORT=3000
+ExecStart=/usr/bin/node node_modules/.bin/next start -p 3000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

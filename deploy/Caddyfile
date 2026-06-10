@@ -1,0 +1,8 @@
+# /etc/caddy/Caddyfile — USI · CUNEOServizi
+# Caddy ottiene e RINNOVA da solo il certificato HTTPS (Let's Encrypt).
+# Inoltra il traffico pubblico (443/80) all'app Next.js in ascolto su 127.0.0.1:3000.
+
+usi-cuneoservizi.it, www.usi-cuneoservizi.it {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:3000
+}
