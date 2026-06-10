@@ -1,0 +1,4 @@
+# I file di deploy girano su Linux: forziamo i fine-riga a LF,
+# così restano corretti anche se modificati da un PC Windows.
+*.sh text eol=lf
+deploy/* text eol=lf
