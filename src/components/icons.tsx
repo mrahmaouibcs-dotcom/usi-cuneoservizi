@@ -36,6 +36,12 @@ export const Globe = ({ className }: IconProps) => (
 export const Chevron = ({ className }: IconProps) => (
   <svg className={className} {...base}><path d="m6 9 6 6 6-6" /></svg>
 );
+export const Menu = ({ className }: IconProps) => (
+  <svg className={className} {...base}><path d="M3 12h18M3 6h18M3 18h18" /></svg>
+);
+export const X = ({ className }: IconProps) => (
+  <svg className={className} {...base}><path d="M18 6 6 18M6 6l12 12" /></svg>
+);
 export const WhatsApp = ({ className }: IconProps) => (
   <svg className={className} viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2zm5.8 14.04c-.25.7-1.44 1.33-1.98 1.41-.53.08-1.02.29-3.44-.72-2.9-1.2-4.74-4.18-4.88-4.37-.14-.19-1.16-1.54-1.16-2.94s.73-2.08 1-2.37c.25-.29.55-.36.73-.36.18 0 .37 0 .53.01.17.01.4-.06.62.48.25.6.85 2.08.93 2.23.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.35 1.46.29.15.46.12.63-.07.17-.19.73-.85.92-1.14.19-.29.39-.24.65-.15.27.1 1.71.81 2 .96.29.15.49.22.56.34.07.12.07.7-.18 1.4z" /></svg>
 );

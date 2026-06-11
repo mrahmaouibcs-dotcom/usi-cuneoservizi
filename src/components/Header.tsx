@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import MobileNav from "@/components/MobileNav";
 import { Calendar, User } from "@/components/icons";
 import { site } from "@/lib/site";
 
@@ -23,9 +24,9 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           <img
             src="/logo-usi.jpeg"
             alt="USI - Unione Sindacale Italiana, fondata nel 1912"
-            className="w-14 h-14 rounded-full object-contain shrink-0"
+            className="w-11 h-11 sm:w-14 sm:h-14 rounded-full object-contain shrink-0"
           />
-          <span className="relative w-12 h-12 rounded-lg overflow-hidden shadow-md grid place-items-center">
+          <span className="relative w-12 h-12 rounded-lg overflow-hidden shadow-md hidden sm:grid place-items-center">
             <span className="absolute inset-y-0 left-0 w-1/3 bg-ita-green" />
             <span className="absolute inset-y-0 left-1/3 w-1/3 bg-white" />
             <span className="absolute inset-y-0 right-0 w-1/3 bg-ita-red" />
@@ -58,18 +59,24 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
           <LanguageSwitcher current={lang} />
           <a
             href="#"
-            className="btn-sheen hidden sm:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ink-900/30"
+            className="btn-sheen hidden lg:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ink-900/30"
           >
             <User className="w-4 h-4 shrink-0" />
             <span>{t("nav.login")}</span>
           </a>
           <Link
             href={`/${lang}/prenota`}
-            className="btn-sheen inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ita-red/25"
+            className="btn-sheen hidden lg:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ita-red hover:bg-ita-red-dark text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ita-red/25"
           >
             <Calendar className="w-4 h-4 shrink-0" />
             <span>{t("nav.book")}</span>
           </Link>
+          <MobileNav
+            nav={nav}
+            lang={lang}
+            loginLabel={t("nav.login")}
+            bookLabel={t("nav.book")}
+          />
         </div>
       </div>
     </header>
