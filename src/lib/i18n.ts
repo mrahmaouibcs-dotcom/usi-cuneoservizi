@@ -7,6 +7,11 @@ const dictionaries = {
   fr: () => import("@/dictionaries/fr.json").then((m) => m.default),
   es: () => import("@/dictionaries/es.json").then((m) => m.default),
   ar: () => import("@/dictionaries/ar.json").then((m) => m.default),
+  zh: () => import("@/dictionaries/zh.json").then((m) => m.default),
+  ru: () => import("@/dictionaries/ru.json").then((m) => m.default),
+  uk: () => import("@/dictionaries/uk.json").then((m) => m.default),
+  pl: () => import("@/dictionaries/pl.json").then((m) => m.default),
+  ro: () => import("@/dictionaries/ro.json").then((m) => m.default),
 };
 
 export type Dictionary = Record<string, string>;

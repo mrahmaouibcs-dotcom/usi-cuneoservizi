@@ -17,5 +17,5 @@ export const staff: StaffMember[] = [
   { name: "Paolo Primerano", role: "Avvocato — Diritto dell'immigrazione e cittadinanza italiana" },
   { name: "Mohamed Rahmaoui", role: "Esperto in affari aziendali, imprese e partita IVA · Esame di lingua italiana" },
   { name: "Staff di supporto", role: "Servizi CAF e Patronato" },
-  { name: "Studio legale convenzionato", role: "Consulenza e assistenza legale" },
+  { name: "Avv. De Bellis Alessandro", role: "Studio legale convenzionato · Consulenza e assistenza legale" },
 ];

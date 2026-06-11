@@ -11,6 +11,7 @@ import WhyUs from "@/components/WhyUs";
 import Team from "@/components/Team";
 import Languages from "@/components/Languages";
 import BookingCTA from "@/components/BookingCTA";
+import Sedi from "@/components/Sedi";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import ClientFx from "@/components/ClientFx";
@@ -34,6 +35,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         <Team dict={dict} />
         <Languages dict={dict} lang={lang} />
         <BookingCTA dict={dict} lang={lang} />
+        <Sedi lang={lang} />
       </main>
       <Footer dict={dict} lang={lang} />
       <WhatsAppFloat />

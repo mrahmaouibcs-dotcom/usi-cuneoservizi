@@ -48,7 +48,7 @@ export default function Hero({ dict, lang }: { dict: Dictionary; lang: Locale })
               <div className="text-xs text-ink-700 mt-1">{t("why.stat1")}</div>
             </div>
             <div>
-              <div className="font-serif text-3xl font-bold text-ink-900 counter" data-target="5">0</div>
+              <div className="font-serif text-3xl font-bold text-ink-900 counter" data-target="10">0</div>
               <div className="text-xs text-ink-700 mt-1">{t("why.stat2")}</div>
             </div>
             <div>
