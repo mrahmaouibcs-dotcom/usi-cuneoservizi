@@ -1,5 +1,5 @@
 import type { Locale } from "@/lib/locales";
-import { sedi, sediTitle, sediIntro } from "@/content/sedi";
+import { sedi, sediTitle, sediIntro, sediAutonomousLabel } from "@/content/sedi";
 import { Pin, Phone, Mail, Chevron } from "@/components/icons";
 
 export default function Sedi({ lang }: { lang: Locale }) {
@@ -28,13 +28,14 @@ export default function Sedi({ lang }: { lang: Locale }) {
                   <ul className="mt-3 space-y-2 text-sm text-ink-800">
                     <li className="flex items-start gap-2">
                       <Pin className="w-4 h-4 mt-0.5 text-ita-green shrink-0" />
-                      {s.mapsHref ? (
-                        <a href={s.mapsHref} target="_blank" rel="noopener" className="hover:text-ita-green transition">
-                          {s.address}
-                        </a>
-                      ) : (
-                        <span>{s.address}</span>
-                      )}
+                      <a
+                        href={s.mapsHref ?? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.address)}`}
+                        target="_blank"
+                        rel="noopener"
+                        className="hover:text-ita-green transition"
+                      >
+                        {s.address}
+                      </a>
                     </li>
                     {s.phone && (
                       <li className="flex items-center gap-2">
@@ -50,6 +51,13 @@ export default function Sedi({ lang }: { lang: Locale }) {
                         <a href={`mailto:${s.email}`} className="hover:text-ita-green transition">
                           {s.email}
                         </a>
+                      </li>
+                    )}
+                    {s.autonomous && (
+                      <li>
+                        <span className="inline-block text-[11px] font-semibold text-ita-red bg-red-50 border border-red-100 rounded px-2 py-0.5">
+                          {sediAutonomousLabel[lang]}
+                        </span>
                       </li>
                     )}
                     {s.note && <li className="text-xs text-ink-700 italic">{s.note}</li>}
