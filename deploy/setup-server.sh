@@ -36,9 +36,13 @@ DB_PASS="$(openssl rand -hex 24)"
 
 # --- 2. Pacchetti di base ---
 say "Aggiorno il sistema e installo i pacchetti base"
+# noninteractive + needrestart in modalità automatica: niente schermate/prompt che bloccano
 export DEBIAN_FRONTEND=noninteractive
-apt-get update -y && apt-get upgrade -y
-apt-get install -y curl git ufw openssl ca-certificates gnupg debian-keyring debian-archive-keyring apt-transport-https
+export NEEDRESTART_MODE=a
+export NEEDRESTART_SUSPEND=1
+APT_OPTS='-y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confold'
+apt-get update -y && apt-get $APT_OPTS upgrade
+apt-get install $APT_OPTS curl git ufw openssl ca-certificates gnupg debian-keyring debian-archive-keyring apt-transport-https
 
 # --- 3. Swap (rete di sicurezza per la build su 2 GB di RAM) ---
 if ! swapon --show 2>/dev/null | grep -q '/swapfile'; then
