@@ -5,21 +5,34 @@
 
 ## Riepilogo
 
-Le **fondamenta sono buone**: routing multilingua con `lang`/`dir` corretti (RTL per l'arabo), un solo `<h1>` per pagina, NAP (nome/indirizzo/telefono) coerente e contenuti tradotti in 10 lingue. Mancano però **gli elementi tecnici che permettono a Google di indicizzare e classificare correttamente** il sito: nessuna sitemap, nessun robots.txt, nessun `hreflang`, nessun canonical, nessun dato strutturato (JSON-LD) e nessun Open Graph. Per un'attività **locale** (CAF/patronato a Cuneo con più sedi) queste lacune limitano fortemente la visibilità su ricerche locali e l'anteprima sui social. Priorità: sbloccare l'indicizzazione (sitemap + robots + `metadataBase`), collegare le versioni linguistiche (`hreflang`) e aggiungere lo schema `LocalBusiness`.
+Le **fondamenta sono buone**: routing multilingua con `lang`/`dir` corretti (RTL per l'arabo), un solo `<h1>` per pagina, NAP (nome/indirizzo/telefono) coerente e contenuti tradotti in 10 lingue. Mancavano però **gli elementi tecnici che permettono a Google di indicizzare e classificare correttamente** il sito: sitemap, robots.txt, `hreflang`, canonical, dato strutturato (JSON-LD) e Open Graph. Per un'attività **locale** (CAF/patronato a Cuneo con più sedi) queste lacune limitavano fortemente la visibilità su ricerche locali e l'anteprima sui social. **In questo PR sono state implementate tutte le azioni a priorità ALTA** (vedi sotto); restano alcune rifiniture a priorità MEDIA/BASSA e attività off-platform (Analytics, Search Console, Google Business Profile).
+
+## ✅ Implementato in questo PR
+
+Dominio canonico: **`https://www.usi-cuneoservizi.it`** (centralizzato in `src/lib/site.ts`).
+
+- **Sitemap XML** dinamica → `src/app/sitemap.ts` (tutte le route × 10 lingue con `hreflang`, esclusa `/admin`).
+- **robots.txt** → `src/app/robots.ts` (allow `/`, disallow `/*/admin`, riferimento alla sitemap + `host`).
+- **`metadataBase`** + **canonical** + **`hreflang`** (10 lingue + `x-default`) su tutte le pagine, tramite l'helper `src/lib/seo.ts`.
+- **Open Graph** localizzato per pagina (home, prenota, servizi, legali) con `og:locale` per lingua e immagine; **Twitter Card** di base.
+- **Metadata localizzati**: `layout.tsx` ora usa `generateMetadata` (titolo/descrizione dalla lingua corrente, con `title.template`); aggiunti metadata localizzati a `/prenota` e alle pagine legali.
+- **Dati strutturati JSON-LD** `Organization`/`LocalBusiness` (NAP, lingue, indirizzo) → `src/components/JsonLd.tsx`, reso nel layout.
+- **`theme-color`** via export `viewport` nel layout.
 
 ## 1. SEO Tecnica
 
 | Controllo | Stato | File / Azione |
 |---|---|---|
-| `metadataBase` (URL assoluti per OG/canonical) | 🔴 Mancante | `src/app/[lang]/layout.tsx` — aggiungere `metadataBase: new URL("https://usi-cuneoservizi.it")` |
-| Sitemap XML | 🔴 Mancante | Creare `src/app/sitemap.ts` con tutte le route × 10 lingue (home, `/prenota`, `/servizi/[slug]`, legali) |
-| `robots.txt` | 🔴 Mancante | Creare `src/app/robots.ts`: `allow /`, `disallow /*/admin`, riferimento alla sitemap |
-| `hreflang` / `alternates.languages` | 🔴 Mancante | Per un sito in 10 lingue è **critico**: collegare le versioni linguistiche + `x-default`, in ogni `generateMetadata` |
-| Canonical (`alternates.canonical`) | 🔴 Mancante | Definire URL canonico per ogni pagina (evita duplicati tra lingue/anchor/`?service=`) |
-| Open Graph / Twitter Card | 🔴 Mancante | Nessun `openGraph`/`twitter` né immagine OG → anteprime social vuote. Aggiungere in layout + immagine `opengraph-image` |
-| Dati strutturati JSON-LD | 🔴 Mancante | Nessuno schema. Aggiungere `LocalBusiness`/`Organization`, `BreadcrumbList` (pagine servizio), `Service` |
-| Metadata localizzati (home + legali) | 🟡 Parziale | `layout.tsx:12` ha titolo/descrizione **statici in italiano** per tutte le 10 lingue. Le pagine servizio sono localizzate (`servizi/[slug]/page.tsx:49`), ma home, `/prenota`, privacy/termini/cookie no |
-| Web manifest / `theme-color` / apple-touch-icon | 🔴 Mancante | Nessun `manifest.ts`, nessun `viewport.themeColor` |
+| `metadataBase` (URL assoluti per OG/canonical) | 🟢 Fatto | `layout.tsx` → `metadataBase: new URL(SITE_URL)` (www) |
+| Sitemap XML | 🟢 Fatto | `src/app/sitemap.ts` — tutte le route × 10 lingue con `hreflang` |
+| `robots.txt` | 🟢 Fatto | `src/app/robots.ts` — allow `/`, disallow `/*/admin`, sitemap + host |
+| `hreflang` / `alternates.languages` | 🟢 Fatto | 10 lingue + `x-default` via `alternates()` in `src/lib/seo.ts` |
+| Canonical (`alternates.canonical`) | 🟢 Fatto | URL canonico per pagina (home, prenota, servizi, legali) |
+| Open Graph / Twitter Card | 🟢 Fatto | `openGraph()` localizzato per pagina + Twitter base. Migliorabile: immagine OG dedicata (`opengraph-image`) invece del logo |
+| Dati strutturati JSON-LD | 🟢 Fatto (parz.) | `Organization`/`LocalBusiness` in `src/components/JsonLd.tsx`. Da aggiungere: `BreadcrumbList` (pagine servizio), `Service` |
+| Metadata localizzati (home + legali) | 🟢 Fatto | `layout.tsx` usa `generateMetadata` localizzato + `title.template`; aggiunti a `/prenota` e pagine legali |
+| `theme-color` | 🟢 Fatto | export `viewport` in `layout.tsx` |
+| Web manifest / apple-touch-icon | 🔴 Mancante | Aggiungere `manifest.ts` e apple-touch-icon |
 | Ottimizzazione immagini | 🟡 Da migliorare | Logo via `<img>` raw (`Header.tsx:24`, eslint-disable) invece di `next/image` → niente lazy-load/responsive, impatto su LCP |
 | Attributi `lang` / `dir` | 🟢 OK | `layout.tsx:33-36` imposta `lang` per locale e `dir="rtl"` per l'arabo |
 | `<h1>` unico per pagina | 🟢 OK | Hero, pagine servizio, prenota, legali: un solo `<h1>` ciascuna |
@@ -56,10 +69,10 @@ Le **fondamenta sono buone**: routing multilingua con `lang`/`dir` corretti (RTL
 
 ## ⭐ Azioni prioritarie
 
-- 🔴 **ALTA — Sbloccare l'indicizzazione**: creare `src/app/sitemap.ts` (tutte le route × 10 lingue) e `src/app/robots.ts` (con disallow di `/admin` e link alla sitemap); aggiungere `metadataBase` in `layout.tsx`.
-- 🔴 **ALTA — `hreflang` + canonical**: implementare `alternates.languages` (10 lingue + `x-default`) e `alternates.canonical` su tutte le pagine — essenziale per un sito multilingua, evita contenuti duplicati e indica a Google la versione giusta per ogni utente.
-- 🔴 **ALTA — Dati strutturati `LocalBusiness`/`Organization`**: aggiungere JSON-LD con NAP, sedi, orari e `sameAs` → forte impatto sulle ricerche locali e sui rich result.
-- 🟡 **MEDIA — Metadata localizzati + Open Graph**: rendere title/description dipendenti dalla lingua (home, `/prenota`, pagine legali) e aggiungere `openGraph`/`twitter` con immagine OG dedicata.
-- 🟡 **MEDIA — Analytics + Search Console**: installare l'analisi, verificare GSC e inviare la sitemap per monitorare risultati ed errori.
+- ✅ **ALTA — Indicizzazione** (fatto): `src/app/sitemap.ts` + `src/app/robots.ts` + `metadataBase`.
+- ✅ **ALTA — `hreflang` + canonical** (fatto): `alternates.languages` (10 lingue + `x-default`) e `alternates.canonical` su tutte le pagine.
+- ✅ **ALTA — Dati strutturati `LocalBusiness`/`Organization`** (fatto): JSON-LD con NAP e lingue. Da estendere con sedi/orari/`sameAs` quando disponibili i profili social.
+- ✅ **MEDIA — Metadata localizzati + Open Graph** (fatto): title/description per lingua su home, `/prenota` e pagine legali + `openGraph`/`twitter`. Resta da creare un'immagine OG dedicata.
+- 🟡 **MEDIA — Analytics + Search Console**: installare l'analisi (GDPR-friendly), verificare GSC e inviare la sitemap per monitorare risultati ed errori.
 - 🟡 **MEDIA — Google Business Profile**: creare/rivendicare la scheda per Cuneo (e sedi dirette) con categoria, orari, foto e recensioni.
-- 🟢 **BASSA — Rifiniture tecniche**: `BreadcrumbList` JSON-LD sulle pagine servizio, logo via `next/image`, `manifest.ts` + `theme-color` + apple-touch-icon, sistemare il link "Accedi" (`Header.tsx:61` → `href="#"`), valutare redirect 308 con persistenza lingua via cookie.
+- 🟢 **BASSA — Rifiniture tecniche**: `BreadcrumbList` JSON-LD sulle pagine servizio, immagine OG dedicata, logo via `next/image`, `manifest.ts` + apple-touch-icon, sistemare il link "Accedi" (`Header.tsx:61` → `href="#"`), valutare redirect 308 con persistenza lingua via cookie.

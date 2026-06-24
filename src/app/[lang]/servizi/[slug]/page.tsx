@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { hasLocale, locales, type Locale } from "@/lib/locales";
+import { hasLocale, locales } from "@/lib/locales";
 import { getDictionary } from "@/lib/i18n";
 import { site } from "@/lib/site";
+import { alternates, openGraph } from "@/lib/seo";
 import {
   serviceSlug,
   serviceFromSlug,
@@ -55,9 +56,14 @@ export async function generateMetadata({
   const id = serviceFromSlug(slug);
   if (!hasLocale(lang) || !id) return {};
   const dict = await getDictionary(lang);
+  const title = dict[`svc.${id}.t`];
+  const description = serviceContent[id].intro;
+  const suffix = `/servizi/${slug}`;
   return {
-    title: `${dict[`svc.${id}.t`]} — ${site.name}`,
-    description: serviceContent[id].intro,
+    title,
+    description,
+    alternates: alternates(lang, suffix),
+    openGraph: openGraph(lang, suffix, `${title} — ${site.name}`, description),
   };
 }
 
