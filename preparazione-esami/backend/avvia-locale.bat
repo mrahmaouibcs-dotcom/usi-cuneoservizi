@@ -43,6 +43,9 @@ REM --- Configurazione locale (SQLite + admin di prova) ---
 set "DATABASE_URL=sqlite+aiosqlite:///./dev.db"
 set "ADMIN_EMAIL=admin@scuola.it"
 set "ADMIN_PASSWORD=admin12345"
+set "DEMO_STUDENT_EMAIL=studente@scuola.it"
+set "DEMO_STUDENT_PASSWORD=studente12345"
+set "DEMO_STUDENT_LIVELLO=B1"
 set "FRONTEND_BASE_URL=http://localhost:8000"
 set "SECRET_KEY=chiave-di-prova-solo-locale"
 
@@ -54,9 +57,13 @@ echo.
 echo  ============================================
 echo    App pronta:  http://localhost:8000
 echo.
-echo    Accesso amministratore:
+echo    Accesso AMMINISTRATORE (gestione candidati):
 echo      email:    admin@scuola.it
 echo      password: admin12345
+echo.
+echo    Accesso STUDENTE di prova (lezioni, esercizi, esame):
+echo      email:    studente@scuola.it
+echo      password: studente12345
 echo  ============================================
 echo    Premi CTRL+C per fermare il server.
 echo  ============================================

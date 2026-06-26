@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#003399" />
+  <title>Preparazione Esami A2/B1 — Demo</title>
+  <meta name="description" content="Demo dell'app di preparazione agli esami di italiano A2/B1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* finestra introduttiva della demo */
+    .demo-ov { position: fixed; inset: 0; z-index: 1000; background: rgba(0,51,153,.55); display: flex; align-items: center; justify-content: center; padding: 18px; }
+    .demo-box { background: #fff; border-radius: 14px; max-width: 420px; width: 100%; padding: 22px; box-shadow: 0 10px 40px rgba(0,0,0,.3); }
+    .demo-box h2 { color: #003399; margin: 0 0 6px; font-size: 20px; }
+    .demo-box p { margin: 8px 0; font-size: 15px; line-height: 1.5; color: #2C2C2A; }
+    .demo-box code { background: #eef; padding: 1px 6px; border-radius: 5px; }
+    .demo-box button { margin-top: 12px; width: 100%; min-height: 52px; border: none; border-radius: 8px; background: #008C45; color: #fff; font-size: 17px; font-weight: 700; }
+    .demo-pill { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); z-index: 900; background: #CD212A; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 999px; letter-spacing: .5px; opacity: .92; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <span class="demo-pill">DEMO</span>
+
+  <div class="demo-ov" id="demoOverlay">
+    <div class="demo-box">
+      <h2>🇮🇹 Demo — Preparazione Esami A2/B1</h2>
+      <p>Stai vedendo una <strong>dimostrazione</strong> con dati di esempio (nessun dato reale, niente da installare).</p>
+      <p>Per entrare scrivi <strong>una email qualsiasi</strong> e una password qualsiasi:</p>
+      <p>• <code>studente@demo.it</code> → vista <strong>studente</strong> (lezioni, esercizi, esame)<br/>
+         • <code>admin@demo.it</code> → vista <strong>amministratore</strong></p>
+      <p>Il pulsante <strong>🔊</strong> legge davvero il testo con la voce italiana del browser.</p>
+      <button onclick="document.getElementById('demoOverlay').remove()">Inizia la demo ▸</button>
+    </div>
+  </div>
+
+  <script src="vendor/react.production.min.js"></script>
+  <script src="vendor/react-dom.production.min.js"></script>
+  <script src="vendor/htm.umd.js"></script>
+  <script src="demo-api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
