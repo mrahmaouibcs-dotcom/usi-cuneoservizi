@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .core.config import get_settings
 from .middleware.rate_limiter import RateLimiterMiddleware
-from .routers import auth, candidato
+from .routers import auth, candidato, percorso, progressi
 
 settings = get_settings()
 
@@ -21,6 +21,8 @@ app.add_middleware(RateLimiterMiddleware)
 
 app.include_router(auth.router, prefix=settings.api_v1_prefix)
 app.include_router(candidato.router, prefix=settings.api_v1_prefix)
+app.include_router(percorso.router, prefix=settings.api_v1_prefix)
+app.include_router(progressi.router, prefix=settings.api_v1_prefix)
 
 
 @app.get(settings.api_v1_prefix + "/health", tags=["meta"])
