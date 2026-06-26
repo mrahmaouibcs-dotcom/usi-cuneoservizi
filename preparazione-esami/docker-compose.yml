@@ -35,24 +35,22 @@ services:
     environment:
       DATABASE_URL: postgresql+asyncpg://prepesami:prepesami@db:5432/prepesami
       REDIS_URL: redis://redis:6379/0
-      SECRET_KEY: dev-secret-change-me
-      FRONTEND_BASE_URL: http://localhost:3000
-      CORS_ORIGINS: http://localhost:3000,http://localhost:8000
-    command: sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"
+      SECRET_KEY: ${SECRET_KEY:-dev-secret-cambiami}
+      # un solo server: FastAPI serve anche la PWA candidato
+      FRONTEND_DIR: /app/frontend
+      FRONTEND_BASE_URL: ${FRONTEND_BASE_URL:-http://localhost:8000}
+      CORS_ORIGINS: http://localhost:8000
+      # admin creato automaticamente al primo avvio
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@scuola.it}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-cambiami123}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    # init: crea tabelle + contenuti + admin, poi avvia il server
+    command: sh -c "python -m scripts.init_db && uvicorn app.main:app --host 0.0.0.0 --port 8000"
     volumes:
       - ./backend:/app
+      - ./frontend:/app/frontend:ro
     ports:
       - "8000:8000"
-
-  # --- Frontend (verrà aggiunto nella fase 4) ---
-  # frontend:
-  #   build: ./frontend
-  #   environment:
-  #     NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - backend
 
 volumes:
   pgdata:

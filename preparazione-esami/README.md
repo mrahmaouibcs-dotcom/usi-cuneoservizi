@@ -1,9 +1,14 @@
 # Preparazione Esami Italiano A2 / B1 — piattaforma riservata
 
-Applicazione full-stack per la preparazione agli esami di lingua italiana
-**A2 / B1** (allineata a CILS, CELI, PLIDA, IT), ad **accesso riservato** ai
-candidati iscritti al centro di preparazione. L'app per i candidati è pensata
-per essere **installabile su smartphone** (PWA).
+Applicazione per la **preparazione** agli esami di lingua italiana **A2 / B1**
+(contenuti allineati al QCER / enti CILS, CELI, PLIDA, IT). I candidati iscritti
+al centro si allenano sull'app; l'esame vero si sostiene **in aula**.
+
+- **App candidato**: PWA **installabile su smartphone**, semplice, pensata per
+  principianti (pulsanti grandi, un'azione per schermata, feedback a colori).
+- **Accesso riservato**: nessuna registrazione pubblica. I candidati sono creati
+  dall'amministratore e si attivano tramite link.
+- **Un solo server**: il backend FastAPI serve sia le API sia la PWA.
 
 > Progetto separato e indipendente dal sito aziendale (`/src`) e dalla PWA
 > dimostrativa (`/italiano-facile`). Vive interamente in questa cartella.
@@ -12,83 +17,95 @@ per essere **installabile su smartphone** (PWA).
 
 | Strato | Tecnologia |
 |---|---|
-| Frontend | Next.js 14 (App Router), TypeScript, Tailwind — **PWA installabile** |
-| Backend | FastAPI (Python 3.11), Pydantic v2 |
-| Database | PostgreSQL (SQLAlchemy async + Alembic) |
-| Auth | JWT Bearer (access 1h / refresh 7g) + attivazione via link 72h |
-| AI | Claude API (`claude-sonnet-4-6`) — feedback su scrittura/orale |
-| Cache | Redis (sessioni, rate-limit) |
-| Storage | S3-compatible (audio esercizi) |
+| App candidato | PWA installabile (React + htm via CDN, **nessun build tool**) |
+| Backend/API | FastAPI (Python 3.11), Pydantic v2, SQLAlchemy async |
+| Database | PostgreSQL (prod) · SQLite (dev/test) |
+| Auth | JWT (access 1h / refresh 7g) + attivazione via link 72h, ruoli |
+| AI (fase 5) | Claude API — feedback su scrittura libera |
+| Cache | Redis (rate-limit) |
 
 ## Struttura
 
 ```
 preparazione-esami/
-├── backend/            # FastAPI
-│   ├── app/
-│   │   ├── core/       # config, database, security, deps, utils
-│   │   ├── models/     # SQLAlchemy ORM
-│   │   ├── schemas/    # Pydantic v2
-│   │   ├── routers/    # auth, candidato, (percorso/esercizi/… in arrivo)
-│   │   ├── services/   # email, candidato, (ai_feedback in arrivo)
-│   │   ├── middleware/ # rate limiter
-│   │   └── main.py
-│   ├── alembic/        # migrations
-│   └── tests/          # pytest
-├── frontend/           # Next.js PWA (fase 4)
+├── backend/            # FastAPI + API + serve la PWA
+│   ├── app/  (core, models, schemas, routers, services, middleware, exercises)
+│   ├── scripts/  init_db.py · seed_db.py · crea_admin.py
+│   ├── alembic/  (migrazioni, opzionali)
+│   └── tests/    (pytest, 31 test)
+├── frontend/           # PWA candidato (statica, servita dal backend)
+├── data/seed/          # contenuti didattici A2 / B1 (JSON)
 └── docker-compose.yml
 ```
 
-## Avvio rapido (Docker)
+## Avvio rapido con Docker (consigliato)
 
 ```bash
 cd preparazione-esami
+# (facoltativo) imposta admin e chiave segreta:
+export ADMIN_EMAIL=admin@scuola.it ADMIN_PASSWORD=unaPasswordSicura SECRET_KEY=$(openssl rand -hex 32)
 docker compose up --build
-# Backend:  http://localhost:8000  ·  Docs: http://localhost:8000/docs
 ```
-Le migrazioni Alembic vengono applicate automaticamente all'avvio del backend.
+Al primo avvio crea automaticamente tabelle, contenuti e l'account admin.
+Apri **http://localhost:8000** → schermata di accesso. Le API e la documentazione
+interattiva sono su **http://localhost:8000/docs**.
 
-## Sviluppo backend in locale (senza Docker)
+## Avvio in locale senza Docker (prova rapida con SQLite)
 
 ```bash
 cd backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env            # poi personalizza
-# DB Postgres locale, oppure SQLite per prova rapida:
+
 export DATABASE_URL="sqlite+aiosqlite:///./dev.db"
-alembic upgrade head
+export ADMIN_EMAIL=admin@scuola.it ADMIN_PASSWORD=unaPasswordSicura
+python -m scripts.init_db          # tabelle + contenuti + admin
 uvicorn app.main:app --reload
+# apri http://localhost:8000
 ```
+
+## Come si usa (flusso del centro)
+
+1. **Accedi come admin** (le credenziali impostate sopra).
+2. Crea i candidati: `POST /api/v1/admin/candidati` (o import CSV
+   `POST /api/v1/admin/candidati/import`). Colonne CSV:
+   `email,nome,cognome,livello,ente_certificatore,data_esame`.
+3. Ogni candidato riceve un **link di attivazione** (in dev viene stampato nei
+   log del backend; in produzione si invia via email configurando SMTP).
+4. Il candidato apre il link, sceglie la password, **installa l'app** sul
+   telefono ("Aggiungi a schermata Home") e si allena.
 
 ## Test
 
 ```bash
 cd backend && source .venv/bin/activate
-pytest -q          # i test girano su SQLite in memoria, nessun servizio esterno
+pytest -q          # SQLite in memoria, nessun servizio esterno
 ```
 
-## Sicurezza / accesso (requisito primario)
+## Sicurezza / accesso
 
-- **Nessuna registrazione pubblica**: i candidati sono pre-registrati dall'admin.
-- Attivazione account tramite link email valido 72h → impostazione password.
-- Login con email + password → access token (1h) + refresh token (7g).
-- Livello (`A2`/`B1`) e ruolo sono **congelati nel JWT** al login: non modificabili lato client.
-- Ruoli: `candidato`, `tutor`, `admin`.
-- Rate limiting per IP (Redis nelle fasi successive).
+- Nessuna registrazione pubblica: candidati pre-registrati dall'admin.
+- Attivazione via link valido 72h → impostazione password.
+- Login → access token (1h) + refresh token (7g).
+- **Livello (A2/B1) e ruolo congelati nel JWT** al login: non modificabili dal
+  client. Un candidato A2 non vede mai contenuti B1 e viceversa (404).
+- Le **soluzioni** degli esercizi non vengono mai inviate al client.
+- Rate limiting per IP.
 
-## Roadmap (build a fasi)
+## Stato (build a fasi)
 
-- [x] **Fase 1 — Backend foundation**: schema DB, migrations Alembic, auth completo (login/attivazione/refresh/logout, JWT con ruoli e livello), rate-limit base, test pytest. ✅
-- [ ] **Fase 2 — Seed contenuti**: ≥3 unità A2 + ≥3 B1, ognuna con ≥5 esercizi di tipi diversi, allineati al QCER.
-- [ ] **Fase 3 — API**: percorso → esercizi (invio/valutazione) → simulazione esame → admin (CRUD + import CSV).
-- [ ] **Fase 4 — Frontend PWA**: Next.js installabile su smartphone, layout candidato, dashboard, percorso, `ExerciseEngine` (MCQ/FILL → tutti i tipi).
-- [ ] **Fase 5 — Claude AI**: feedback in streaming per `WRITE_FREE` e `SPEAK_SIM` (payload anonimizzato).
-- [ ] **Fase 6 — Admin panel**: gestione candidati, import CSV, statistiche.
+- [x] **Fase 1** — Backend: schema DB, auth completo, test
+- [x] **Fase 2** — Contenuti A2/B1 (37 esercizi) + motore di correzione + QA
+- [x] **Fase 3** — API didattica: percorso, esercizi, invio risposte, progressi
+- [x] **Fase 4** — PWA candidato installabile (E2E verificata)
+- [x] **Fase 6** — Admin: candidati, import CSV, statistiche
+- [ ] **Fase 5** — Feedback AI (Claude) per scrittura libera
+- [ ] Pannello admin grafico nella PWA · simulazione esame cronometrata
 
 ## Note GDPR
 
-- Payload verso Claude API **anonimizzati** (nessun nome/email/dato identificativo).
-- `data retention`: tentativi eliminati 2 anni dopo la data esame.
-- Diritto all'oblio: `DELETE /api/v1/me` (fase successiva).
-- Log di accesso conservati 6 mesi.
+- Diritto all'oblio: `DELETE /api/v1/admin/candidati/{id}` elimina il candidato
+  e, in cascata, tentativi e progressi.
+- I payload inviati a Claude (fase 5) saranno **anonimizzati** (nessun
+  nome/email/dato identificativo).
+- Conservazione log di accesso: 6 mesi (da configurare in produzione).
