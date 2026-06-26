@@ -12,7 +12,8 @@ settings = get_settings()
 
 
 def build_activation_url(token: str) -> str:
-    return f"{settings.frontend_base_url}/attiva/{token}"
+    # link gestito dalla PWA statica tramite query-string (?attiva=...)
+    return f"{settings.frontend_base_url}/?attiva={token}"
 
 
 async def invia_link_attivazione(email: str, token: str) -> None:

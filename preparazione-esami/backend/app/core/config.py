@@ -55,7 +55,9 @@ class Settings(BaseSettings):
     s3_secret_key: str = ""
 
     # --- Frontend ---
-    frontend_base_url: str = "http://localhost:3000"
+    frontend_base_url: str = "http://localhost:8000"
+    # cartella della PWA servita da FastAPI (vuoto = percorso predefinito ../frontend)
+    frontend_dir: str = ""
 
     # --- CORS (lista separata da virgole per evitare il parsing JSON in env) ---
     cors_origins: str = "http://localhost:3000,http://localhost:8000"

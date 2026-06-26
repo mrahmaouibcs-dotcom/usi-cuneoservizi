@@ -1,6 +1,9 @@
 """Entry point FastAPI."""
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from .core.config import get_settings
 from .middleware.rate_limiter import RateLimiterMiddleware
@@ -28,3 +31,10 @@ app.include_router(progressi.router, prefix=settings.api_v1_prefix)
 @app.get(settings.api_v1_prefix + "/health", tags=["meta"])
 async def health() -> dict[str, str]:
     return {"status": "ok", "app": settings.app_name, "env": settings.environment}
+
+
+# PWA candidato servita da FastAPI (un solo server). Montata per ultima: le
+# rotte API registrate sopra hanno la precedenza sul catch-all statico.
+_frontend = Path(settings.frontend_dir) if settings.frontend_dir else Path(__file__).resolve().parents[2] / "frontend"
+if _frontend.is_dir():
+    app.mount("/", StaticFiles(directory=str(_frontend), html=True), name="frontend")

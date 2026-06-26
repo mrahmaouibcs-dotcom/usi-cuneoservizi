@@ -1,0 +1,17 @@
+{
+  "name": "Preparazione Esami A2/B1",
+  "short_name": "Esami Italiano",
+  "description": "Allenati per l'esame di italiano A2 o B1",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F4F0",
+  "theme_color": "#003399",
+  "lang": "it",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
