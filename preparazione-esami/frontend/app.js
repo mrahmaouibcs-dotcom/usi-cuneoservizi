@@ -369,9 +369,27 @@
         ${W ? html`<${W} ex=${ex} answer=${answer} setAnswer=${setAnswer} locked=${locked} risultato=${ris} />`
             : html`<div class="alert alert--err">Tipo di esercizio non supportato.</div>`}
         ${ris ? html`
-          <div class=${"feedback " + (aiType ? "feedback--ok" : ris.corretto ? "feedback--ok" : "feedback--no")}>
-            <div class="feedback__t">${aiType ? "Risposta inviata ✓" : ris.corretto ? "Corretto! 🎉" : "Non del tutto"}</div>
-            <div>${aiType ? "La tua risposta sarà valutata." : `Punteggio: ${ris.punteggio} / ${ris.punteggio_max}`}</div>
+          <div class=${"feedback " + (!aiType && !ris.corretto ? "feedback--no" : "feedback--ok")}>
+            ${aiType
+              ? (ris.feedback_ai && ris.feedback_ai.disponibile ? html`
+                  <div class="feedback__t">Valutazione: ${ris.punteggio} / ${ris.punteggio_max}</div>
+                  ${(ris.feedback_ai.punti_di_forza || []).length ? html`
+                    <div style=${{ marginTop: "8px" }}><strong>Punti di forza</strong>
+                      <ul style=${{ margin: "4px 0 0 18px" }}>${ris.feedback_ai.punti_di_forza.map((p, i) => html`<li key=${i}>${p}</li>`)}</ul></div>` : null}
+                  ${(ris.feedback_ai.suggerimenti || []).length ? html`
+                    <div style=${{ marginTop: "8px" }}><strong>Suggerimenti</strong>
+                      <ul style=${{ margin: "4px 0 0 18px" }}>${ris.feedback_ai.suggerimenti.map((p, i) => html`<li key=${i}>${p}</li>`)}</ul></div>` : null}
+                  ${ris.feedback_ai.testo_corretto ? html`
+                    <div style=${{ marginTop: "8px" }}><strong>Testo corretto</strong>
+                      <div style=${{ fontStyle: "italic" }}>${ris.feedback_ai.testo_corretto}</div></div>` : null}
+                ` : html`
+                  <div class="feedback__t">Risposta inviata ✓</div>
+                  <div>${(ris.feedback_ai && ris.feedback_ai.messaggio) || "La valutazione automatica non è disponibile al momento."}</div>
+                `)
+              : html`
+                  <div class="feedback__t">${ris.corretto ? "Corretto! 🎉" : "Non del tutto"}</div>
+                  <div>Punteggio: ${ris.punteggio} / ${ris.punteggio_max}</div>
+                `}
           </div>
           <button class="btn btn--primary" style=${{ marginTop: "16px" }} onClick=${avanti}>
             ${idx + 1 < lista.length ? "Avanti ▸" : "Fine ✓"}</button>

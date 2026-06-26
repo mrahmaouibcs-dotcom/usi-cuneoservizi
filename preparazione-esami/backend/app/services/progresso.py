@@ -6,12 +6,16 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from ..core.utils import ensure_utc
-from ..exercises.schema import AUTO_SCORED
 from ..models.candidato import Candidato
 from ..models.contenuti import Esercizio, Unita
+from ..models.enums import ExerciseType
 from ..models.progresso import ProgressoCandidato, TentativoEsercizio
 from ..schemas.tentativo import RisultatoOut
+from .ai_feedback import valuta_produzione
 from .scoring import correggi
+
+# Tipi valutati dall'AI (testo libero)
+AI_TIPI = {ExerciseType.WRITE_FREE, ExerciseType.SPEAK_SIM}
 
 
 async def _miglior_punteggio_per_esercizio(
@@ -91,13 +95,28 @@ async def registra_tentativo(
     ris = correggi(
         esercizio.tipo, esercizio.contenuto, esercizio.soluzione, risposta, esercizio.punteggio_max
     )
+
+    punteggio = ris.punteggio
+    feedback_ai = None
+    # Produzione scritta: valutazione AI (payload anonimizzato)
+    if esercizio.tipo in AI_TIPI and (risposta or {}).get("testo"):
+        feedback_ai = await valuta_produzione(
+            testo=risposta["testo"],
+            livello=candidato.livello.value if candidato.livello else "",
+            ente=candidato.ente_certificatore.value if candidato.ente_certificatore else "",
+            consegna=(esercizio.contenuto or {}).get("prompt", ""),
+        )
+        if feedback_ai.get("disponibile"):
+            # punteggio AI 0-10 → scala sul punteggio_max dell'esercizio
+            punteggio = round(int(feedback_ai.get("punteggio", 0)) / 10 * esercizio.punteggio_max)
+
     tentativo = TentativoEsercizio(
         candidato_id=candidato.id,
         esercizio_id=esercizio.id,
         risposta=risposta,
-        punteggio=ris.punteggio,
+        punteggio=punteggio,
         durata_sec=max(0, durata_sec),
-        feedback_ai=None,
+        feedback_ai=feedback_ai,
     )
     db.add(tentativo)
     await db.flush()
@@ -108,11 +127,11 @@ async def registra_tentativo(
     await db.commit()
 
     return RisultatoOut(
-        punteggio=ris.punteggio,
+        punteggio=punteggio,
         punteggio_max=ris.punteggio_max,
         corretto=ris.corretto,
         dettaglio=ris.dettaglio,
-        feedback_ai=None,
+        feedback_ai=feedback_ai,
     )
 
 
