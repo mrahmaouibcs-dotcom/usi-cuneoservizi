@@ -98,9 +98,9 @@ pytest -q          # SQLite in memoria, nessun servizio esterno
 - [x] **Fase 2** — Contenuti A2/B1 (37 esercizi) + motore di correzione + QA
 - [x] **Fase 3** — API didattica: percorso, esercizi, invio risposte, progressi
 - [x] **Fase 4** — PWA candidato installabile (E2E verificata)
-- [x] **Fase 6** — Admin: candidati, import CSV, statistiche
-- [ ] **Fase 5** — Feedback AI (Claude) per scrittura libera
-- [ ] Pannello admin grafico nella PWA · simulazione esame cronometrata
+- [x] **Fase 5** — Feedback AI (Claude) per la scrittura libera (richiede `ANTHROPIC_API_KEY`)
+- [x] **Fase 6** — Admin: candidati, import CSV, statistiche + pannello grafico nella PWA
+- [ ] Opzionale: simulazione esame cronometrata, esercizi audio (ascolto/dettato con S3)
 
 ## Note GDPR
 
