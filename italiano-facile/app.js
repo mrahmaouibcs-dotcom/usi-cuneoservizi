@@ -106,6 +106,13 @@
   }
   function starString(n) { return "⭐".repeat(n) + "☆".repeat(3 - n); }
 
+  // Testo da pronunciare: sostituisce il "_____" con la parola giusta
+  // (se data) oppure con una pausa, e normalizza gli spazi.
+  function speechText(prompt, fill) {
+    const t = prompt.replace(/_{2,}/g, fill ? " " + fill + " " : " … ");
+    return t.replace(/\s+/g, " ").trim();
+  }
+
   function renderPromptWithBlank(text) {
     // Evidenzia "_____" come blank dorato
     const parts = text.split(/_{2,}/);
@@ -404,7 +411,11 @@
 
     return html`
       <div>
-        <p class="exercise-prompt">${renderPromptWithBlank(ex.prompt)}</p>
+        <div class="exercise-head">
+          <p class="exercise-prompt">${renderPromptWithBlank(ex.prompt)}</p>
+          <${SpeakButton} text=${speechText(ex.prompt, answered ? ex.options[ex.answer] : null)}
+            label="Ascolta la frase" />
+        </div>
         <div class="options">
           ${ex.options.map((opt, i) => {
             let cls = "option";
@@ -487,7 +498,10 @@
         ` : html`
           <div class=${"feedback " + (correct ? "feedback--ok" : "feedback--no")}>
             <div class="feedback__title">${correct ? "Perfetto! 🎉" : "Quasi…"}</div>
-            <div>Soluzione: <strong>${ex.solution}</strong></div>
+            <div class="feedback__solution">
+              <span>Soluzione: <strong>${ex.solution}</strong></span>
+              <${SpeakButton} text=${ex.solution} label="Ascolta la soluzione" />
+            </div>
             <div style=${{ marginTop: "4px" }}>${ex.explanation}</div>
           </div>`}
       </div>`;
@@ -637,6 +651,8 @@
                       <span class="vocab-row__it">${ex.solution || ex.options[ex.answer]}</span>
                       <span class="vocab-row__cat" style=${{ display: "block" }}>${ex.explanation}</span>
                     </span>
+                    <${SpeakButton} text=${ex.solution || speechText(ex.prompt, ex.options[ex.answer])}
+                      label="Ascolta" />
                   </div>`)}
               </div>` : html`
               <div class="card" style=${{ color: "var(--verde-bosco)" }}>Nessun errore. Perfetto! 🌟</div>`}

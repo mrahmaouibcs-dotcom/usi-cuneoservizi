@@ -4,7 +4,7 @@
    Le risorse da CDN (React, font) vengono memorizzate runtime al primo fetch.
    ========================================================================== */
 
-const CACHE_NAME = "italiano-facile-v2";
+const CACHE_NAME = "italiano-facile-v3";
 
 // Pre-cache all'installazione. Path relativi → funziona anche in sottocartella (GitHub Pages).
 const PRECACHE_URLS = [

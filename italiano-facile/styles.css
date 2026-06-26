@@ -404,10 +404,26 @@ button { font-family: inherit; cursor: pointer; }
 /* ============================================================================
    Quiz / esercizi
    ========================================================================== */
+.exercise-head {
+  display: flex; align-items: flex-start; gap: 10px;
+  margin-bottom: 18px;
+}
+.exercise-head .exercise-prompt { flex: 1; margin: 6px 0; }
+.exercise-head .speak-btn { margin-top: 4px; }
+
 .exercise-prompt {
   font-size: 18px; font-weight: 600;
   line-height: 1.5; margin: 6px 0 18px;
 }
+.feedback__solution {
+  display: flex; align-items: center; gap: 10px;
+  justify-content: space-between;
+}
+.feedback__solution .speak-btn {
+  width: 34px; height: 34px;
+  border-color: rgba(27,67,50,0.25);
+}
+.feedback__solution .speak-btn svg { width: 17px; height: 17px; }
 .exercise-prompt .blank {
   color: var(--oro-grano); font-weight: 800;
   background: var(--oro-soft);
