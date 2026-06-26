@@ -19,8 +19,13 @@ class Unita(Base):
     sezione: Mapped[str] = mapped_column(String(50), nullable=False, index=True)
     numero: Mapped[int] = mapped_column(Integer, nullable=False)
     titolo: Mapped[str] = mapped_column(String(255), nullable=False)
+    tema: Mapped[str] = mapped_column(String(255), default="", nullable=False)
     descrizione: Mapped[str] = mapped_column(Text, default="", nullable=False)
     obiettivi_cefr: Mapped[list] = mapped_column(JSON, default=list, nullable=False)
+    # lezione/teoria: { introduzione, sezioni: [{titolo, testo, tabella?, esempi[]}] }
+    lezione: Mapped[dict] = mapped_column(JSON, default=dict, nullable=False)
+    # lessico: [{ parola, traduzione, esempio }] (con audio nell'app)
+    lessico: Mapped[list] = mapped_column(JSON, default=list, nullable=False)
     ordine: Mapped[int] = mapped_column(Integer, default=0, nullable=False)
     is_published: Mapped[bool] = mapped_column(Boolean, default=False, nullable=False)
 
@@ -39,6 +44,7 @@ class Esercizio(Base):
     tipo: Mapped[ExerciseType] = mapped_column(
         SAEnum(ExerciseType, native_enum=False, length=20), nullable=False
     )
+    abilita: Mapped[str] = mapped_column(String(30), default="grammatica", nullable=False)
     titolo: Mapped[str] = mapped_column(String(255), nullable=False)
     istruzioni: Mapped[str] = mapped_column(Text, default="", nullable=False)
     # struttura specifica per tipo (domande, opzioni, testo cloze, ...), SENZA soluzione

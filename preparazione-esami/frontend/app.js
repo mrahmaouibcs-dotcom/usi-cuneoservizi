@@ -97,9 +97,15 @@
     const valori = (answer && answer.risposte) || ex.contenuto.affermazioni.map(() => null);
     const set = (i, v) => { const a = valori.slice(); a[i] = v; setAnswer({ risposte: a }); };
     const opt = [["vero", "Vero"], ["falso", "Falso"], ["non_detto", "Non detto"]];
+    const orale = ex.abilita === "comprensione_orale";
     return html`
       <div>
-        ${ex.contenuto.testo ? html`<div class="card">${ex.contenuto.testo}</div>` : null}
+        ${orale && ex.contenuto.testo ? html`
+          <div class="card audio-riga" style=${{ marginBottom: "14px" }}>
+            <${Speak} text=${ex.contenuto.testo} label="Ascolta il testo" variant="grande" />
+            <span>Ascolta il testo, poi rispondi (il testo non si legge).</span>
+          </div>` : null}
+        ${!orale && ex.contenuto.testo ? html`<div class="card">${ex.contenuto.testo}</div>` : null}
         ${ex.contenuto.affermazioni.map((af, i) => html`
           <div key=${i} style=${{ marginBottom: "14px" }}>
             <div style=${{ marginBottom: "8px", fontWeight: 600 }}>${i + 1}. ${af}</div>
@@ -345,29 +351,84 @@
       </div>`;
   }
 
+  function tipoLabel(t) {
+    return { MCQ: "Scelta multipla", FILL: "Completa", REORDER: "Riordina", MATCH: "Abbina", TRUE_FALSE: "Vero/Falso", ERROR_FIND: "Trova l'errore", WRITE_FREE: "Scrittura" }[t] || t;
+  }
+  function abilitaLabel(a) {
+    return {
+      grammatica: "Grammatica", lessico: "Lessico",
+      comprensione_scritta: "Comprensione scritta", comprensione_orale: "Comprensione orale 🎧",
+      produzione_scritta: "Produzione scritta", produzione_orale: "Produzione orale",
+    }[a] || "Grammatica";
+  }
+
+  function Lezione({ lezione }) {
+    const sez = (lezione && lezione.sezioni) || [];
+    return html`<div>
+      ${lezione && lezione.introduzione ? html`<p class="lez-intro">${lezione.introduzione}</p>` : null}
+      ${sez.map((s, i) => html`<div key=${i} class="card">
+        <div class="lez-tit">${s.titolo}</div>
+        ${s.testo ? html`<p style=${{ margin: "0 0 10px" }}>${s.testo}</p>` : null}
+        ${s.tabella ? html`<div class="lez-tab-wrap"><table class="lez-tab">
+          <thead><tr>${(s.tabella.headers || []).map((h, hi) => html`<th key=${hi}>${h}</th>`)}</tr></thead>
+          <tbody>${(s.tabella.rows || []).map((r, ri) => html`<tr key=${ri}>${r.map((c, ci) => html`<td key=${ci}>${c}</td>`)}</tr>`)}</tbody>
+        </table></div>` : null}
+        ${(s.esempi || []).map((es, ei) => html`<div key=${ei} class="lez-esempio"><${Speak} text=${es} label="Ascolta l'esempio" /><span>${es}</span></div>`)}
+      </div>`)}
+    </div>`;
+  }
+
+  function Lessico({ lessico }) {
+    return html`<div>${(lessico || []).map((v, i) => html`<div key=${i} class="vocab">
+      <${Speak} text=${v.parola} label=${"Ascolta " + v.parola} />
+      <div class="vocab__body">
+        <div class="vocab__it">${v.parola}${v.traduzione ? html`<span class="vocab__en"> — ${v.traduzione}</span>` : null}</div>
+        ${v.esempio ? html`<div class="vocab__ex">“${v.esempio}”</div>` : null}
+      </div>
+    </div>`)}</div>`;
+  }
+
   function UnitaView({ candidato, unitaId, go }) {
     const [dett, setDett] = useState(null);
     const [err, setErr] = useState("");
-    useEffect(() => { (async () => { try { setDett(await API.unitaDettaglio(unitaId)); } catch (ex) { setErr(ex.detail); } })(); }, [unitaId]);
+    const [vista, setVista] = useState("home");
+    useEffect(() => { setVista("home"); (async () => { try { setDett(await API.unitaDettaglio(unitaId)); } catch (ex) { setErr(ex.detail); } })(); }, [unitaId]);
     if (err) return html`<div class="main fade"><button class="back" onClick=${() => go("home")}>‹ Indietro</button><div class="alert alert--err">${err}</div></div>`;
     if (!dett) return html`<div class="main"><${Spinner} /></div>`;
-    return html`
-      <div class="main fade">
-        <button class="back" onClick=${() => go("home")}>‹ Le mie unità</button>
-        <${Header} candidato=${candidato} titolo=${dett.titolo} sub=${dett.descrizione} />
-        <div class="sezione-tit">Esercizi (${dett.esercizi.length})</div>
-        ${dett.esercizi.map((e, i) => html`<button key=${e.id} class="item"
-          onClick=${() => go("esercizio", { lista: dett.esercizi, idx: i, unitaId })}>
-          <span class="item__num">${i + 1}</span>
-          <span class="item__body"><span class="item__title">${e.titolo}</span>
-            <span class="item__sub">${tipoLabel(e.tipo)}</span></span>
-          <span class="item__chev">›</span>
-        </button>`)}
-      </div>`;
-  }
+    const haLezione = dett.lezione && (dett.lezione.introduzione || (dett.lezione.sezioni || []).length);
+    const haLessico = (dett.lessico || []).length;
 
-  function tipoLabel(t) {
-    return { MCQ: "Scelta multipla", FILL: "Completa", REORDER: "Riordina", MATCH: "Abbina", TRUE_FALSE: "Vero/Falso", ERROR_FIND: "Trova l'errore", WRITE_FREE: "Scrittura" }[t] || t;
+    if (vista === "lezione") return html`<div class="main fade">
+      <button class="back" onClick=${() => setVista("home")}>‹ Torna all'unità</button>
+      <${Header} candidato=${candidato} titolo=${"Lezione"} sub=${dett.titolo} />
+      <${Lezione} lezione=${dett.lezione} />
+      <button class="btn btn--blu" style=${{ marginTop: "12px" }} onClick=${() => setVista("home")}>Ho capito → vai agli esercizi</button>
+    </div>`;
+    if (vista === "lessico") return html`<div class="main fade">
+      <button class="back" onClick=${() => setVista("home")}>‹ Torna all'unità</button>
+      <${Header} candidato=${candidato} titolo=${"Lessico"} sub=${dett.titolo} />
+      <p class="progress-label" style=${{ marginBottom: "12px" }}>Tocca 🔊 per ascoltare la pronuncia.</p>
+      <${Lessico} lessico=${dett.lessico} />
+    </div>`;
+
+    return html`<div class="main fade">
+      <button class="back" onClick=${() => go("home")}>‹ Le mie unità</button>
+      <${Header} candidato=${candidato} titolo=${dett.titolo} sub=${dett.tema || dett.descrizione} />
+      ${haLezione ? html`<button class="item" onClick=${() => setVista("lezione")}>
+        <span class="item__num">📖</span><span class="item__body"><span class="item__title">Lezione</span>
+          <span class="item__sub">Teoria ed esempi (con audio)</span></span><span class="item__chev">›</span></button>` : null}
+      ${haLessico ? html`<button class="item" onClick=${() => setVista("lessico")}>
+        <span class="item__num">🔤</span><span class="item__body"><span class="item__title">Lessico</span>
+          <span class="item__sub">${dett.lessico.length} parole con pronuncia</span></span><span class="item__chev">›</span></button>` : null}
+      <div class="sezione-tit">Esercizi (${dett.esercizi.length})</div>
+      ${dett.esercizi.map((e, i) => html`<button key=${e.id} class="item"
+        onClick=${() => go("esercizio", { lista: dett.esercizi, idx: i, unitaId })}>
+        <span class="item__num">${i + 1}</span>
+        <span class="item__body"><span class="item__title">${e.titolo}</span>
+          <span class="item__sub">${abilitaLabel(e.abilita)} · ${tipoLabel(e.tipo)}</span></span>
+        <span class="item__chev">›</span>
+      </button>`)}
+    </div>`;
   }
 
   function Esercizio({ candidato, lista, idx, unitaId, go }) {

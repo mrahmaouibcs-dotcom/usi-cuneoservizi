@@ -26,6 +26,15 @@ class StatoAccount(str, enum.Enum):
     sospeso = "sospeso"
 
 
+class Abilita(str, enum.Enum):
+    grammatica = "grammatica"
+    lessico = "lessico"
+    comprensione_scritta = "comprensione_scritta"
+    comprensione_orale = "comprensione_orale"
+    produzione_scritta = "produzione_scritta"
+    produzione_orale = "produzione_orale"
+
+
 class ExerciseType(str, enum.Enum):
     MCQ = "MCQ"                 # Scelta multipla
     FILL = "FILL"              # Cloze / riempimento lacune

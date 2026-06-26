@@ -82,8 +82,11 @@ async def dettaglio_unita(
         sezione=unita.sezione,
         numero=unita.numero,
         titolo=unita.titolo,
+        tema=unita.tema,
         descrizione=unita.descrizione,
         obiettivi_cefr=unita.obiettivi_cefr,
+        lezione=unita.lezione or {},
+        lessico=unita.lessico or [],
         ordine=unita.ordine,
         esercizi=esercizi,
     )

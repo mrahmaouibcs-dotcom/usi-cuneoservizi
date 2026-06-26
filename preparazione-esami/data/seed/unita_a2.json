@@ -2,21 +2,75 @@
   "unita": [
     {
       "livello": "A2",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 1,
-      "titolo": "Il presente indicativo (regolari e irregolari)",
-      "descrizione": "Coniugazione dei verbi regolari (-are, -ere, -ire) e dei principali irregolari (essere, avere, fare, andare) per parlare di abitudini e routine.",
+      "titolo": "Presentarsi: il presente indicativo",
+      "tema": "Identità, lavoro e abitudini quotidiane",
+      "descrizione": "Parlare di sé, del proprio lavoro e delle abitudini usando il presente indicativo (verbi regolari e irregolari).",
       "obiettivi_cefr": [
-        "Coniugare i verbi regolari e i principali irregolari al presente indicativo",
-        "Descrivere abitudini e routine quotidiane"
+        "Sa presentarsi e dare informazioni personali di base",
+        "Sa coniugare i verbi regolari e i principali irregolari al presente",
+        "Sa descrivere azioni abituali della vita quotidiana"
+      ],
+      "lezione": {
+        "introduzione": "Il presente indicativo si usa per parlare di azioni abituali, situazioni attuali e fatti generali. È il tempo più importante per presentarsi e descrivere la propria giornata.",
+        "sezioni": [
+          {
+            "titolo": "I verbi regolari (-are, -ere, -ire)",
+            "testo": "Si toglie la desinenza dell'infinito (-are, -ere, -ire) e si aggiungono le terminazioni del presente.",
+            "tabella": {
+              "headers": ["Pronome", "parlare", "prendere", "dormire"],
+              "rows": [
+                ["io", "parlo", "prendo", "dormo"],
+                ["tu", "parli", "prendi", "dormi"],
+                ["lui/lei", "parla", "prende", "dorme"],
+                ["noi", "parliamo", "prendiamo", "dormiamo"],
+                ["voi", "parlate", "prendete", "dormite"],
+                ["loro", "parlano", "prendono", "dormono"]
+              ]
+            },
+            "esempi": [
+              "Ogni giorno parlo italiano al lavoro.",
+              "I bambini dormono otto ore."
+            ]
+          },
+          {
+            "titolo": "I verbi irregolari più comuni",
+            "testo": "Alcuni verbi molto usati sono irregolari: essere, avere, fare, andare. È utile impararli a memoria.",
+            "tabella": {
+              "headers": ["Pronome", "essere", "avere", "fare", "andare"],
+              "rows": [
+                ["io", "sono", "ho", "faccio", "vado"],
+                ["tu", "sei", "hai", "fai", "vai"],
+                ["lui/lei", "è", "ha", "fa", "va"],
+                ["noi", "siamo", "abbiamo", "facciamo", "andiamo"],
+                ["voi", "siete", "avete", "fate", "andate"],
+                ["loro", "sono", "hanno", "fanno", "vanno"]
+              ]
+            },
+            "esempi": [
+              "Sono italiano e ho venticinque anni.",
+              "La domenica andiamo al parco e facciamo una passeggiata."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        { "parola": "lavorare", "traduzione": "to work", "esempio": "Lavoro in un ufficio in centro." },
+        { "parola": "abitare", "traduzione": "to live (reside)", "esempio": "Abito a Roma da tre anni." },
+        { "parola": "studiare", "traduzione": "to study", "esempio": "Studio l'italiano la sera." },
+        { "parola": "svegliarsi", "traduzione": "to wake up", "esempio": "Mi sveglio alle sette." },
+        { "parola": "andare", "traduzione": "to go", "esempio": "Vado al lavoro in autobus." },
+        { "parola": "fare colazione", "traduzione": "to have breakfast", "esempio": "Faccio colazione con un caffè." }
       ],
       "ordine": 1,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
-          "titolo": "Scegli la forma corretta",
-          "istruzioni": "Seleziona la coniugazione corretta del verbo.",
+          "abilita": "grammatica",
+          "titolo": "Verbo regolare in -are",
+          "istruzioni": "Scegli la forma corretta del presente.",
           "contenuto": {
             "domanda": "Marco _____ in una grande azienda di Milano.",
             "opzioni": ["lavora", "lavori", "lavorano", "lavorate"]
@@ -26,8 +80,9 @@
         },
         {
           "tipo": "FILL",
-          "titolo": "Completa la routine",
-          "istruzioni": "Scegli per ogni spazio la forma corretta del verbo.",
+          "abilita": "grammatica",
+          "titolo": "La mia mattina",
+          "istruzioni": "Completa con la forma corretta del verbo.",
           "contenuto": {
             "testo_template": "Ogni mattina io {0} alle sette e poi {1} colazione.",
             "lacune": [
@@ -39,7 +94,32 @@
           "punteggio_max": 10
         },
         {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Terza persona plurale",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "I miei amici _____ molto bene l'italiano.",
+            "opzioni": ["parlano", "parla", "parli", "parliamo"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Abbina il pronome al verbo (essere)",
+          "istruzioni": "Collega ogni pronome alla forma corretta del verbo essere.",
+          "contenuto": {
+            "colonna_a": ["io", "tu", "lui", "noi"],
+            "colonna_b": ["sei", "sono", "è", "siamo"]
+          },
+          "soluzione": { "mappa": { "0": 1, "1": 0, "2": 2, "3": 3 } },
+          "punteggio_max": 10
+        },
+        {
           "tipo": "REORDER",
+          "abilita": "grammatica",
           "titolo": "Rimetti in ordine",
           "istruzioni": "Ordina le parole per formare una frase corretta.",
           "contenuto": {
@@ -52,8 +132,21 @@
           "punteggio_max": 10
         },
         {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: i verbi e la traduzione",
+          "istruzioni": "Collega ogni verbo alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": ["lavorare", "abitare", "studiare", "fare colazione"],
+            "colonna_b": ["to work", "to live", "to study", "to have breakfast"]
+          },
+          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "punteggio_max": 10
+        },
+        {
           "tipo": "TRUE_FALSE",
-          "titolo": "Vero, falso o non detto?",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: una studentessa",
           "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
           "contenuto": {
             "testo": "Anna è una studentessa. Studia all'università e lavora part-time in un bar. La sera esce spesso con gli amici.",
@@ -68,44 +161,59 @@
           "punteggio_max": 10
         },
         {
-          "tipo": "MCQ",
-          "titolo": "Terza persona plurale",
-          "istruzioni": "Seleziona la forma corretta.",
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: la giornata di Luca",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere o false.",
           "contenuto": {
-            "domanda": "I miei amici _____ molto bene l'italiano.",
-            "opzioni": ["parlano", "parla", "parli", "parliamo"]
+            "testo": "Mi chiamo Luca. Lavoro in un ristorante e abito a Firenze. La mattina vado al lavoro in autobus e la sera studio inglese.",
+            "affermazioni": [
+              "Luca lavora in un ristorante.",
+              "Luca abita a Roma.",
+              "La sera Luca studia inglese."
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": { "risposte": ["vero", "falso", "vero"] },
           "punteggio_max": 10
         },
         {
-          "tipo": "MATCH",
-          "titolo": "Abbina il pronome al verbo (essere)",
-          "istruzioni": "Collega ogni pronome alla forma corretta del verbo essere.",
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: presentati",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
           "contenuto": {
-            "colonna_a": ["io", "tu", "lui", "noi"],
-            "colonna_b": ["sei", "sono", "è", "siamo"]
+            "prompt": "Presentati in 30-40 parole: come ti chiami, dove abiti, cosa fai (lavoro o studio) e che cosa fai di solito ogni giorno.",
+            "parole_min": 30,
+            "parole_max": 40
           },
-          "soluzione": { "mappa": { "0": 1, "1": 0, "2": 2, "3": 3 } },
-          "punteggio_max": 10
+          "soluzione": {
+            "criteri": [
+              "Usa il presente indicativo correttamente",
+              "Fornisce le informazioni richieste (nome, città, attività, abitudini)",
+              "Testo comprensibile e coerente"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     },
     {
       "livello": "A2",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 2,
-      "titolo": "Passato prossimo e imperfetto",
+      "titolo": "Raccontare il passato: passato prossimo e imperfetto",
+      "tema": "Esperienze, ricordi ed eventi passati",
       "descrizione": "Distinzione d'uso tra passato prossimo (azioni concluse e puntuali) e imperfetto (descrizioni, abitudini e azioni in corso nel passato).",
       "obiettivi_cefr": [
-        "Distinguere l'uso del passato prossimo e dell'imperfetto",
-        "Raccontare esperienze ed eventi passati"
+        "Sa raccontare esperienze ed eventi passati",
+        "Sa distinguere l'uso del passato prossimo e dell'imperfetto"
       ],
       "ordine": 2,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Azione conclusa",
           "istruzioni": "Scegli il tempo verbale corretto.",
           "contenuto": {
@@ -117,6 +225,7 @@
         },
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Abitudine nel passato",
           "istruzioni": "Scegli il tempo verbale corretto.",
           "contenuto": {
@@ -128,8 +237,9 @@
         },
         {
           "tipo": "FILL",
+          "abilita": "grammatica",
           "titolo": "Due azioni nel passato",
-          "istruzioni": "Completa con la forma corretta: imperfetto per l'azione in corso, passato prossimo per quella puntuale.",
+          "istruzioni": "Completa: imperfetto per l'azione in corso, passato prossimo per quella puntuale.",
           "contenuto": {
             "testo_template": "Mentre io {0} la televisione, {1} il telefono.",
             "lacune": [
@@ -142,8 +252,9 @@
         },
         {
           "tipo": "REORDER",
+          "abilita": "grammatica",
           "titolo": "Rimetti in ordine",
-          "istruzioni": "Ordina le parole per formare una frase corretta al passato prossimo.",
+          "istruzioni": "Ordina le parole per formare una frase al passato prossimo.",
           "contenuto": {
             "parole": ["Ieri", "sera", "ho", "mangiato", "una", "pizza", "buonissima"]
           },
@@ -152,7 +263,8 @@
         },
         {
           "tipo": "TRUE_FALSE",
-          "titolo": "Vero, falso o non detto?",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: un ricordo d'infanzia",
           "istruzioni": "Leggi il racconto e valuta le affermazioni.",
           "contenuto": {
             "testo": "Quando ero piccola, abitavo in un paese di montagna. D'estate andavamo sempre al lago e mangiavamo il gelato in piazza. Un giorno ho visto un cervo nel bosco.",
@@ -168,7 +280,8 @@
         },
         {
           "tipo": "MCQ",
-          "titolo": "Evento concluso nel passato",
+          "abilita": "grammatica",
+          "titolo": "Evento concluso",
           "istruzioni": "Scegli la forma corretta.",
           "contenuto": {
             "domanda": "L'anno scorso noi _____ un bellissimo viaggio in Sicilia.",
@@ -181,19 +294,21 @@
     },
     {
       "livello": "A2",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 3,
-      "titolo": "Pronomi diretti e indiretti",
-      "descrizione": "Uso dei pronomi diretti (lo, la, li, le) e indiretti (gli, le, ci, vi) per evitare ripetizioni e rendere il discorso più naturale.",
+      "titolo": "Parlare in modo naturale: pronomi diretti e indiretti",
+      "tema": "Relazioni quotidiane e comunicazione",
+      "descrizione": "Uso dei pronomi diretti (lo, la, li, le) e indiretti (gli, le, ci, vi) per evitare ripetizioni.",
       "obiettivi_cefr": [
-        "Usare correttamente i pronomi diretti e indiretti",
-        "Evitare ripetizioni nel discorso quotidiano"
+        "Sa usare i pronomi diretti e indiretti",
+        "Sa evitare ripetizioni nel discorso quotidiano"
       ],
       "ordine": 3,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Pronome diretto",
           "istruzioni": "Scegli il pronome corretto.",
           "contenuto": {
@@ -205,6 +320,7 @@
         },
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Pronome indiretto",
           "istruzioni": "Scegli il pronome corretto.",
           "contenuto": {
@@ -216,6 +332,7 @@
         },
         {
           "tipo": "FILL",
+          "abilita": "grammatica",
           "titolo": "Completa con il pronome",
           "istruzioni": "Scegli il pronome diretto corretto.",
           "contenuto": {
@@ -227,6 +344,7 @@
         },
         {
           "tipo": "REORDER",
+          "abilita": "grammatica",
           "titolo": "Rimetti in ordine",
           "istruzioni": "Ordina le parole per formare una frase corretta.",
           "contenuto": {
@@ -237,6 +355,7 @@
         },
         {
           "tipo": "MATCH",
+          "abilita": "grammatica",
           "titolo": "Abbina l'elemento al pronome",
           "istruzioni": "Collega ogni elemento al pronome che lo sostituisce.",
           "contenuto": {
@@ -248,7 +367,8 @@
         },
         {
           "tipo": "TRUE_FALSE",
-          "titolo": "Vero, falso o non detto?",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: un dialogo",
           "istruzioni": "Leggi il dialogo e valuta le affermazioni.",
           "contenuto": {
             "testo": "— Hai invitato Luca alla festa? — Sì, l'ho invitato. — E hai avvisato Sara di portare il dolce? — Sì, le ho mandato un messaggio.",

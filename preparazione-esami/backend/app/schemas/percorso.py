@@ -11,6 +11,7 @@ class EsercizioListItem(BaseModel):
     model_config = ConfigDict(from_attributes=True)
     id: uuid.UUID
     tipo: ExerciseType
+    abilita: str
     titolo: str
     ordine: int
     punteggio_max: int
@@ -22,6 +23,7 @@ class EsercizioPubblico(BaseModel):
     id: uuid.UUID
     unita_id: uuid.UUID
     tipo: ExerciseType
+    abilita: str
     titolo: str
     istruzioni: str
     contenuto: dict[str, Any]
@@ -38,10 +40,13 @@ class UnitaListItem(BaseModel):
     sezione: str
     numero: int
     titolo: str
+    tema: str
     descrizione: str
     obiettivi_cefr: list[str]
     ordine: int
 
 
 class UnitaDettaglio(UnitaListItem):
+    lezione: dict[str, Any]
+    lessico: list[dict[str, Any]]
     esercizi: list[EsercizioListItem]

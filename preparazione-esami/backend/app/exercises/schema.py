@@ -194,8 +194,19 @@ def build_correct_answer(tipo: ExerciseType, soluzione: dict) -> dict | None:
 # --------------------------------------------------------------------------- #
 #  Modelli del file di seed
 # --------------------------------------------------------------------------- #
+ABILITA_VALIDE = {
+    "grammatica",
+    "lessico",
+    "comprensione_scritta",
+    "comprensione_orale",
+    "produzione_scritta",
+    "produzione_orale",
+}
+
+
 class SeedEsercizio(BaseModel):
     tipo: ExerciseType
+    abilita: str = "grammatica"
     titolo: str
     istruzioni: str = ""
     contenuto: dict[str, Any]
@@ -205,13 +216,34 @@ class SeedEsercizio(BaseModel):
     tempo_limite_sec: int | None = None
 
 
+class SeedSezioneLezione(BaseModel):
+    titolo: str
+    testo: str = ""
+    tabella: dict[str, Any] | None = None  # { headers: [...], rows: [[...]] }
+    esempi: list[str] = Field(default_factory=list)
+
+
+class SeedLezione(BaseModel):
+    introduzione: str = ""
+    sezioni: list[SeedSezioneLezione] = Field(default_factory=list)
+
+
+class SeedVocabolo(BaseModel):
+    parola: str
+    traduzione: str = ""
+    esempio: str = ""
+
+
 class SeedUnita(BaseModel):
     livello: Literal["A2", "B1"]
     sezione: str
     numero: int
     titolo: str
+    tema: str = ""
     descrizione: str = ""
     obiettivi_cefr: list[str] = Field(default_factory=list)
+    lezione: SeedLezione = Field(default_factory=SeedLezione)
+    lessico: list[SeedVocabolo] = Field(default_factory=list)
     ordine: int = 0
     is_published: bool = True
     esercizi: list[SeedEsercizio] = Field(min_length=1)

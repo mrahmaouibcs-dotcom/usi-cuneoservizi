@@ -44,8 +44,11 @@ async def importa_unita(db: AsyncSession, seed: SeedFile) -> tuple[int, int]:
             )
             db.add(unita)
         unita.titolo = su.titolo
+        unita.tema = su.tema
         unita.descrizione = su.descrizione
         unita.obiettivi_cefr = su.obiettivi_cefr
+        unita.lezione = su.lezione.model_dump()
+        unita.lessico = [v.model_dump() for v in su.lessico]
         unita.ordine = su.ordine
         unita.is_published = su.is_published
         await db.flush()
@@ -62,6 +65,7 @@ async def importa_unita(db: AsyncSession, seed: SeedFile) -> tuple[int, int]:
                 Esercizio(
                     unita_id=unita.id,
                     tipo=ExerciseType(ex.tipo),
+                    abilita=ex.abilita,
                     titolo=ex.titolo,
                     istruzioni=ex.istruzioni,
                     contenuto=ex.contenuto,
