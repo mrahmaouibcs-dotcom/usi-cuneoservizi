@@ -1,6 +1,6 @@
 /* Service Worker — guscio app offline.
    NB: le chiamate API (/api/) NON vengono messe in cache (dati sempre freschi). */
-const CACHE = "prep-esami-v1";
+const CACHE = "prep-esami-v2";
 const SHELL = [
   "./",
   "./index.html",

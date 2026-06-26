@@ -149,6 +149,14 @@ textarea.write { width: 100%; min-height: 160px; font-size: 16px; padding: 12px;
 .nav button.active { color: var(--blu); }
 .nav svg { width: 24px; height: 24px; }
 
+/* audio / pronuncia */
+.speak { flex: 0 0 auto; width: 44px; height: 44px; display: inline-grid; place-items: center; border: 2px solid var(--blu); border-radius: 50%; background: #fff; color: var(--blu); }
+.speak svg { width: 22px; height: 22px; }
+.speak:active { transform: scale(0.92); }
+.speak--grande { width: 52px; height: 52px; background: var(--blu-soft); }
+.speak--grande svg { width: 26px; height: 26px; }
+.audio-riga { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--testo2); font-size: 14px; }
+
 .back { display: inline-flex; align-items: center; gap: 6px; background: none; border: none; color: var(--blu); font-weight: 600; font-size: 16px; padding: 4px 0; margin-bottom: 8px; }
 .fade { animation: fade .25s ease; }
 @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }

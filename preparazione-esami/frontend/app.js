@@ -23,6 +23,48 @@
     return out;
   }
 
+  /* ---------- audio: pronuncia con voce italiana del browser ---------- */
+  const speechOK = typeof window !== "undefined" && "speechSynthesis" in window;
+  function primeVoices() {
+    if (!speechOK) return;
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+  function vocePicker() {
+    if (!speechOK) return null;
+    const v = window.speechSynthesis.getVoices() || [];
+    return v.find((x) => x.lang === "it-IT") || v.find((x) => x.lang && x.lang.toLowerCase().startsWith("it")) || null;
+  }
+  function speak(text) {
+    if (!speechOK || !text) return;
+    try {
+      const s = window.speechSynthesis;
+      s.cancel();
+      const u = new SpeechSynthesisUtterance(String(text));
+      u.lang = "it-IT";
+      const v = vocePicker();
+      if (v) u.voice = v;
+      u.rate = 0.95;
+      s.speak(u);
+    } catch (e) {}
+  }
+  const SpeakerIcon = () => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8 8 0 0 1 0 12"/></svg>`;
+  function Speak({ text, label, variant }) {
+    if (!speechOK || !text) return null;
+    return html`<button type="button" class=${"speak" + (variant ? " speak--" + variant : "")}
+      aria-label=${label || "Ascolta"} title="Ascolta"
+      onClick=${(e) => { e.stopPropagation(); speak(text); }}><${SpeakerIcon} /></button>`;
+  }
+  // testo principale leggibile di un esercizio (per la pronuncia)
+  function testoEsercizio(ex) {
+    const c = ex.contenuto || {};
+    if (c.testo) return c.testo;
+    if (c.domanda) return String(c.domanda).replace(/_{2,}/g, " ... ");
+    if (c.testo_template) return String(c.testo_template).replace(/\{\d+\}/g, " ... ");
+    if (c.prompt) return c.prompt;
+    return null;
+  }
+
   /* =======================================================================
      WIDGET ESERCIZI — ognuno chiama setAnswer(payload)
      ======================================================================= */
@@ -365,7 +407,9 @@
         <div class="progress" style=${{ marginBottom: "6px" }}>
           <div class="progress__fill" style=${{ width: Math.round(((idx + (locked ? 1 : 0)) / lista.length) * 100) + "%" }}></div>
         </div>
-        <p class="progress-label" style=${{ marginBottom: "14px" }}>Esercizio ${idx + 1} di ${lista.length}</p>
+        <p class="progress-label" style=${{ marginBottom: "10px" }}>Esercizio ${idx + 1} di ${lista.length}</p>
+        ${testoEsercizio(ex) ? html`
+          <div class="audio-riga"><${Speak} text=${testoEsercizio(ex)} label="Ascolta la frase" variant="grande" /><span>Ascolta la pronuncia</span></div>` : null}
         ${W ? html`<${W} ex=${ex} answer=${answer} setAnswer=${setAnswer} locked=${locked} risultato=${ris} />`
             : html`<div class="alert alert--err">Tipo di esercizio non supportato.</div>`}
         ${ris ? html`
@@ -572,6 +616,8 @@
     const [attivaToken, setAttivaToken] = useState(null);
 
     const go = (name, params = {}) => setScreen({ name, params });
+
+    useEffect(() => { primeVoices(); }, []);
 
     useEffect(() => {
       const url = new URL(window.location.href);
