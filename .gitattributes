@@ -2,3 +2,6 @@
 # così restano corretti anche se modificati da un PC Windows.
 *.sh text eol=lf
 deploy/* text eol=lf
+
+# Gli script .bat girano su Windows: fine-riga CRLF.
+*.bat text eol=crlf

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+
+  <title>Italiano Facile — Impara l'italiano (A2 e B1)</title>
+  <meta name="description" content="Impara l'italiano per stranieri. Livelli A2 e B1: vocabolario, grammatica ed esercizi. App installabile e offline." />
+
+  <!-- PWA / iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Italiano Facile" />
+  <meta name="theme-color" content="#1B4332" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="root">
+    <!-- Fallback mostrato prima del caricamento di React -->
+    <div class="boot-loader">
+      <div class="boot-flag" aria-hidden="true"></div>
+      <p>Italiano Facile</p>
+    </div>
+  </div>
+
+  <!-- React + htm da CDN (no build tool). htm permette la sintassi tipo-JSX. -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/htm@3.1.1/dist/htm.umd.js" crossorigin></script>
+
+  <!-- Contenuti didattici e logica app -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Registrazione Service Worker -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function () {
+        navigator.serviceWorker.register("sw.js").catch(function (err) {
+          console.warn("Service Worker non registrato:", err);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

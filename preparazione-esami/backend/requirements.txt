@@ -1,0 +1,35 @@
+# --- Web framework ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+
+# --- Validazione / settings ---
+pydantic>=2.6
+pydantic-settings>=2.2
+email-validator>=2.1
+
+# --- Database ---
+SQLAlchemy[asyncio]>=2.0.29
+asyncpg>=0.29          # driver PostgreSQL (produzione)
+aiosqlite>=0.20        # driver SQLite (test/dev rapido)
+alembic>=1.13
+
+# --- Sicurezza ---
+PyJWT>=2.8
+passlib>=1.7.4
+
+# --- Cache / rate-limit ---
+redis>=5.0
+
+# --- LLM / AI feedback ---
+anthropic>=0.40
+
+# --- Storage S3 (solo quando si aggiungeranno gli esercizi audio) ---
+# boto3 ha percorsi molto lunghi che su Windows possono superare il limite
+# dei 260 caratteri ("Long Path"). Lo si reintroduce con la fase audio.
+# boto3>=1.34
+
+# --- Test ---
+pytest>=8.1
+pytest-asyncio>=0.23
+httpx>=0.27
