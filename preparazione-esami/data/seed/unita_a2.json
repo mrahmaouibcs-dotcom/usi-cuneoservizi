@@ -1,0 +1,264 @@
+{
+  "unita": [
+    {
+      "livello": "A2",
+      "sezione": "grammatica",
+      "numero": 1,
+      "titolo": "Il presente indicativo (regolari e irregolari)",
+      "descrizione": "Coniugazione dei verbi regolari (-are, -ere, -ire) e dei principali irregolari (essere, avere, fare, andare) per parlare di abitudini e routine.",
+      "obiettivi_cefr": [
+        "Coniugare i verbi regolari e i principali irregolari al presente indicativo",
+        "Descrivere abitudini e routine quotidiane"
+      ],
+      "ordine": 1,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Scegli la forma corretta",
+          "istruzioni": "Seleziona la coniugazione corretta del verbo.",
+          "contenuto": {
+            "domanda": "Marco _____ in una grande azienda di Milano.",
+            "opzioni": ["lavora", "lavori", "lavorano", "lavorate"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Completa la routine",
+          "istruzioni": "Scegli per ogni spazio la forma corretta del verbo.",
+          "contenuto": {
+            "testo_template": "Ogni mattina io {0} alle sette e poi {1} colazione.",
+            "lacune": [
+              { "opzioni": ["mi sveglio", "ti svegli", "si sveglia"] },
+              { "opzioni": ["faccio", "fai", "fa"] }
+            ]
+          },
+          "soluzione": { "risposte": ["mi sveglio", "faccio"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta.",
+          "contenuto": {
+            "parole": ["Noi", "andiamo", "al", "cinema", "il", "sabato"]
+          },
+          "soluzione": { "frase": "Noi andiamo al cinema il sabato" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "titolo": "Vero, falso o non detto?",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Anna è una studentessa. Studia all'università e lavora part-time in un bar. La sera esce spesso con gli amici.",
+            "affermazioni": [
+              "Anna studia all'università.",
+              "Anna lavora a tempo pieno.",
+              "La sera Anna resta sempre a casa.",
+              "Anna ha venticinque anni."
+            ]
+          },
+          "soluzione": { "risposte": ["vero", "falso", "falso", "non_detto"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Verbi irregolari",
+          "istruzioni": "Seleziona la forma corretta.",
+          "contenuto": {
+            "domanda": "I miei amici _____ molto bene l'italiano.",
+            "opzioni": ["parlano", "parla", "parli", "parliamo"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "titolo": "Abbina il pronome al verbo (essere)",
+          "istruzioni": "Collega ogni pronome alla forma corretta del verbo essere.",
+          "contenuto": {
+            "colonna_a": ["io", "tu", "lui", "noi"],
+            "colonna_b": ["sei", "sono", "è", "siamo"]
+          },
+          "soluzione": { "mappa": { "0": 1, "1": 0, "2": 2, "3": 3 } },
+          "punteggio_max": 10
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "grammatica",
+      "numero": 2,
+      "titolo": "Passato prossimo e imperfetto",
+      "descrizione": "Distinzione d'uso tra passato prossimo (azioni concluse e puntuali) e imperfetto (descrizioni, abitudini e azioni in corso nel passato).",
+      "obiettivi_cefr": [
+        "Distinguere l'uso del passato prossimo e dell'imperfetto",
+        "Raccontare esperienze ed eventi passati"
+      ],
+      "ordine": 2,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Azione conclusa",
+          "istruzioni": "Scegli il tempo verbale corretto.",
+          "contenuto": {
+            "domanda": "Ieri _____ al mare con la mia famiglia.",
+            "opzioni": ["sono andato", "andavo", "vado", "andrò"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Abitudine nel passato",
+          "istruzioni": "Scegli il tempo verbale corretto.",
+          "contenuto": {
+            "domanda": "Da bambino _____ sempre nel parco vicino a casa.",
+            "opzioni": ["giocavo", "ho giocato", "gioco", "giocherò"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Due azioni nel passato",
+          "istruzioni": "Completa con la forma corretta: imperfetto per l'azione in corso, passato prossimo per quella puntuale.",
+          "contenuto": {
+            "testo_template": "Mentre io {0} la televisione, {1} il telefono.",
+            "lacune": [
+              { "opzioni": ["guardavo", "ho guardato", "guarderò"] },
+              { "opzioni": ["è suonato", "suonava", "suonerà"] }
+            ]
+          },
+          "soluzione": { "risposte": ["guardavo", "è suonato"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta al passato prossimo.",
+          "contenuto": {
+            "parole": ["Ieri", "sera", "ho", "mangiato", "una", "pizza", "buonissima"]
+          },
+          "soluzione": { "frase": "Ieri sera ho mangiato una pizza buonissima" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "titolo": "Vero, falso o non detto?",
+          "istruzioni": "Leggi il racconto e valuta le affermazioni.",
+          "contenuto": {
+            "testo": "Quando ero piccola, abitavo in un paese di montagna. D'estate andavamo sempre al lago e mangiavamo il gelato in piazza. Un giorno ho visto un cervo nel bosco.",
+            "affermazioni": [
+              "Da piccola abitava in una grande città.",
+              "D'estate andavano al lago.",
+              "Una volta ha visto un cervo nel bosco.",
+              "Aveva un cane di nome Fido."
+            ]
+          },
+          "soluzione": { "risposte": ["falso", "vero", "vero", "non_detto"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Evento concluso nel passato",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "L'anno scorso noi _____ un bellissimo viaggio in Sicilia.",
+            "opzioni": ["abbiamo fatto", "facevamo", "facciamo", "faremo"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "grammatica",
+      "numero": 3,
+      "titolo": "Pronomi diretti e indiretti",
+      "descrizione": "Uso dei pronomi diretti (lo, la, li, le) e indiretti (gli, le, ci, vi) per evitare ripetizioni e rendere il discorso più naturale.",
+      "obiettivi_cefr": [
+        "Usare correttamente i pronomi diretti e indiretti",
+        "Evitare ripetizioni nel discorso quotidiano"
+      ],
+      "ordine": 3,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Pronome diretto",
+          "istruzioni": "Scegli il pronome corretto.",
+          "contenuto": {
+            "domanda": "Hai visto Maria? — Sì, _____ ho vista ieri.",
+            "opzioni": ["l'", "gli", "le", "li"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Pronome indiretto",
+          "istruzioni": "Scegli il pronome corretto.",
+          "contenuto": {
+            "domanda": "Telefoni spesso a tua madre? — Sì, _____ telefono ogni giorno.",
+            "opzioni": ["le", "la", "gli", "li"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Completa con il pronome",
+          "istruzioni": "Scegli il pronome diretto corretto.",
+          "contenuto": {
+            "testo_template": "Questi sono i miei libri preferiti: {0} leggo sempre volentieri.",
+            "lacune": [ { "opzioni": ["li", "le", "gli", "ci"] } ]
+          },
+          "soluzione": { "risposte": ["li"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta.",
+          "contenuto": {
+            "parole": ["Ti", "ho", "comprato", "un", "regalo"]
+          },
+          "soluzione": { "frase": "Ti ho comprato un regalo" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "titolo": "Abbina l'elemento al pronome",
+          "istruzioni": "Collega ogni elemento al pronome che lo sostituisce.",
+          "contenuto": {
+            "colonna_a": ["a Marco", "Maria", "a noi", "i libri"],
+            "colonna_b": ["gli", "la", "ci", "li"]
+          },
+          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "titolo": "Vero, falso o non detto?",
+          "istruzioni": "Leggi il dialogo e valuta le affermazioni.",
+          "contenuto": {
+            "testo": "— Hai invitato Luca alla festa? — Sì, l'ho invitato. — E hai avvisato Sara di portare il dolce? — Sì, le ho mandato un messaggio.",
+            "affermazioni": [
+              "Luca è stato invitato alla festa.",
+              "Sara deve portare il dolce.",
+              "Hanno telefonato a Sara."
+            ]
+          },
+          "soluzione": { "risposte": ["vero", "vero", "falso"] },
+          "punteggio_max": 10
+        }
+      ]
+    }
+  ]
+}

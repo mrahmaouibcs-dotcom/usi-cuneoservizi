@@ -1,0 +1,283 @@
+{
+  "unita": [
+    {
+      "livello": "B1",
+      "sezione": "grammatica",
+      "numero": 1,
+      "titolo": "Il congiuntivo presente",
+      "descrizione": "Uso del congiuntivo presente dopo verbi ed espressioni di opinione, desiderio e necessità (penso che, è importante che, spero che).",
+      "obiettivi_cefr": [
+        "Usare il congiuntivo presente dopo verbi di opinione, desiderio e necessità",
+        "Esprimere dubbi, opinioni e auspici"
+      ],
+      "ordine": 1,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Dopo un verbo di opinione",
+          "istruzioni": "Scegli la forma corretta del verbo.",
+          "contenuto": {
+            "domanda": "Penso che lui _____ ragione su questo punto.",
+            "opzioni": ["abbia", "ha", "avrà", "aveva"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Dopo un'espressione impersonale",
+          "istruzioni": "Scegli la forma corretta del verbo.",
+          "contenuto": {
+            "domanda": "È importante che voi _____ puntuali alla riunione.",
+            "opzioni": ["siate", "siete", "sarete", "eravate"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Completa con il congiuntivo",
+          "istruzioni": "Scegli la forma corretta del congiuntivo presente.",
+          "contenuto": {
+            "testo_template": "Spero che tu {0} bene e che {1} venire alla riunione.",
+            "lacune": [
+              { "opzioni": ["stia", "stai", "starai"] },
+              { "opzioni": ["possa", "puoi", "potrai"] }
+            ]
+          },
+          "soluzione": { "risposte": ["stia", "possa"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta con il congiuntivo.",
+          "contenuto": {
+            "parole": ["Credo", "che", "questa", "sia", "la", "scelta", "giusta"]
+          },
+          "soluzione": { "frase": "Credo che questa sia la scelta giusta" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "titolo": "Vero, falso o non detto?",
+          "istruzioni": "Leggi il testo e valuta le affermazioni.",
+          "contenuto": {
+            "testo": "Molti pensano che il lavoro da casa sia più comodo. Tuttavia, alcuni credono che riduca i rapporti tra colleghi. È probabile che in futuro le aziende offrano soluzioni miste.",
+            "affermazioni": [
+              "Tutti pensano che il telelavoro sia comodo.",
+              "Alcuni temono che diminuiscano i rapporti tra colleghi.",
+              "Secondo il testo, è probabile che in futuro ci siano soluzioni miste.",
+              "Le aziende hanno già deciso di abolire l'ufficio."
+            ]
+          },
+          "soluzione": { "risposte": ["falso", "vero", "vero", "non_detto"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Tocca la parola sbagliata nella frase (il verbo dovrebbe essere al congiuntivo).",
+          "contenuto": {
+            "parole": ["Voglio", "che", "tu", "vieni", "con", "me", "domani"],
+            "frase": "Voglio che tu vieni con me domani."
+          },
+          "soluzione": {
+            "indici_errati": [3],
+            "correzioni": { "3": "venga" }
+          },
+          "punteggio_max": 10
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "grammatica",
+      "numero": 2,
+      "titolo": "Il periodo ipotetico (I e II tipo)",
+      "descrizione": "Periodo ipotetico della realtà (se + presente → presente/futuro) e della possibilità (se + congiuntivo imperfetto → condizionale presente).",
+      "obiettivi_cefr": [
+        "Costruire periodi ipotetici della realtà e della possibilità",
+        "Formulare ipotesi e descriverne le conseguenze"
+      ],
+      "ordine": 2,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Ipotesi reale",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "Se _____ tempo, vengo volentieri alla festa.",
+            "opzioni": ["ho", "avessi", "avrò", "abbia"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Ipotesi possibile",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "Se _____ più soldi, comprerei una casa al mare.",
+            "opzioni": ["avessi", "ho", "avrò", "abbia"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Completa il periodo ipotetico",
+          "istruzioni": "Completa con congiuntivo imperfetto e condizionale presente.",
+          "contenuto": {
+            "testo_template": "Se tu {0} più tempo libero, cosa {1}?",
+            "lacune": [
+              { "opzioni": ["avessi", "hai", "avrai"] },
+              { "opzioni": ["faresti", "fai", "farai"] }
+            ]
+          },
+          "soluzione": { "risposte": ["avessi", "faresti"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare un periodo ipotetico della possibilità.",
+          "contenuto": {
+            "parole": ["Se", "studiassi", "di", "più", "passeresti", "l'esame"]
+          },
+          "soluzione": { "frase": "Se studiassi di più passeresti l'esame" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Ipotesi reale (conseguenza)",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "Se piove, _____ a casa a guardare un film.",
+            "opzioni": ["resto", "resterei", "restassi", "sia restato"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "titolo": "Vero, falso o non detto?",
+          "istruzioni": "Leggi il testo e valuta le affermazioni.",
+          "contenuto": {
+            "testo": "Se le persone usassero di più i mezzi pubblici, ci sarebbe meno traffico in città. Inoltre, se ognuno riciclasse correttamente, l'ambiente ne trarrebbe grande beneficio.",
+            "affermazioni": [
+              "Il testo descrive fatti reali già avvenuti.",
+              "Usare di più i mezzi pubblici ridurrebbe il traffico.",
+              "Un buon riciclo aiuterebbe l'ambiente."
+            ]
+          },
+          "soluzione": { "risposte": ["falso", "vero", "vero"] },
+          "punteggio_max": 10
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "grammatica",
+      "numero": 3,
+      "titolo": "Connettivi e coesione testuale",
+      "descrizione": "Connettivi di causa, conseguenza, contrasto e aggiunta (perché, perciò, tuttavia, sebbene, inoltre) per collegare le frasi in modo coerente.",
+      "obiettivi_cefr": [
+        "Usare i connettivi logici di causa, conseguenza, contrasto e aggiunta",
+        "Collegare le frasi e i paragrafi in modo coerente e coeso"
+      ],
+      "ordine": 3,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "titolo": "Connettivo di causa",
+          "istruzioni": "Scegli il connettivo corretto.",
+          "contenuto": {
+            "domanda": "Non sono uscito _____ pioveva molto forte.",
+            "opzioni": ["perché", "quindi", "sebbene", "oppure"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Connettivo di conseguenza",
+          "istruzioni": "Scegli il connettivo corretto.",
+          "contenuto": {
+            "domanda": "Ho studiato molto, _____ ho superato l'esame senza problemi.",
+            "opzioni": ["perciò", "perché", "nonostante", "mentre"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "titolo": "Connettivo di contrasto",
+          "istruzioni": "Scegli il connettivo corretto (richiede il congiuntivo).",
+          "contenuto": {
+            "domanda": "_____ fosse molto stanco, ha continuato a lavorare fino a tardi.",
+            "opzioni": ["Sebbene", "Perché", "Quindi", "Poiché"]
+          },
+          "soluzione": { "corretta": 0 },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "titolo": "Completa con i connettivi",
+          "istruzioni": "Scegli il connettivo adatto per ogni spazio.",
+          "contenuto": {
+            "testo_template": "Mi piacerebbe viaggiare; {0}, non ho abbastanza tempo. {1}, cerco di fare brevi gite nel weekend.",
+            "lacune": [
+              { "opzioni": ["tuttavia", "perciò", "poiché"] },
+              { "opzioni": ["Perciò", "Sebbene", "Mentre"] }
+            ]
+          },
+          "soluzione": { "risposte": ["tuttavia", "Perciò"] },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase coerente con un connettivo di causa.",
+          "contenuto": {
+            "parole": ["Mangio", "molta", "frutta", "perché", "fa", "bene", "alla", "salute"]
+          },
+          "soluzione": { "frase": "Mangio molta frutta perché fa bene alla salute" },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "titolo": "Abbina il connettivo alla funzione",
+          "istruzioni": "Collega ogni connettivo alla sua funzione logica.",
+          "contenuto": {
+            "colonna_a": ["perché", "quindi", "ma", "inoltre"],
+            "colonna_b": ["causa", "conseguenza", "contrasto", "aggiunta"]
+          },
+          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "titolo": "Esprimi la tua opinione",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema (fase AI).",
+          "contenuto": {
+            "prompt": "Scrivi un breve testo (60-80 parole) in cui esprimi la tua opinione sull'uso dello smartphone nella vita quotidiana. Usa almeno tre connettivi diversi (es. perché, tuttavia, inoltre).",
+            "parole_min": 60,
+            "parole_max": 80
+          },
+          "soluzione": {
+            "criteri": [
+              "Uso corretto di almeno tre connettivi",
+              "Coerenza e coesione del testo",
+              "Registro adeguato e opinione chiara"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    }
+  ]
+}
