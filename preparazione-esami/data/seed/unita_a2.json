@@ -19,14 +19,49 @@
             "titolo": "I verbi regolari (-are, -ere, -ire)",
             "testo": "Si toglie la desinenza dell'infinito (-are, -ere, -ire) e si aggiungono le terminazioni del presente.",
             "tabella": {
-              "headers": ["Pronome", "parlare", "prendere", "dormire"],
+              "headers": [
+                "Pronome",
+                "parlare",
+                "prendere",
+                "dormire"
+              ],
               "rows": [
-                ["io", "parlo", "prendo", "dormo"],
-                ["tu", "parli", "prendi", "dormi"],
-                ["lui/lei", "parla", "prende", "dorme"],
-                ["noi", "parliamo", "prendiamo", "dormiamo"],
-                ["voi", "parlate", "prendete", "dormite"],
-                ["loro", "parlano", "prendono", "dormono"]
+                [
+                  "io",
+                  "parlo",
+                  "prendo",
+                  "dormo"
+                ],
+                [
+                  "tu",
+                  "parli",
+                  "prendi",
+                  "dormi"
+                ],
+                [
+                  "lui/lei",
+                  "parla",
+                  "prende",
+                  "dorme"
+                ],
+                [
+                  "noi",
+                  "parliamo",
+                  "prendiamo",
+                  "dormiamo"
+                ],
+                [
+                  "voi",
+                  "parlate",
+                  "prendete",
+                  "dormite"
+                ],
+                [
+                  "loro",
+                  "parlano",
+                  "prendono",
+                  "dormono"
+                ]
               ]
             },
             "esempi": [
@@ -38,14 +73,56 @@
             "titolo": "I verbi irregolari più comuni",
             "testo": "Alcuni verbi molto usati sono irregolari: essere, avere, fare, andare. È utile impararli a memoria.",
             "tabella": {
-              "headers": ["Pronome", "essere", "avere", "fare", "andare"],
+              "headers": [
+                "Pronome",
+                "essere",
+                "avere",
+                "fare",
+                "andare"
+              ],
               "rows": [
-                ["io", "sono", "ho", "faccio", "vado"],
-                ["tu", "sei", "hai", "fai", "vai"],
-                ["lui/lei", "è", "ha", "fa", "va"],
-                ["noi", "siamo", "abbiamo", "facciamo", "andiamo"],
-                ["voi", "siete", "avete", "fate", "andate"],
-                ["loro", "sono", "hanno", "fanno", "vanno"]
+                [
+                  "io",
+                  "sono",
+                  "ho",
+                  "faccio",
+                  "vado"
+                ],
+                [
+                  "tu",
+                  "sei",
+                  "hai",
+                  "fai",
+                  "vai"
+                ],
+                [
+                  "lui/lei",
+                  "è",
+                  "ha",
+                  "fa",
+                  "va"
+                ],
+                [
+                  "noi",
+                  "siamo",
+                  "abbiamo",
+                  "facciamo",
+                  "andiamo"
+                ],
+                [
+                  "voi",
+                  "siete",
+                  "avete",
+                  "fate",
+                  "andate"
+                ],
+                [
+                  "loro",
+                  "sono",
+                  "hanno",
+                  "fanno",
+                  "vanno"
+                ]
               ]
             },
             "esempi": [
@@ -56,12 +133,36 @@
         ]
       },
       "lessico": [
-        { "parola": "lavorare", "traduzione": "to work", "esempio": "Lavoro in un ufficio in centro." },
-        { "parola": "abitare", "traduzione": "to live (reside)", "esempio": "Abito a Roma da tre anni." },
-        { "parola": "studiare", "traduzione": "to study", "esempio": "Studio l'italiano la sera." },
-        { "parola": "svegliarsi", "traduzione": "to wake up", "esempio": "Mi sveglio alle sette." },
-        { "parola": "andare", "traduzione": "to go", "esempio": "Vado al lavoro in autobus." },
-        { "parola": "fare colazione", "traduzione": "to have breakfast", "esempio": "Faccio colazione con un caffè." }
+        {
+          "parola": "lavorare",
+          "traduzione": "to work",
+          "esempio": "Lavoro in un ufficio in centro."
+        },
+        {
+          "parola": "abitare",
+          "traduzione": "to live (reside)",
+          "esempio": "Abito a Roma da tre anni."
+        },
+        {
+          "parola": "studiare",
+          "traduzione": "to study",
+          "esempio": "Studio l'italiano la sera."
+        },
+        {
+          "parola": "svegliarsi",
+          "traduzione": "to wake up",
+          "esempio": "Mi sveglio alle sette."
+        },
+        {
+          "parola": "andare",
+          "traduzione": "to go",
+          "esempio": "Vado al lavoro in autobus."
+        },
+        {
+          "parola": "fare colazione",
+          "traduzione": "to have breakfast",
+          "esempio": "Faccio colazione con un caffè."
+        }
       ],
       "ordine": 1,
       "is_published": true,
@@ -73,9 +174,16 @@
           "istruzioni": "Scegli la forma corretta del presente.",
           "contenuto": {
             "domanda": "Marco _____ in una grande azienda di Milano.",
-            "opzioni": ["lavora", "lavori", "lavorano", "lavorate"]
+            "opzioni": [
+              "lavora",
+              "lavori",
+              "lavorano",
+              "lavorate"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
@@ -86,11 +194,28 @@
           "contenuto": {
             "testo_template": "Ogni mattina io {0} alle sette e poi {1} colazione.",
             "lacune": [
-              { "opzioni": ["mi sveglio", "ti svegli", "si sveglia"] },
-              { "opzioni": ["faccio", "fai", "fa"] }
+              {
+                "opzioni": [
+                  "mi sveglio",
+                  "ti svegli",
+                  "si sveglia"
+                ]
+              },
+              {
+                "opzioni": [
+                  "faccio",
+                  "fai",
+                  "fa"
+                ]
+              }
             ]
           },
-          "soluzione": { "risposte": ["mi sveglio", "faccio"] },
+          "soluzione": {
+            "risposte": [
+              "mi sveglio",
+              "faccio"
+            ]
+          },
           "punteggio_max": 10
         },
         {
@@ -100,9 +225,16 @@
           "istruzioni": "Scegli la forma corretta.",
           "contenuto": {
             "domanda": "I miei amici _____ molto bene l'italiano.",
-            "opzioni": ["parlano", "parla", "parli", "parliamo"]
+            "opzioni": [
+              "parlano",
+              "parla",
+              "parli",
+              "parliamo"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
@@ -111,10 +243,27 @@
           "titolo": "Abbina il pronome al verbo (essere)",
           "istruzioni": "Collega ogni pronome alla forma corretta del verbo essere.",
           "contenuto": {
-            "colonna_a": ["io", "tu", "lui", "noi"],
-            "colonna_b": ["sei", "sono", "è", "siamo"]
+            "colonna_a": [
+              "io",
+              "tu",
+              "lui",
+              "noi"
+            ],
+            "colonna_b": [
+              "sei",
+              "sono",
+              "è",
+              "siamo"
+            ]
           },
-          "soluzione": { "mappa": { "0": 1, "1": 0, "2": 2, "3": 3 } },
+          "soluzione": {
+            "mappa": {
+              "0": 1,
+              "1": 0,
+              "2": 2,
+              "3": 3
+            }
+          },
           "punteggio_max": 10
         },
         {
@@ -123,11 +272,20 @@
           "titolo": "Rimetti in ordine",
           "istruzioni": "Ordina le parole per formare una frase corretta.",
           "contenuto": {
-            "parole": ["Noi", "andiamo", "al", "cinema", "il", "sabato"]
+            "parole": [
+              "Noi",
+              "andiamo",
+              "al",
+              "cinema",
+              "il",
+              "sabato"
+            ]
           },
           "soluzione": {
             "frase": "Noi andiamo al cinema il sabato",
-            "accettate": ["Il sabato noi andiamo al cinema"]
+            "accettate": [
+              "Il sabato noi andiamo al cinema"
+            ]
           },
           "punteggio_max": 10
         },
@@ -137,10 +295,27 @@
           "titolo": "Lessico: i verbi e la traduzione",
           "istruzioni": "Collega ogni verbo alla traduzione in inglese.",
           "contenuto": {
-            "colonna_a": ["lavorare", "abitare", "studiare", "fare colazione"],
-            "colonna_b": ["to work", "to live", "to study", "to have breakfast"]
+            "colonna_a": [
+              "lavorare",
+              "abitare",
+              "studiare",
+              "fare colazione"
+            ],
+            "colonna_b": [
+              "to work",
+              "to live",
+              "to study",
+              "to have breakfast"
+            ]
           },
-          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
           "punteggio_max": 10
         },
         {
@@ -157,7 +332,14 @@
               "Anna ha venticinque anni."
             ]
           },
-          "soluzione": { "risposte": ["vero", "falso", "falso", "non_detto"] },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "falso",
+              "non_detto"
+            ]
+          },
           "punteggio_max": 10
         },
         {
@@ -173,7 +355,13 @@
               "La sera Luca studia inglese."
             ]
           },
-          "soluzione": { "risposte": ["vero", "falso", "vero"] },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero"
+            ]
+          },
           "punteggio_max": 10
         },
         {
@@ -194,6 +382,26 @@
             ]
           },
           "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: la tua giornata",
+          "istruzioni": "Tocca 'Parla' e descrivi la tua giornata. Il sistema valuterà la tua risposta.",
+          "contenuto": {
+            "prompt": "Descrivi la tua giornata tipica: a che ora ti svegli, cosa fai la mattina, dove lavori o studi e cosa fai la sera. Usa il presente indicativo.",
+            "traccia_modello": "Mi chiamo Sara. La mattina mi sveglio alle sette, faccio colazione e vado al lavoro in autobus. Lavoro in un negozio. La sera studio l'italiano e poi guardo un film.",
+            "parole_min": 30,
+            "parole_max": 50
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il presente indicativo correttamente",
+              "Descrive le azioni della giornata in ordine",
+              "Pronuncia comprensibile e frasi complete"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     },
@@ -203,10 +411,167 @@
       "numero": 2,
       "titolo": "Raccontare il passato: passato prossimo e imperfetto",
       "tema": "Esperienze, ricordi ed eventi passati",
-      "descrizione": "Distinzione d'uso tra passato prossimo (azioni concluse e puntuali) e imperfetto (descrizioni, abitudini e azioni in corso nel passato).",
+      "descrizione": "Raccontare esperienze e ricordi distinguendo l'uso del passato prossimo (azioni concluse e puntuali) dall'imperfetto (descrizioni, abitudini e azioni in corso nel passato).",
       "obiettivi_cefr": [
-        "Sa raccontare esperienze ed eventi passati",
-        "Sa distinguere l'uso del passato prossimo e dell'imperfetto"
+        "Sa raccontare esperienze ed eventi passati in modo semplice",
+        "Sa distinguere e usare il passato prossimo e l'imperfetto",
+        "Sa descrivere persone, luoghi e abitudini del passato"
+      ],
+      "lezione": {
+        "introduzione": "Per parlare del passato in italiano usiamo soprattutto due tempi: il passato prossimo e l'imperfetto. Il passato prossimo indica azioni concluse e puntuali ('ieri sono andato al mare'). L'imperfetto descrive situazioni, abitudini e azioni in corso nel passato ('da bambino giocavo sempre fuori'). Spesso i due tempi compaiono insieme nello stesso racconto.",
+        "sezioni": [
+          {
+            "titolo": "La formazione del passato prossimo",
+            "testo": "Il passato prossimo si forma con il presente dell'ausiliare avere o essere più il participio passato del verbo. Con essere il participio concorda nel genere e nel numero con il soggetto (andato/andata/andati/andate); con avere resta invariato. I participi regolari finiscono in -ato (-are), -uto (-ere), -ito (-ire).",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "avere + mangiato",
+                "essere + andato/a"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "ho mangiato",
+                  "sono andato/a"
+                ],
+                [
+                  "tu",
+                  "hai mangiato",
+                  "sei andato/a"
+                ],
+                [
+                  "lui/lei",
+                  "ha mangiato",
+                  "è andato/a"
+                ],
+                [
+                  "noi",
+                  "abbiamo mangiato",
+                  "siamo andati/e"
+                ],
+                [
+                  "voi",
+                  "avete mangiato",
+                  "siete andati/e"
+                ],
+                [
+                  "loro",
+                  "hanno mangiato",
+                  "sono andati/e"
+                ]
+              ]
+            },
+            "esempi": [
+              "Ieri ho mangiato una pizza con gli amici.",
+              "La settimana scorsa Maria è andata a Roma."
+            ]
+          },
+          {
+            "titolo": "La formazione dell'imperfetto",
+            "testo": "L'imperfetto è un tempo semplice: si toglie la desinenza -re dell'infinito e si aggiungono le terminazioni -vo, -vi, -va, -vamo, -vate, -vano. È quasi sempre regolare per tutti e tre i gruppi di verbi.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "parlare",
+                "prendere",
+                "dormire"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "parlavo",
+                  "prendevo",
+                  "dormivo"
+                ],
+                [
+                  "tu",
+                  "parlavi",
+                  "prendevi",
+                  "dormivi"
+                ],
+                [
+                  "lui/lei",
+                  "parlava",
+                  "prendeva",
+                  "dormiva"
+                ],
+                [
+                  "noi",
+                  "parlavamo",
+                  "prendevamo",
+                  "dormivamo"
+                ],
+                [
+                  "voi",
+                  "parlavate",
+                  "prendevate",
+                  "dormivate"
+                ],
+                [
+                  "loro",
+                  "parlavano",
+                  "prendevano",
+                  "dormivano"
+                ]
+              ]
+            },
+            "esempi": [
+              "Da bambino dormivo sempre con la luce accesa.",
+              "Ogni estate parlavamo inglese con i turisti."
+            ]
+          },
+          {
+            "titolo": "Quando usare l'uno o l'altro",
+            "testo": "Usiamo il passato prossimo per azioni concluse, singole e con un inizio e una fine ('ho finito i compiti'). Usiamo l'imperfetto per descrizioni, stati d'animo, abitudini ripetute e azioni che erano in corso ('faceva freddo', 'andavo sempre a scuola a piedi'). Spesso l'imperfetto fa da sfondo e il passato prossimo segna l'evento che interrompe: 'Mentre leggevo, è suonato il telefono'.",
+            "esempi": [
+              "Mentre cucinavo, è arrivato mio fratello.",
+              "Faceva caldo, così siamo andati in piscina."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "ricordo",
+          "traduzione": "memory",
+          "esempio": "Ho un bel ricordo di quelle vacanze."
+        },
+        {
+          "parola": "infanzia",
+          "traduzione": "childhood",
+          "esempio": "Durante l'infanzia abitavo in campagna."
+        },
+        {
+          "parola": "una volta",
+          "traduzione": "once / in the past",
+          "esempio": "Una volta non c'erano i telefoni."
+        },
+        {
+          "parola": "improvvisamente",
+          "traduzione": "suddenly",
+          "esempio": "Improvvisamente ha cominciato a piovere."
+        },
+        {
+          "parola": "raccontare",
+          "traduzione": "to tell / to narrate",
+          "esempio": "La nonna ci raccontava sempre delle storie."
+        },
+        {
+          "parola": "succedere",
+          "traduzione": "to happen",
+          "esempio": "Che cosa è successo ieri sera?"
+        },
+        {
+          "parola": "spesso",
+          "traduzione": "often",
+          "esempio": "Da ragazzo andavo spesso al cinema."
+        },
+        {
+          "parola": "evento",
+          "traduzione": "event",
+          "esempio": "È stato un evento indimenticabile."
+        }
       ],
       "ordine": 2,
       "is_published": true,
@@ -214,13 +579,20 @@
         {
           "tipo": "MCQ",
           "abilita": "grammatica",
-          "titolo": "Azione conclusa",
+          "titolo": "Azione conclusa nel passato",
           "istruzioni": "Scegli il tempo verbale corretto.",
           "contenuto": {
             "domanda": "Ieri _____ al mare con la mia famiglia.",
-            "opzioni": ["sono andato", "andavo", "vado", "andrò"]
+            "opzioni": [
+              "sono andato",
+              "andavo",
+              "vado",
+              "andrò"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
@@ -230,24 +602,75 @@
           "istruzioni": "Scegli il tempo verbale corretto.",
           "contenuto": {
             "domanda": "Da bambino _____ sempre nel parco vicino a casa.",
-            "opzioni": ["giocavo", "ho giocato", "gioco", "giocherò"]
+            "opzioni": [
+              "giocavo",
+              "ho giocato",
+              "gioco",
+              "giocherò"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "FILL",
           "abilita": "grammatica",
-          "titolo": "Due azioni nel passato",
+          "titolo": "Sfondo ed evento",
           "istruzioni": "Completa: imperfetto per l'azione in corso, passato prossimo per quella puntuale.",
           "contenuto": {
-            "testo_template": "Mentre io {0} la televisione, {1} il telefono.",
+            "testo_template": "Mentre io {0} la televisione, all'improvviso {1} il telefono.",
             "lacune": [
-              { "opzioni": ["guardavo", "ho guardato", "guarderò"] },
-              { "opzioni": ["è suonato", "suonava", "suonerà"] }
+              {
+                "opzioni": [
+                  "guardavo",
+                  "ho guardato",
+                  "guarderò"
+                ]
+              },
+              {
+                "opzioni": [
+                  "è suonato",
+                  "suonava",
+                  "suonerà"
+                ]
+              }
             ]
           },
-          "soluzione": { "risposte": ["guardavo", "è suonato"] },
+          "soluzione": {
+            "risposte": [
+              "guardavo",
+              "è suonato"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'ausiliare sbagliato",
+          "istruzioni": "Trova la parola sbagliata nella frase al passato prossimo.",
+          "contenuto": {
+            "parole": [
+              "Maria",
+              "ha",
+              "andata",
+              "al",
+              "cinema",
+              "ieri",
+              "sera"
+            ],
+            "frase": "Maria ha andata al cinema ieri sera"
+          },
+          "soluzione": {
+            "indici_errati": [
+              1
+            ],
+            "correzioni": {
+              "1": "è"
+            }
+          },
           "punteggio_max": 10
         },
         {
@@ -256,18 +679,57 @@
           "titolo": "Rimetti in ordine",
           "istruzioni": "Ordina le parole per formare una frase al passato prossimo.",
           "contenuto": {
-            "parole": ["Ieri", "sera", "ho", "mangiato", "una", "pizza", "buonissima"]
+            "parole": [
+              "Ieri",
+              "sera",
+              "ho",
+              "mangiato",
+              "una",
+              "pizza",
+              "buonissima"
+            ]
           },
-          "soluzione": { "frase": "Ieri sera ho mangiato una pizza buonissima" },
+          "soluzione": {
+            "frase": "Ieri sera ho mangiato una pizza buonissima"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: parola e traduzione",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "ricordo",
+              "infanzia",
+              "raccontare",
+              "improvvisamente"
+            ],
+            "colonna_b": [
+              "memory",
+              "childhood",
+              "to tell",
+              "suddenly"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "TRUE_FALSE",
           "abilita": "comprensione_scritta",
           "titolo": "Lettura: un ricordo d'infanzia",
-          "istruzioni": "Leggi il racconto e valuta le affermazioni.",
+          "istruzioni": "Leggi il racconto e indica se ogni affermazione è vera, falsa o non presente nel testo.",
           "contenuto": {
-            "testo": "Quando ero piccola, abitavo in un paese di montagna. D'estate andavamo sempre al lago e mangiavamo il gelato in piazza. Un giorno ho visto un cervo nel bosco.",
+            "testo": "Quando ero piccola, abitavo in un paese di montagna. D'estate andavamo sempre al lago e mangiavamo il gelato in piazza. Un giorno ho visto un cervo nel bosco e sono tornata a casa molto contenta.",
             "affermazioni": [
               "Da piccola abitava in una grande città.",
               "D'estate andavano al lago.",
@@ -275,20 +737,79 @@
               "Aveva un cane di nome Fido."
             ]
           },
-          "soluzione": { "risposte": ["falso", "vero", "vero", "non_detto"] },
+          "soluzione": {
+            "risposte": [
+              "falso",
+              "vero",
+              "vero",
+              "non_detto"
+            ]
+          },
           "punteggio_max": 10
         },
         {
-          "tipo": "MCQ",
-          "abilita": "grammatica",
-          "titolo": "Evento concluso",
-          "istruzioni": "Scegli la forma corretta.",
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: la festa di Paolo",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non dette.",
           "contenuto": {
-            "domanda": "L'anno scorso noi _____ un bellissimo viaggio in Sicilia.",
-            "opzioni": ["abbiamo fatto", "facevamo", "facciamo", "faremo"]
+            "testo": "Sabato scorso sono andato alla festa di compleanno di Paolo. C'erano molti amici e la musica era bellissima. Mentre ballavo, ho incontrato un vecchio compagno di scuola. Abbiamo parlato per ore e siamo tornati a casa molto tardi.",
+            "affermazioni": [
+              "La festa era per il compleanno di Paolo.",
+              "Alla festa non c'era nessuno.",
+              "Ha incontrato un vecchio compagno di scuola.",
+              "La festa è finita alle nove di sera."
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
           "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: un ricordo del passato",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Racconta un ricordo della tua infanzia in 40-60 parole: dove abitavi, che cosa facevi di solito (imperfetto) e un episodio particolare che ti è successo (passato prossimo).",
+            "parole_min": 40,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente sia l'imperfetto sia il passato prossimo",
+              "Distingue le abitudini/descrizioni dagli eventi puntuali",
+              "Fornisce le informazioni richieste (luogo, abitudini, episodio)",
+              "Testo comprensibile e coerente"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: le tue ultime vacanze",
+          "istruzioni": "Rispondi a voce. Il browser trascrive e il sistema valuta la tua risposta.",
+          "contenuto": {
+            "prompt": "Racconta le tue ultime vacanze in 40-60 parole: dove sei andato/a e che cosa hai fatto (passato prossimo), com'era il posto e che tempo faceva (imperfetto).",
+            "traccia_modello": "L'estate scorsa sono andato in Sicilia con i miei amici. Il mare era bellissimo e faceva molto caldo. Ogni mattina andavamo in spiaggia e la sera mangiavamo il pesce al ristorante. Un giorno abbiamo visitato un vulcano: è stata un'esperienza fantastica.",
+            "parole_min": 40,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente passato prossimo e imperfetto",
+              "Risponde a tutte le parti della consegna (luogo, attività, descrizione, tempo)",
+              "Pronuncia e fluidità adeguate al livello A2"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     },
@@ -298,10 +819,169 @@
       "numero": 3,
       "titolo": "Parlare in modo naturale: pronomi diretti e indiretti",
       "tema": "Relazioni quotidiane e comunicazione",
-      "descrizione": "Uso dei pronomi diretti (lo, la, li, le) e indiretti (gli, le, ci, vi) per evitare ripetizioni.",
+      "descrizione": "Uso dei pronomi diretti (lo, la, li, le, l') e indiretti (gli, le, ci, vi) per evitare ripetizioni nel discorso quotidiano.",
       "obiettivi_cefr": [
-        "Sa usare i pronomi diretti e indiretti",
-        "Sa evitare ripetizioni nel discorso quotidiano"
+        "Sa usare i pronomi diretti per sostituire l'oggetto e non ripetere le parole",
+        "Sa usare i pronomi indiretti con i verbi come telefonare, scrivere e parlare",
+        "Sa accordare il participio passato con il pronome diretto al passato prossimo"
+      ],
+      "lezione": {
+        "introduzione": "Per non ripetere sempre le stesse parole, in italiano usiamo i pronomi. I pronomi diretti sostituiscono l'oggetto diretto (senza preposizione): \"Compro il pane\" → \"Lo compro\". I pronomi indiretti sostituiscono la persona introdotta dalla preposizione \"a\": \"Telefono a Marco\" → \"Gli telefono\". Di solito il pronome va prima del verbo.",
+        "sezioni": [
+          {
+            "titolo": "I pronomi diretti",
+            "testo": "Il pronome diretto sostituisce l'oggetto diretto, cioè la cosa o la persona che riceve l'azione senza preposizione. Davanti a una vocale, lo e la diventano l'. I pronomi li e le non si apostrofano mai.",
+            "tabella": {
+              "headers": [
+                "Sostituisce",
+                "Pronome diretto",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "maschile singolare",
+                  "lo (l')",
+                  "Il caffè? Lo bevo."
+                ],
+                [
+                  "femminile singolare",
+                  "la (l')",
+                  "La pizza? La mangio."
+                ],
+                [
+                  "maschile plurale",
+                  "li",
+                  "I libri? Li leggo."
+                ],
+                [
+                  "femminile plurale",
+                  "le",
+                  "Le mele? Le compro."
+                ]
+              ]
+            },
+            "esempi": [
+              "Conosci Anna? Sì, la conosco bene.",
+              "Vuoi questi biscotti? No, non li voglio."
+            ]
+          },
+          {
+            "titolo": "I pronomi indiretti",
+            "testo": "Il pronome indiretto sostituisce la persona introdotta dalla preposizione \"a\". Si usa con verbi come telefonare, scrivere, parlare, rispondere, regalare. Attenzione: \"le\" significa \"a lei\", mentre \"gli\" significa \"a lui\".",
+            "tabella": {
+              "headers": [
+                "Sostituisce",
+                "Pronome indiretto",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "a lui",
+                  "gli",
+                  "A Marco scrivo → Gli scrivo."
+                ],
+                [
+                  "a lei",
+                  "le",
+                  "A Sara scrivo → Le scrivo."
+                ],
+                [
+                  "a noi",
+                  "ci",
+                  "A noi telefoni → Ci telefoni."
+                ],
+                [
+                  "a voi",
+                  "vi",
+                  "A voi parlo → Vi parlo."
+                ]
+              ]
+            },
+            "esempi": [
+              "Hai risposto a tua madre? Sì, le ho risposto.",
+              "Quando vedi i tuoi amici, gli racconti tutto."
+            ]
+          },
+          {
+            "titolo": "L'accordo del participio al passato prossimo",
+            "testo": "Con il pronome diretto (lo, la, li, le), al passato prossimo il participio passato si accorda in genere e numero con il pronome. Con i pronomi indiretti, invece, il participio non cambia e resta al maschile singolare.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "Frase al passato",
+                "Participio"
+              ],
+              "rows": [
+                [
+                  "la (Maria)",
+                  "L'ho vista ieri.",
+                  "vista (femm. sing.)"
+                ],
+                [
+                  "li (i libri)",
+                  "Li ho letti.",
+                  "letti (masch. plur.)"
+                ],
+                [
+                  "le (le foto)",
+                  "Le ho viste.",
+                  "viste (femm. plur.)"
+                ],
+                [
+                  "le (a Sara)",
+                  "Le ho scritto.",
+                  "scritto (invariabile)"
+                ]
+              ]
+            },
+            "esempi": [
+              "Hai comprato la frutta? Sì, l'ho comprata.",
+              "Hai telefonato a Luca? Sì, gli ho telefonato."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "invitare",
+          "traduzione": "to invite",
+          "esempio": "Invito gli amici alla festa e li aspetto alle otto."
+        },
+        {
+          "parola": "ringraziare",
+          "traduzione": "to thank",
+          "esempio": "Le ho regalato un libro e lei mi ha ringraziato."
+        },
+        {
+          "parola": "messaggio",
+          "traduzione": "message",
+          "esempio": "Ti mando un messaggio quando arrivo."
+        },
+        {
+          "parola": "regalo",
+          "traduzione": "gift",
+          "esempio": "Ho comprato un regalo per Sara e gliel'ho dato ieri."
+        },
+        {
+          "parola": "avvisare",
+          "traduzione": "to warn / to let know",
+          "esempio": "Se faccio tardi, ti avviso."
+        },
+        {
+          "parola": "incontrare",
+          "traduzione": "to meet",
+          "esempio": "Incontro Marco in centro e lo saluto."
+        },
+        {
+          "parola": "rispondere",
+          "traduzione": "to answer / to reply",
+          "esempio": "Le ho scritto, ma non mi ha ancora risposto."
+        },
+        {
+          "parola": "fidarsi",
+          "traduzione": "to trust",
+          "esempio": "Mi fido di lei perché è una vera amica."
+        }
       ],
       "ordine": 3,
       "is_published": true,
@@ -309,37 +989,499 @@
         {
           "tipo": "MCQ",
           "abilita": "grammatica",
-          "titolo": "Pronome diretto",
-          "istruzioni": "Scegli il pronome corretto.",
+          "titolo": "Pronome diretto femminile",
+          "istruzioni": "Scegli il pronome diretto corretto.",
           "contenuto": {
             "domanda": "Hai visto Maria? — Sì, _____ ho vista ieri.",
-            "opzioni": ["l'", "gli", "le", "li"]
+            "opzioni": [
+              "l'",
+              "gli",
+              "le",
+              "li"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MCQ",
           "abilita": "grammatica",
           "titolo": "Pronome indiretto",
-          "istruzioni": "Scegli il pronome corretto.",
+          "istruzioni": "Scegli il pronome indiretto corretto.",
           "contenuto": {
             "domanda": "Telefoni spesso a tua madre? — Sì, _____ telefono ogni giorno.",
-            "opzioni": ["le", "la", "gli", "li"]
+            "opzioni": [
+              "le",
+              "la",
+              "li",
+              "lo"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "FILL",
           "abilita": "grammatica",
-          "titolo": "Completa con il pronome",
-          "istruzioni": "Scegli il pronome diretto corretto.",
+          "titolo": "Diretto o indiretto?",
+          "istruzioni": "Completa con il pronome corretto: diretto per l'oggetto, indiretto per la persona con \"a\".",
           "contenuto": {
-            "testo_template": "Questi sono i miei libri preferiti: {0} leggo sempre volentieri.",
-            "lacune": [ { "opzioni": ["li", "le", "gli", "ci"] } ]
+            "testo_template": "Questi sono i miei libri preferiti: {0} leggo sempre volentieri. Quando vedo Marco, {1} parlo dei miei libri.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "li",
+                  "le",
+                  "gli",
+                  "ci"
+                ]
+              },
+              {
+                "opzioni": [
+                  "gli",
+                  "lo",
+                  "li",
+                  "la"
+                ]
+              }
+            ]
           },
-          "soluzione": { "risposte": ["li"] },
+          "soluzione": {
+            "risposte": [
+              "li",
+              "gli"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Accordo del participio",
+          "istruzioni": "Trova la parola sbagliata: il participio deve accordarsi con il pronome diretto.",
+          "contenuto": {
+            "parole": [
+              "Hai",
+              "comprato",
+              "le",
+              "mele?",
+              "Sì,",
+              "le",
+              "ho",
+              "comprato"
+            ],
+            "frase": "Hai comprato le mele? Sì, le ho comprato"
+          },
+          "soluzione": {
+            "indici_errati": [
+              7
+            ],
+            "correzioni": {
+              "7": "comprate"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta con il pronome indiretto.",
+          "contenuto": {
+            "parole": [
+              "Ti",
+              "ho",
+              "comprato",
+              "un",
+              "regalo"
+            ]
+          },
+          "soluzione": {
+            "frase": "Ti ho comprato un regalo"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: parola e traduzione",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "invitare",
+              "ringraziare",
+              "messaggio",
+              "avvisare"
+            ],
+            "colonna_b": [
+              "to invite",
+              "to thank",
+              "message",
+              "to let know"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: organizzare una festa",
+          "istruzioni": "Leggi il dialogo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "— Hai invitato Luca alla festa? — Sì, l'ho invitato ieri. — E hai avvisato Sara di portare il dolce? — Sì, le ho mandato un messaggio. Lei mi ha risposto subito: porta una torta al cioccolato. — Perfetto, allora compro io le bibite e le metto in frigo.",
+            "affermazioni": [
+              "Luca è stato invitato alla festa.",
+              "Sara deve portare il dolce.",
+              "Hanno telefonato a Sara.",
+              "Luca abita vicino a Sara."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: una telefonata",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Ciao, sono Giulia. Volevo dirti che ho parlato con Paolo: l'ho incontrato stamattina al bar e gli ho dato il tuo numero. Lui ti chiamerà domani per il progetto. Ah, e ho comprato i biglietti per il concerto: li ho già pagati io, mi dai i soldi quando ci vediamo. A presto!",
+            "affermazioni": [
+              "Giulia ha incontrato Paolo al bar.",
+              "Giulia ha dato a Paolo il numero di telefono.",
+              "Giulia non ha ancora comprato i biglietti."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: un messaggio a un amico",
+          "istruzioni": "Scrivi un breve messaggio. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Scrivi un messaggio a un amico (30-45 parole) per organizzare una cena. Di': chi inviti e se l'hai già avvisato, che cosa porti tu e che cosa chiedi all'amico di portare. Usa almeno due pronomi (diretti o indiretti).",
+            "parole_min": 30,
+            "parole_max": 45
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente almeno due pronomi diretti o indiretti",
+              "Fornisce le informazioni richieste (chi inviti, cosa porti, cosa chiedi)",
+              "Testo comprensibile, coerente e adatto a un messaggio informale"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: rispondi alle domande",
+          "istruzioni": "Rispondi a voce alle domande. Il sistema trascriverà e valuterà la tua risposta.",
+          "contenuto": {
+            "prompt": "Rispondi a queste domande usando i pronomi per non ripetere le parole: Vedi spesso i tuoi amici? Quando li incontri, di cosa parlate? Telefoni o scrivi spesso ai tuoi genitori? Parla per circa 40-60 parole.",
+            "traccia_modello": "Sì, vedo spesso i miei amici: li incontro il fine settimana in centro. Quando li vedo, parliamo del lavoro e dei film. Ai miei genitori telefono ogni domenica: gli racconto la mia settimana. A mia madre scrivo anche dei messaggi e lei mi risponde subito.",
+            "parole_min": 40,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente i pronomi diretti e indiretti per evitare ripetizioni",
+              "Risponde a tutte le domande in modo chiaro e coerente"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "unità",
+      "numero": 4,
+      "titolo": "La famiglia e la casa",
+      "tema": "Descrivere la famiglia, le persone e gli ambienti della casa",
+      "descrizione": "Parlare dei membri della famiglia e degli ambienti della casa usando gli aggettivi possessivi e l'accordo dell'aggettivo per descrizioni fisiche e di carattere.",
+      "obiettivi_cefr": [
+        "Sa descrivere la propria famiglia e le persone vicine",
+        "Sa usare gli aggettivi possessivi con e senza articolo",
+        "Sa descrivere ambienti della casa con aggettivi accordati al nome"
+      ],
+      "lezione": {
+        "introduzione": "Gli aggettivi possessivi indicano a chi appartiene una persona o una cosa (mio, tuo, suo...). In italiano di solito sono preceduti dall'articolo. In questa unità impariamo anche ad accordare gli aggettivi con il nome per descrivere le persone e la casa.",
+        "sezioni": [
+          {
+            "titolo": "Gli aggettivi possessivi",
+            "testo": "Il possessivo concorda in genere e numero con la cosa posseduta, non con il possessore. Di solito si usa con l'articolo determinativo: la mia casa, i tuoi libri.",
+            "tabella": {
+              "headers": [
+                "Possessore",
+                "maschile singolare",
+                "femminile singolare",
+                "maschile plurale",
+                "femminile plurale"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "il mio",
+                  "la mia",
+                  "i miei",
+                  "le mie"
+                ],
+                [
+                  "tu",
+                  "il tuo",
+                  "la tua",
+                  "i tuoi",
+                  "le tue"
+                ],
+                [
+                  "lui/lei",
+                  "il suo",
+                  "la sua",
+                  "i suoi",
+                  "le sue"
+                ],
+                [
+                  "noi",
+                  "il nostro",
+                  "la nostra",
+                  "i nostri",
+                  "le nostre"
+                ],
+                [
+                  "voi",
+                  "il vostro",
+                  "la vostra",
+                  "i vostri",
+                  "le vostre"
+                ],
+                [
+                  "loro",
+                  "il loro",
+                  "la loro",
+                  "i loro",
+                  "le loro"
+                ]
+              ]
+            },
+            "esempi": [
+              "La mia camera è grande e luminosa.",
+              "I tuoi fratelli sono molto simpatici."
+            ]
+          },
+          {
+            "titolo": "I possessivi con i nomi di parentela",
+            "testo": "Con i nomi di parentela al singolare NON si usa l'articolo: mia madre, tuo padre, suo fratello. Si usa invece l'articolo al plurale (i miei fratelli), con 'loro' (la loro madre) e quando il nome è alterato o accompagnato da un aggettivo (la mia sorellina, il mio fratello maggiore).",
+            "esempi": [
+              "Mia madre lavora in ospedale.",
+              "I miei nonni abitano in campagna."
+            ]
+          },
+          {
+            "titolo": "L'accordo dell'aggettivo qualificativo",
+            "testo": "L'aggettivo concorda in genere e numero con il nome. Gli aggettivi in -o hanno quattro forme (alto, alta, alti, alte); quelli in -e hanno due forme (gentile, gentili). Si usano per descrivere l'aspetto fisico e il carattere.",
+            "esempi": [
+              "Mio fratello è alto e simpatico.",
+              "Le mie sorelle sono basse e gentili."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "il fratello",
+          "traduzione": "brother",
+          "esempio": "Mio fratello ha vent'anni."
+        },
+        {
+          "parola": "la sorella",
+          "traduzione": "sister",
+          "esempio": "Mia sorella studia all'università."
+        },
+        {
+          "parola": "i nonni",
+          "traduzione": "grandparents",
+          "esempio": "I miei nonni abitano vicino a noi."
+        },
+        {
+          "parola": "la cucina",
+          "traduzione": "kitchen",
+          "esempio": "In cucina prepariamo la cena insieme."
+        },
+        {
+          "parola": "la camera da letto",
+          "traduzione": "bedroom",
+          "esempio": "La mia camera da letto è al primo piano."
+        },
+        {
+          "parola": "il soggiorno",
+          "traduzione": "living room",
+          "esempio": "Guardiamo la televisione in soggiorno."
+        },
+        {
+          "parola": "il bagno",
+          "traduzione": "bathroom",
+          "esempio": "Il bagno è piccolo ma comodo."
+        },
+        {
+          "parola": "il giardino",
+          "traduzione": "garden",
+          "esempio": "I bambini giocano in giardino."
+        }
+      ],
+      "ordine": 4,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Possessivo con nome di parentela",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "_____ madre prepara una torta ogni domenica.",
+            "opzioni": [
+              "Mia",
+              "La mia",
+              "Mie",
+              "Il mio"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Possessivo con l'articolo",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "_____ camera è molto ordinata.",
+            "opzioni": [
+              "La mia",
+              "Mia",
+              "Il mio",
+              "Le mie"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Possessivi al plurale e parentela",
+          "istruzioni": "Completa con la forma corretta del possessivo.",
+          "contenuto": {
+            "testo_template": "{0} fratelli sono alti, ma {1} sorella è bassa.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "I miei",
+                  "Mio",
+                  "Le mie"
+                ]
+              },
+              {
+                "opzioni": [
+                  "mia",
+                  "la mia",
+                  "mie"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "I miei",
+              "mia"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Abbina il nome al possessivo",
+          "istruzioni": "Collega ogni nome alla forma corretta del possessivo 'mio'.",
+          "contenuto": {
+            "colonna_a": [
+              "padre",
+              "casa",
+              "genitori",
+              "amiche"
+            ],
+            "colonna_b": [
+              "mio",
+              "la mia",
+              "i miei",
+              "le mie"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore di accordo",
+          "istruzioni": "Trova la parola sbagliata nella frase.",
+          "contenuto": {
+            "parole": [
+              "Le",
+              "mie",
+              "sorelle",
+              "sono",
+              "molto",
+              "simpatico"
+            ],
+            "frase": "Le mie sorelle sono molto simpatico"
+          },
+          "soluzione": {
+            "indici_errati": [
+              5
+            ],
+            "correzioni": {
+              "5": "simpatiche"
+            }
+          },
           "punteggio_max": 10
         },
         {
@@ -348,38 +1490,1796 @@
           "titolo": "Rimetti in ordine",
           "istruzioni": "Ordina le parole per formare una frase corretta.",
           "contenuto": {
-            "parole": ["Ti", "ho", "comprato", "un", "regalo"]
+            "parole": [
+              "Il",
+              "nostro",
+              "giardino",
+              "è",
+              "grande",
+              "e",
+              "verde"
+            ]
           },
-          "soluzione": { "frase": "Ti ho comprato un regalo" },
+          "soluzione": {
+            "frase": "Il nostro giardino è grande e verde"
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MATCH",
-          "abilita": "grammatica",
-          "titolo": "Abbina l'elemento al pronome",
-          "istruzioni": "Collega ogni elemento al pronome che lo sostituisce.",
+          "abilita": "lessico",
+          "titolo": "Lessico: la casa e la famiglia",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
           "contenuto": {
-            "colonna_a": ["a Marco", "Maria", "a noi", "i libri"],
-            "colonna_b": ["gli", "la", "ci", "li"]
+            "colonna_a": [
+              "la cucina",
+              "il fratello",
+              "il bagno",
+              "i nonni"
+            ],
+            "colonna_b": [
+              "kitchen",
+              "brother",
+              "bathroom",
+              "grandparents"
+            ]
           },
-          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "TRUE_FALSE",
           "abilita": "comprensione_scritta",
-          "titolo": "Lettura: un dialogo",
-          "istruzioni": "Leggi il dialogo e valuta le affermazioni.",
+          "titolo": "Lettura: la famiglia di Giulia",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
           "contenuto": {
-            "testo": "— Hai invitato Luca alla festa? — Sì, l'ho invitato. — E hai avvisato Sara di portare il dolce? — Sì, le ho mandato un messaggio.",
+            "testo": "Mi chiamo Giulia. La mia famiglia è grande: ho due fratelli e una sorella. Mio padre è alto e ha i capelli grigi, mia madre è bassa e molto allegra. Abitiamo in una casa con un bel giardino. La mia camera è al secondo piano.",
             "affermazioni": [
-              "Luca è stato invitato alla festa.",
-              "Sara deve portare il dolce.",
-              "Hanno telefonato a Sara."
+              "Giulia ha una sorella.",
+              "La madre di Giulia è alta.",
+              "La casa ha un giardino.",
+              "Giulia ha un cane."
             ]
           },
-          "soluzione": { "risposte": ["vero", "vero", "falso"] },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
           "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: la casa di Marco",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere o false.",
+          "contenuto": {
+            "testo": "Ciao, sono Marco. La mia casa non è molto grande. Ci sono due camere da letto, una cucina e un piccolo soggiorno. Mio fratello e io dormiamo nella stessa camera. Non abbiamo il giardino, ma abbiamo un bel balcone.",
+            "affermazioni": [
+              "La casa di Marco ha due camere da letto.",
+              "Marco dorme con suo fratello.",
+              "La casa ha un grande giardino."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: la mia famiglia e la mia casa",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Descrivi in 40-50 parole la tua famiglia e la tua casa: chi sono i membri della tua famiglia, com'è il loro aspetto o carattere, e com'è la tua casa (le stanze). Usa gli aggettivi possessivi.",
+            "parole_min": 40,
+            "parole_max": 50
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente gli aggettivi possessivi (con e senza articolo)",
+              "Accorda gli aggettivi qualificativi con i nomi",
+              "Descrive sia la famiglia sia la casa in modo comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: presenta la tua famiglia",
+          "istruzioni": "Parla per circa un minuto. Il sistema trascrive e valuta quello che dici.",
+          "contenuto": {
+            "prompt": "Presenta oralmente la tua famiglia: di' quante persone siete, chi sono (madre, padre, fratelli...) e descrivi brevemente l'aspetto o il carattere di una persona. Usa gli aggettivi possessivi.",
+            "traccia_modello": "La mia famiglia è composta da quattro persone: mio padre, mia madre, mio fratello e io. Mio padre è alto e simpatico, mia madre è gentile e lavora in un negozio. Mio fratello è più piccolo di me ed è molto vivace. Abitiamo insieme in una casa con un piccolo giardino.",
+            "parole_min": 30,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente gli aggettivi possessivi con i nomi di parentela",
+              "Descrive almeno una persona con aggettivi accordati"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "unità",
+      "numero": 5,
+      "titolo": "A tavola e la spesa",
+      "tema": "Cibo, ristorante e fare la spesa",
+      "descrizione": "Parlare di cibo, ordinare al ristorante e fare la spesa usando gli articoli partitivi, le espressioni di quantità e \"c'è / ci sono\".",
+      "obiettivi_cefr": [
+        "Sa usare gli articoli partitivi per indicare una quantità indefinita",
+        "Sa esprimere quantità con espressioni come un chilo di, un litro di, un po' di",
+        "Sa usare \"c'è\" e \"ci sono\" per indicare la presenza di cose",
+        "Sa ordinare al ristorante e fare la lista della spesa"
+      ],
+      "lezione": {
+        "introduzione": "Quando parliamo di cibo non sappiamo sempre la quantità esatta. Per dire \"un po' di\" o \"alcuni\" usiamo gli articoli partitivi (del, della, dei...). Per indicare quantità precise usiamo espressioni come un chilo di o un litro di. Infine, con \"c'è\" e \"ci sono\" diciamo che cosa è presente.",
+        "sezioni": [
+          {
+            "titolo": "Gli articoli partitivi (del, della, dei...)",
+            "testo": "L'articolo partitivo si forma con la preposizione \"di\" + l'articolo determinativo (di + il = del, di + la = della...). Significa \"un po' di\" con i nomi singolari non numerabili e \"alcuni / delle\" con i nomi plurali. Si sceglie come l'articolo determinativo, secondo il genere e la prima lettera del nome.",
+            "tabella": {
+              "headers": [
+                "Partitivo",
+                "Si usa con",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "del",
+                  "maschile singolare (consonante)",
+                  "del pane"
+                ],
+                [
+                  "dello",
+                  "maschile singolare (s+cons., z, gn)",
+                  "dello zucchero"
+                ],
+                [
+                  "dell'",
+                  "singolare (vocale)",
+                  "dell'olio"
+                ],
+                [
+                  "della",
+                  "femminile singolare (consonante)",
+                  "della frutta"
+                ],
+                [
+                  "dei",
+                  "maschile plurale (consonante)",
+                  "dei pomodori"
+                ],
+                [
+                  "degli",
+                  "maschile plurale (vocale, s+cons., z)",
+                  "degli spinaci"
+                ],
+                [
+                  "delle",
+                  "femminile plurale",
+                  "delle mele"
+                ]
+              ]
+            },
+            "esempi": [
+              "Vorrei del pane e della frutta, per favore.",
+              "Compro dei pomodori e delle mele al mercato."
+            ]
+          },
+          {
+            "titolo": "Le espressioni di quantità",
+            "testo": "Per indicare una quantità precisa usiamo un numero o un'espressione + \"di\" + il nome (senza articolo): un chilo di mele, un litro di latte, un po' di sale. Usiamo anche molto/poco, che cambiano secondo il genere e il numero del nome.",
+            "tabella": {
+              "headers": [
+                "Espressione",
+                "Significato",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "un chilo di",
+                  "1000 grammi",
+                  "un chilo di pasta"
+                ],
+                [
+                  "un litro di",
+                  "quantità di liquido",
+                  "un litro di acqua"
+                ],
+                [
+                  "un po' di",
+                  "una piccola quantità",
+                  "un po' di zucchero"
+                ],
+                [
+                  "molto / molta",
+                  "una grande quantità",
+                  "molto pane, molta frutta"
+                ],
+                [
+                  "poco / poca",
+                  "una piccola quantità",
+                  "poco sale, poca acqua"
+                ]
+              ]
+            },
+            "esempi": [
+              "Per la torta servono un chilo di farina e un po' di burro.",
+              "Bevo molta acqua e mangio poca carne."
+            ]
+          },
+          {
+            "titolo": "C'è e ci sono",
+            "testo": "Usiamo \"c'è\" + nome singolare e \"ci sono\" + nome plurale per dire che qualcosa è presente in un luogo. Nella forma negativa diventano \"non c'è\" e \"non ci sono\".",
+            "esempi": [
+              "Nel frigorifero c'è del latte ma non ci sono le uova.",
+              "Sul tavolo ci sono due bicchieri e c'è una bottiglia di vino."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "la spesa",
+          "traduzione": "grocery shopping",
+          "esempio": "Il sabato faccio la spesa al supermercato."
+        },
+        {
+          "parola": "il pane",
+          "traduzione": "bread",
+          "esempio": "Vorrei del pane fresco, per favore."
+        },
+        {
+          "parola": "la frutta",
+          "traduzione": "fruit",
+          "esempio": "Mangio della frutta dopo i pasti."
+        },
+        {
+          "parola": "la verdura",
+          "traduzione": "vegetables",
+          "esempio": "Al mercato compro sempre della verdura fresca."
+        },
+        {
+          "parola": "il conto",
+          "traduzione": "the bill",
+          "esempio": "Cameriere, il conto per favore!"
+        },
+        {
+          "parola": "ordinare",
+          "traduzione": "to order",
+          "esempio": "Al ristorante ordino una pizza margherita."
+        },
+        {
+          "parola": "il supermercato",
+          "traduzione": "supermarket",
+          "esempio": "Vado al supermercato a comprare il latte."
+        },
+        {
+          "parola": "il cameriere",
+          "traduzione": "the waiter",
+          "esempio": "Il cameriere porta il menù al tavolo."
+        }
+      ],
+      "ordine": 5,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il partitivo giusto",
+          "istruzioni": "Scegli l'articolo partitivo corretto.",
+          "contenuto": {
+            "domanda": "Per favore, vorrei _____ pane e un litro di latte.",
+            "opzioni": [
+              "del",
+              "della",
+              "dei",
+              "delle"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Partitivo al plurale",
+          "istruzioni": "Scegli l'articolo partitivo corretto.",
+          "contenuto": {
+            "domanda": "Al mercato compro _____ mele e _____ pomodori.",
+            "opzioni": [
+              "delle ... dei",
+              "della ... del",
+              "dei ... delle",
+              "degli ... delle"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "La lista della spesa",
+          "istruzioni": "Completa con il partitivo o l'espressione di quantità corretta.",
+          "contenuto": {
+            "testo_template": "Devo comprare {0} zucchero, un chilo {1} pasta e {2} acqua.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "dello",
+                  "della",
+                  "dei"
+                ]
+              },
+              {
+                "opzioni": [
+                  "di",
+                  "del",
+                  "della"
+                ]
+              },
+              {
+                "opzioni": [
+                  "dell'",
+                  "del",
+                  "della"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "dello",
+              "di",
+              "dell'"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "C'è o ci sono?",
+          "istruzioni": "Completa con \"c'è\" o \"ci sono\".",
+          "contenuto": {
+            "testo_template": "Nel frigorifero {0} del latte, ma non {1} le uova.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "c'è",
+                  "ci sono"
+                ]
+              },
+              {
+                "opzioni": [
+                  "c'è",
+                  "ci sono"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "c'è",
+              "ci sono"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata nella frase.",
+          "contenuto": {
+            "parole": [
+              "Sul",
+              "tavolo",
+              "ci",
+              "sono",
+              "una",
+              "bottiglia",
+              "di",
+              "vino"
+            ],
+            "frase": "Sul tavolo ci sono una bottiglia di vino"
+          },
+          "soluzione": {
+            "indici_errati": [
+              3
+            ],
+            "correzioni": {
+              "3": "è"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: cibo e spesa",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "la spesa",
+              "il conto",
+              "ordinare",
+              "la verdura"
+            ],
+            "colonna_b": [
+              "grocery shopping",
+              "the bill",
+              "to order",
+              "vegetables"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Ordina al ristorante",
+          "istruzioni": "Ordina le parole per formare una frase corretta.",
+          "contenuto": {
+            "parole": [
+              "Vorrei",
+              "della",
+              "pasta",
+              "e",
+              "un",
+              "po'",
+              "di",
+              "vino"
+            ]
+          },
+          "soluzione": {
+            "frase": "Vorrei della pasta e un po' di vino"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: al supermercato",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Oggi Giulia va al supermercato. Compra del pane, un litro di latte e della frutta. Vuole anche dei pomodori, ma non ci sono. Alla cassa paga dodici euro.",
+            "affermazioni": [
+              "Giulia compra del pane.",
+              "Giulia compra un chilo di carne.",
+              "Al supermercato non ci sono i pomodori.",
+              "Giulia va al supermercato in macchina."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: al ristorante",
+          "istruzioni": "Ascolta il dialogo (tocca il pulsante audio) e indica se le affermazioni sono vere o false.",
+          "contenuto": {
+            "testo": "Buonasera, benvenuti. Allora, per me una pizza margherita e dell'acqua naturale. Per la signora, invece, della pasta al pomodoro e un bicchiere di vino rosso. Subito, e alla fine vi porto anche il conto.",
+            "affermazioni": [
+              "Il cliente ordina una pizza margherita.",
+              "La signora vuole del vino bianco.",
+              "Il cameriere porta il conto alla fine."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: la tua lista della spesa",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Scrivi la tua lista della spesa per la settimana in 30-40 parole. Usa almeno tre articoli partitivi (del, della, dei...) e due espressioni di quantità (un chilo di, un litro di, un po' di...).",
+            "parole_min": 30,
+            "parole_max": 40
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente almeno tre articoli partitivi",
+              "Usa almeno due espressioni di quantità",
+              "Lessico del cibo coerente e testo comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: ordina al ristorante",
+          "istruzioni": "Immagina di essere al ristorante. Parla ad alta voce: il browser trascrive e il sistema valuta.",
+          "contenuto": {
+            "prompt": "Sei al ristorante con un amico. Ordina al cameriere: scegli un primo, un secondo e una bevanda, e alla fine chiedi il conto. Parla per 40-60 parole.",
+            "traccia_modello": "Buonasera. Per me, come primo, vorrei della pasta al pomodoro e, come secondo, del pollo con un po' di insalata. Da bere prendo dell'acqua naturale e un bicchiere di vino rosso. Per il mio amico, invece, una pizza margherita. Grazie. Alla fine ci porta il conto, per favore?",
+            "parole_min": 40,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Ordina primo, secondo e bevanda usando partitivi o espressioni di quantità",
+              "Chiede il conto in modo cortese e comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "unità",
+      "numero": 6,
+      "titolo": "In città: chiedere e dare indicazioni",
+      "tema": "Orientarsi in città, luoghi pubblici e trasporti",
+      "descrizione": "Chiedere e dare indicazioni stradali usando le preposizioni di luogo e l'imperativo informale (tu).",
+      "obiettivi_cefr": [
+        "Sa chiedere e dare semplici indicazioni stradali",
+        "Sa usare le preposizioni di luogo per descrivere la posizione di edifici e luoghi",
+        "Sa usare l'imperativo informale (tu) per dare istruzioni e indicazioni"
+      ],
+      "lezione": {
+        "introduzione": "Per orientarsi in città è importante sapere dove si trovano i luoghi e come arrivarci. Usiamo le preposizioni di luogo per indicare la posizione e l'imperativo informale (tu) per dare indicazioni a un amico. In questa unità impari a chiedere e a dare la strada in modo semplice e chiaro.",
+        "sezioni": [
+          {
+            "titolo": "Le preposizioni di luogo",
+            "testo": "Per dire dove si trova un luogo usiamo le preposizioni e le locuzioni di luogo. Con i nomi di città usiamo 'a' (a Roma); con molti luoghi pubblici usiamo 'in' (in piazza, in banca). 'Vicino a', 'davanti a', 'di fronte a' e 'accanto a' indicano la posizione rispetto a un altro punto.",
+            "tabella": {
+              "headers": [
+                "Preposizione",
+                "Significato (inglese)",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "a",
+                  "at / to (città, punti)",
+                  "Abito a Milano."
+                ],
+                [
+                  "in",
+                  "in / at (luoghi)",
+                  "Vado in farmacia."
+                ],
+                [
+                  "da",
+                  "to / at (persone)",
+                  "Vado dal medico."
+                ],
+                [
+                  "vicino a",
+                  "near",
+                  "La fermata è vicino a casa mia."
+                ],
+                [
+                  "davanti a",
+                  "in front of",
+                  "Ci vediamo davanti al cinema."
+                ],
+                [
+                  "di fronte a",
+                  "opposite / across from",
+                  "La banca è di fronte alla posta."
+                ],
+                [
+                  "accanto a",
+                  "next to",
+                  "Il bar è accanto alla farmacia."
+                ]
+              ]
+            },
+            "esempi": [
+              "La stazione è vicino al centro.",
+              "Il supermercato è di fronte alla scuola."
+            ]
+          },
+          {
+            "titolo": "L'imperativo informale (tu)",
+            "testo": "Per dare indicazioni a un amico usiamo l'imperativo con il 'tu'. I verbi in -are hanno la desinenza -a (gira, attraversa), i verbi in -ere e -ire hanno la desinenza -i (prendi, segui). Alcuni verbi utili per la strada, come 'andare', hanno una forma irregolare ('va'', spesso scritto anche 'vai').",
+            "tabella": {
+              "headers": [
+                "Infinito",
+                "Imperativo (tu)",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "girare",
+                  "gira",
+                  "Gira a destra al semaforo."
+                ],
+                [
+                  "andare",
+                  "va' / vai",
+                  "Vai sempre dritto."
+                ],
+                [
+                  "prendere",
+                  "prendi",
+                  "Prendi la prima strada a sinistra."
+                ],
+                [
+                  "attraversare",
+                  "attraversa",
+                  "Attraversa la piazza."
+                ],
+                [
+                  "seguire",
+                  "segui",
+                  "Segui questa via fino in fondo."
+                ],
+                [
+                  "continuare",
+                  "continua",
+                  "Continua dritto per cento metri."
+                ]
+              ]
+            },
+            "esempi": [
+              "Gira a destra e poi vai dritto.",
+              "Attraversa la strada e prendi l'autobus numero 5."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "la fermata",
+          "traduzione": "the (bus/tram) stop",
+          "esempio": "La fermata dell'autobus è davanti al bar."
+        },
+        {
+          "parola": "l'incrocio",
+          "traduzione": "the intersection / crossroads",
+          "esempio": "Al primo incrocio gira a sinistra."
+        },
+        {
+          "parola": "il semaforo",
+          "traduzione": "the traffic light",
+          "esempio": "Attraversa la strada al semaforo."
+        },
+        {
+          "parola": "la piazza",
+          "traduzione": "the square",
+          "esempio": "Il municipio è in piazza, accanto alla chiesa."
+        },
+        {
+          "parola": "dritto",
+          "traduzione": "straight ahead",
+          "esempio": "Vai sempre dritto fino alla stazione."
+        },
+        {
+          "parola": "girare a destra",
+          "traduzione": "to turn right",
+          "esempio": "Dopo il ponte devi girare a destra."
+        },
+        {
+          "parola": "la fermata della metro",
+          "traduzione": "the metro station",
+          "esempio": "La fermata della metro è vicino al museo."
+        },
+        {
+          "parola": "l'edicola",
+          "traduzione": "the newsstand",
+          "esempio": "Compro il giornale all'edicola di fronte alla posta."
+        }
+      ],
+      "ordine": 6,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Preposizione di luogo",
+          "istruzioni": "Scegli la preposizione corretta.",
+          "contenuto": {
+            "domanda": "La banca è _____ fronte alla posta.",
+            "opzioni": [
+              "di",
+              "a",
+              "in",
+              "da"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Imperativo informale",
+          "istruzioni": "Scegli la forma corretta dell'imperativo (tu).",
+          "contenuto": {
+            "domanda": "Per arrivare alla stazione, _____ a destra al semaforo.",
+            "opzioni": [
+              "gira",
+              "giri",
+              "girate",
+              "girare"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Dai le indicazioni",
+          "istruzioni": "Completa con l'imperativo informale (tu) corretto.",
+          "contenuto": {
+            "testo_template": "{0} sempre dritto, poi {1} la prima strada a sinistra.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "Vai",
+                  "Vado",
+                  "Andate"
+                ]
+              },
+              {
+                "opzioni": [
+                  "prendi",
+                  "prendo",
+                  "prende"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "Vai",
+              "prendi"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Infinito e imperativo",
+          "istruzioni": "Collega ogni verbo all'infinito alla sua forma all'imperativo (tu).",
+          "contenuto": {
+            "colonna_a": [
+              "girare",
+              "prendere",
+              "attraversare",
+              "seguire"
+            ],
+            "colonna_b": [
+              "gira",
+              "prendi",
+              "attraversa",
+              "segui"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata nella frase.",
+          "contenuto": {
+            "parole": [
+              "Il",
+              "bar",
+              "è",
+              "accanto",
+              "in",
+              "farmacia"
+            ],
+            "frase": "Il bar è accanto in farmacia"
+          },
+          "soluzione": {
+            "indici_errati": [
+              4
+            ],
+            "correzioni": {
+              "4": "alla"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico della città",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "la fermata",
+              "l'incrocio",
+              "il semaforo",
+              "la piazza"
+            ],
+            "colonna_b": [
+              "the stop",
+              "the intersection",
+              "the traffic light",
+              "the square"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: dove si trovano i luoghi",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Nella mia città la posta è in piazza Garibaldi, di fronte alla banca. Accanto alla posta c'è una farmacia. Il supermercato è vicino alla stazione, a dieci minuti a piedi dal centro.",
+            "affermazioni": [
+              "La posta è di fronte alla banca.",
+              "La farmacia è accanto alla posta.",
+              "Il supermercato è in centro.",
+              "La piazza si chiama piazza Verdi."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: il percorso per il museo",
+          "istruzioni": "Ascolta le indicazioni (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Allora, per arrivare al museo è facile. Esci dalla stazione e vai sempre dritto fino al semaforo. Al semaforo gira a destra e attraversa la piazza. Il museo è di fronte alla chiesa, accanto a un grande bar. Ci metti circa dieci minuti a piedi.",
+            "affermazioni": [
+              "Bisogna girare a destra al semaforo.",
+              "Il museo è di fronte alla chiesa.",
+              "Bisogna prendere l'autobus per arrivare al museo.",
+              "Il museo è accanto a un bar."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso",
+              "vero"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare un'indicazione corretta.",
+          "contenuto": {
+            "parole": [
+              "Gira",
+              "a",
+              "sinistra",
+              "e",
+              "attraversa",
+              "la",
+              "piazza"
+            ]
+          },
+          "soluzione": {
+            "frase": "Gira a sinistra e attraversa la piazza"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: indica la strada",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Un amico ti chiede come arrivare dalla stazione a casa tua. Scrivi le indicazioni in 30-40 parole: usa l'imperativo informale (gira, vai, prendi, attraversa) e almeno due preposizioni di luogo (vicino a, davanti a, di fronte a, accanto a).",
+            "parole_min": 30,
+            "parole_max": 40
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa l'imperativo informale (tu) correttamente",
+              "Usa almeno due preposizioni o locuzioni di luogo",
+              "Le indicazioni sono chiare, ordinate e comprensibili"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: dai le indicazioni",
+          "istruzioni": "Parla per circa 30-40 parole. Il browser trascrive e il sistema valuta.",
+          "contenuto": {
+            "prompt": "Sei davanti alla stazione. Spiega a voce a un amico come arrivare alla piazza principale. Usa l'imperativo informale (vai, gira, attraversa, prendi) e le preposizioni di luogo (vicino a, davanti a, di fronte a, accanto a).",
+            "traccia_modello": "Guarda, è facile. Esci dalla stazione e vai sempre dritto. Al semaforo gira a destra e continua per cento metri. La piazza principale è di fronte alla chiesa, vicino al municipio. Ci metti cinque minuti a piedi.",
+            "parole_min": 30,
+            "parole_max": 40
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa l'imperativo informale (tu) per dare indicazioni",
+              "Usa correttamente le preposizioni di luogo",
+              "Pronuncia chiara e indicazioni logiche e comprensibili"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "unità",
+      "numero": 7,
+      "titolo": "Progetti e tempo libero: il futuro semplice",
+      "tema": "Progetti, intenzioni, previsioni e tempo libero",
+      "descrizione": "Parlare di progetti futuri, intenzioni e previsioni usando il futuro semplice dei verbi regolari e dei principali irregolari.",
+      "obiettivi_cefr": [
+        "Sa parlare di progetti e intenzioni per il futuro",
+        "Sa coniugare i verbi regolari e i principali irregolari al futuro semplice",
+        "Sa fare semplici previsioni sul tempo libero e sulle vacanze"
+      ],
+      "lezione": {
+        "introduzione": "Il futuro semplice si usa per parlare di azioni future, progetti, intenzioni e previsioni. Si forma aggiungendo alla radice del verbo le terminazioni del futuro, uguali per tutte e tre le coniugazioni. Alcuni verbi molto comuni hanno una radice irregolare che è utile imparare a memoria.",
+        "sezioni": [
+          {
+            "titolo": "Il futuro semplice dei verbi regolari",
+            "testo": "Per formare il futuro dei verbi regolari si parte dall'infinito. Nei verbi in -are la 'a' diventa 'e' (parlare → parler-), mentre i verbi in -ere e -ire mantengono la vocale (prendere → prender-, dormire → dormir-). Poi si aggiungono le terminazioni -ò, -ai, -à, -emo, -ete, -anno, uguali per tutti.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "parlare",
+                "prendere",
+                "dormire"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "parlerò",
+                  "prenderò",
+                  "dormirò"
+                ],
+                [
+                  "tu",
+                  "parlerai",
+                  "prenderai",
+                  "dormirai"
+                ],
+                [
+                  "lui/lei",
+                  "parlerà",
+                  "prenderà",
+                  "dormirà"
+                ],
+                [
+                  "noi",
+                  "parleremo",
+                  "prenderemo",
+                  "dormiremo"
+                ],
+                [
+                  "voi",
+                  "parlerete",
+                  "prenderete",
+                  "dormirete"
+                ],
+                [
+                  "loro",
+                  "parleranno",
+                  "prenderanno",
+                  "dormiranno"
+                ]
+              ]
+            },
+            "esempi": [
+              "Domani parlerò con il mio capo del nuovo progetto.",
+              "L'estate prossima dormiremo in un piccolo albergo al mare."
+            ]
+          },
+          {
+            "titolo": "I verbi irregolari più comuni",
+            "testo": "Alcuni verbi molto usati hanno una radice irregolare al futuro, ma le terminazioni restano sempre le stesse. È utile impararli a memoria perché compaiono spesso quando parliamo di progetti.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "essere",
+                "avere",
+                "andare",
+                "fare",
+                "venire"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "sarò",
+                  "avrò",
+                  "andrò",
+                  "farò",
+                  "verrò"
+                ],
+                [
+                  "tu",
+                  "sarai",
+                  "avrai",
+                  "andrai",
+                  "farai",
+                  "verrai"
+                ],
+                [
+                  "lui/lei",
+                  "sarà",
+                  "avrà",
+                  "andrà",
+                  "farà",
+                  "verrà"
+                ],
+                [
+                  "noi",
+                  "saremo",
+                  "avremo",
+                  "andremo",
+                  "faremo",
+                  "verremo"
+                ],
+                [
+                  "voi",
+                  "sarete",
+                  "avrete",
+                  "andrete",
+                  "farete",
+                  "verrete"
+                ],
+                [
+                  "loro",
+                  "saranno",
+                  "avranno",
+                  "andranno",
+                  "faranno",
+                  "verranno"
+                ]
+              ]
+            },
+            "esempi": [
+              "Il prossimo fine settimana andrò in montagna con gli amici.",
+              "Sabato faremo una gita e i nostri cugini verranno con noi."
+            ]
+          },
+          {
+            "titolo": "Quando si usa il futuro",
+            "testo": "Usiamo il futuro semplice per i progetti ('L'anno prossimo studierò di più'), per le previsioni ('Domani pioverà') e per le ipotesi sul presente ('Saranno le otto'). Spesso accanto al verbo c'è un'espressione di tempo come domani, la settimana prossima, tra un mese.",
+            "esempi": [
+              "Tra un mese cominceremo un corso di nuoto.",
+              "Quest'inverno probabilmente farà molto freddo."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "il progetto",
+          "traduzione": "the plan, project",
+          "esempio": "Ho un progetto importante per l'anno prossimo."
+        },
+        {
+          "parola": "il tempo libero",
+          "traduzione": "free time",
+          "esempio": "Nel tempo libero leggo e gioco a calcio."
+        },
+        {
+          "parola": "la vacanza",
+          "traduzione": "the holiday, vacation",
+          "esempio": "Quest'estate andrò in vacanza in Sardegna."
+        },
+        {
+          "parola": "viaggiare",
+          "traduzione": "to travel",
+          "esempio": "Da grande viaggerò in tutto il mondo."
+        },
+        {
+          "parola": "rilassarsi",
+          "traduzione": "to relax",
+          "esempio": "Il fine settimana mi rilasserò sul divano."
+        },
+        {
+          "parola": "la passeggiata",
+          "traduzione": "the walk",
+          "esempio": "Domenica faremo una lunga passeggiata in centro."
+        },
+        {
+          "parola": "l'hobby",
+          "traduzione": "the hobby",
+          "esempio": "Il mio hobby preferito è la fotografia."
+        },
+        {
+          "parola": "iscriversi",
+          "traduzione": "to sign up, to enrol",
+          "esempio": "Mi iscriverò a un corso di chitarra."
+        }
+      ],
+      "ordine": 7,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Futuro del verbo regolare in -are",
+          "istruzioni": "Scegli la forma corretta del futuro semplice.",
+          "contenuto": {
+            "domanda": "Domani io _____ con i miei amici al parco.",
+            "opzioni": [
+              "giocherò",
+              "giocherai",
+              "giocheremo",
+              "giocheranno"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "I progetti per l'estate",
+          "istruzioni": "Completa con la forma corretta del futuro semplice.",
+          "contenuto": {
+            "testo_template": "L'estate prossima io {0} in Sicilia e {1} molte foto.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "andrò",
+                  "andrai",
+                  "andremo"
+                ]
+              },
+              {
+                "opzioni": [
+                  "farò",
+                  "farai",
+                  "faremo"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "andrò",
+              "farò"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Abbina il pronome al verbo (essere)",
+          "istruzioni": "Collega ogni pronome alla forma corretta del futuro del verbo essere.",
+          "contenuto": {
+            "colonna_a": [
+              "io",
+              "tu",
+              "noi",
+              "loro"
+            ],
+            "colonna_b": [
+              "sarai",
+              "sarò",
+              "saranno",
+              "saremo"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 1,
+              "1": 0,
+              "2": 3,
+              "3": 2
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta al futuro.",
+          "contenuto": {
+            "parole": [
+              "Sabato",
+              "prossimo",
+              "verrò",
+              "alla",
+              "tua",
+              "festa"
+            ]
+          },
+          "soluzione": {
+            "frase": "Sabato prossimo verrò alla tua festa"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata e pensa alla forma corretta del futuro.",
+          "contenuto": {
+            "parole": [
+              "Domani",
+              "i",
+              "miei",
+              "amici",
+              "venirà",
+              "a",
+              "cena"
+            ],
+            "frase": "Domani i miei amici venirà a cena"
+          },
+          "soluzione": {
+            "indici_errati": [
+              4
+            ],
+            "correzioni": {
+              "4": "verranno"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: parole e traduzione",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "il progetto",
+              "il tempo libero",
+              "viaggiare",
+              "rilassarsi"
+            ],
+            "colonna_b": [
+              "the plan",
+              "free time",
+              "to travel",
+              "to relax"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: i progetti di Giulia",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "L'anno prossimo Giulia finirà l'università. Dopo gli esami andrà in vacanza in Grecia con le amiche e si rilasserà per due settimane. Al ritorno cercherà un lavoro in una libreria.",
+            "affermazioni": [
+              "L'anno prossimo Giulia finirà l'università.",
+              "Giulia andrà in vacanza in Spagna.",
+              "Al ritorno cercherà un lavoro in una libreria.",
+              "Giulia partirà in vacanza con il fidanzato."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: il fine settimana di Marco",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere o false.",
+          "contenuto": {
+            "testo": "Ciao, sono Marco. Questo fine settimana sarò molto impegnato. Sabato mattina andrò in palestra e nel pomeriggio farò una passeggiata in centro con Anna. Domenica resterò a casa a riposare e guarderò un film.",
+            "affermazioni": [
+              "Sabato mattina Marco andrà in palestra.",
+              "Sabato pomeriggio farà una passeggiata con Anna.",
+              "Domenica Marco andrà al mare."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: i tuoi progetti",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Scrivi in 40-50 parole quali sono i tuoi progetti per le prossime vacanze: dove andrai, con chi, cosa farai nel tempo libero. Usa il futuro semplice.",
+            "parole_min": 40,
+            "parole_max": 50
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il futuro semplice correttamente (regolari e irregolari)",
+              "Fornisce le informazioni richieste (luogo, persone, attività)",
+              "Testo comprensibile e coerente con il tema del tempo libero"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: il prossimo fine settimana",
+          "istruzioni": "Parla per circa un minuto. Il browser trascriverà le tue parole e il sistema le valuterà.",
+          "contenuto": {
+            "prompt": "Racconta che cosa farai il prossimo fine settimana: dove andrai, con chi starai e quali attività farai nel tempo libero. Usa il futuro semplice.",
+            "traccia_modello": "Il prossimo fine settimana sarò libero, così farò molte cose. Sabato andrò in centro con i miei amici e faremo una passeggiata. La sera mangeremo una pizza insieme. Domenica mi rilasserò a casa, leggerò un libro e guarderò un film. Sarà un fine settimana tranquillo e piacevole.",
+            "parole_min": 30,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il futuro semplice in modo corretto",
+              "Parla di progetti per il tempo libero in modo chiaro e coerente"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "A2",
+      "sezione": "unità",
+      "numero": 8,
+      "titolo": "Salute e consigli: i verbi modali",
+      "tema": "Il corpo, la salute, dal medico, dare consigli",
+      "descrizione": "Parlare della salute, descrivere i sintomi e dare consigli usando i verbi modali dovere, potere e volere al presente.",
+      "obiettivi_cefr": [
+        "Sa coniugare i verbi modali dovere, potere e volere al presente",
+        "Sa descrivere semplici sintomi e parlare di una visita dal medico",
+        "Sa dare consigli usando dovresti + infinito e perché non...?"
+      ],
+      "lezione": {
+        "introduzione": "I verbi modali dovere, potere e volere accompagnano un altro verbo all'infinito. Dovere esprime obbligo o necessità, potere esprime possibilità o permesso, volere esprime un desiderio. Sono molto utili per parlare della salute e per dare consigli.",
+        "sezioni": [
+          {
+            "titolo": "I tre verbi modali al presente",
+            "testo": "Dovere, potere e volere sono irregolari. Sono seguiti da un verbo all'infinito: Devo riposare, Posso uscire, Voglio dormire.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "dovere",
+                "potere",
+                "volere"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "devo",
+                  "posso",
+                  "voglio"
+                ],
+                [
+                  "tu",
+                  "devi",
+                  "puoi",
+                  "vuoi"
+                ],
+                [
+                  "lui/lei",
+                  "deve",
+                  "può",
+                  "vuole"
+                ],
+                [
+                  "noi",
+                  "dobbiamo",
+                  "possiamo",
+                  "vogliamo"
+                ],
+                [
+                  "voi",
+                  "dovete",
+                  "potete",
+                  "volete"
+                ],
+                [
+                  "loro",
+                  "devono",
+                  "possono",
+                  "vogliono"
+                ]
+              ]
+            },
+            "esempi": [
+              "Ho la febbre, quindi devo restare a casa.",
+              "Non posso venire in palestra perché mi fa male la schiena."
+            ]
+          },
+          {
+            "titolo": "Dare consigli",
+            "testo": "Per dare un consiglio gentile si usa dovresti + infinito (condizionale di dovere) oppure la domanda perché non...? + presente. Sono espressioni utili quando qualcuno sta male.",
+            "esempi": [
+              "Hai mal di testa? Dovresti bere più acqua e riposare.",
+              "Sei sempre stanco: perché non vai a dormire prima?"
+            ]
+          },
+          {
+            "titolo": "Il corpo e i sintomi",
+            "testo": "Per descrivere un dolore si usa l'espressione avere mal di + parte del corpo (mal di testa, mal di gola) oppure fare male: Mi fa male il braccio. Mi fanno male le gambe.",
+            "esempi": [
+              "Ho mal di gola e un po' di tosse.",
+              "Mi fanno male i piedi dopo la corsa."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "la testa",
+          "traduzione": "the head",
+          "esempio": "Ho mal di testa da stamattina."
+        },
+        {
+          "parola": "la gola",
+          "traduzione": "the throat",
+          "esempio": "Mi fa male la gola quando parlo."
+        },
+        {
+          "parola": "la schiena",
+          "traduzione": "the back",
+          "esempio": "Dopo il lavoro mi fa male la schiena."
+        },
+        {
+          "parola": "la febbre",
+          "traduzione": "the fever",
+          "esempio": "Ho la febbre alta e devo restare a letto."
+        },
+        {
+          "parola": "la tosse",
+          "traduzione": "the cough",
+          "esempio": "Ho la tosse e mal di gola."
+        },
+        {
+          "parola": "il medico",
+          "traduzione": "the doctor",
+          "esempio": "Domani vado dal medico per una visita."
+        },
+        {
+          "parola": "la medicina",
+          "traduzione": "the medicine",
+          "esempio": "Devo prendere la medicina due volte al giorno."
+        },
+        {
+          "parola": "riposare",
+          "traduzione": "to rest",
+          "esempio": "Sei stanco, dovresti riposare un po'."
+        }
+      ],
+      "ordine": 8,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il verbo dovere",
+          "istruzioni": "Scegli la forma corretta del verbo dovere al presente.",
+          "contenuto": {
+            "domanda": "Ho la febbre, quindi io _____ restare a casa oggi.",
+            "opzioni": [
+              "devo",
+              "devi",
+              "dobbiamo",
+              "devono"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il verbo potere",
+          "istruzioni": "Scegli la forma corretta del verbo potere al presente.",
+          "contenuto": {
+            "domanda": "Marco ha mal di schiena e non _____ giocare a calcio oggi.",
+            "opzioni": [
+              "può",
+              "puoi",
+              "posso",
+              "possono"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Dal medico",
+          "istruzioni": "Completa con la forma corretta dei verbi modali.",
+          "contenuto": {
+            "testo_template": "Dottore, non {0} dormire la notte e {1} sapere cosa devo fare.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "riesco",
+                  "posso",
+                  "vuoi"
+                ]
+              },
+              {
+                "opzioni": [
+                  "voglio",
+                  "vuole",
+                  "vogliamo"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "posso",
+              "voglio"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Un consiglio",
+          "istruzioni": "Ordina le parole per formare un consiglio corretto.",
+          "contenuto": {
+            "parole": [
+              "Dovresti",
+              "bere",
+              "più",
+              "acqua",
+              "e",
+              "riposare"
+            ]
+          },
+          "soluzione": {
+            "frase": "Dovresti bere più acqua e riposare"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata nella frase e correggila.",
+          "contenuto": {
+            "parole": [
+              "Noi",
+              "devono",
+              "andare",
+              "dal",
+              "medico",
+              "domani"
+            ],
+            "frase": "Noi devono andare dal medico domani"
+          },
+          "soluzione": {
+            "indici_errati": [
+              1
+            ],
+            "correzioni": {
+              "1": "dobbiamo"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: il corpo e la salute",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "la testa",
+              "la gola",
+              "la febbre",
+              "il medico",
+              "la medicina"
+            ],
+            "colonna_b": [
+              "the head",
+              "the throat",
+              "the fever",
+              "the doctor",
+              "the medicine"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 4
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: una visita dal medico",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Giulia non sta bene. Ha la febbre e mal di gola da due giorni. Oggi va dal medico, che le dice di prendere una medicina e di riposare a casa. Giulia non può andare al lavoro questa settimana.",
+            "affermazioni": [
+              "Giulia ha la febbre e mal di gola.",
+              "Il medico le dice di fare sport.",
+              "Giulia non può andare al lavoro questa settimana.",
+              "Giulia ha trentacinque anni."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: al telefono con un amico",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere o false.",
+          "contenuto": {
+            "testo": "Ciao Paolo, oggi non posso venire in palestra perché mi fa male la schiena. Devo restare a casa e riposare. Tu dovresti chiamare Anna: anche lei vuole allenarsi questa sera.",
+            "affermazioni": [
+              "Chi parla non può andare in palestra.",
+              "Chi parla ha mal di schiena.",
+              "Anna non vuole allenarsi."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: un messaggio a un amico malato",
+          "istruzioni": "Scrivi un breve messaggio. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Un tuo amico ha l'influenza. Scrivi un messaggio di 30-40 parole: chiedi come sta e dagli almeno due consigli usando dovresti + infinito o perché non...? (per esempio: riposare, bere acqua, andare dal medico).",
+            "parole_min": 30,
+            "parole_max": 40
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa i verbi modali o le forme per dare consigli (dovresti..., perché non...?)",
+              "Dà almeno due consigli pertinenti sulla salute",
+              "Testo comprensibile, coerente e con lessico del corpo/salute"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: dal medico",
+          "istruzioni": "Parla al microfono. Il sistema trascriverà e valuterà la tua risposta.",
+          "contenuto": {
+            "prompt": "Immagina di essere dal medico. Descrivi come stai e quali sintomi hai (per esempio mal di testa, febbre, tosse) e di' che cosa non puoi fare. Parla per 30-50 parole usando i verbi modali.",
+            "traccia_modello": "Buongiorno dottore, non sto bene. Ho mal di testa e un po' di febbre da ieri. Mi fa male anche la gola e ho la tosse. Non posso andare al lavoro e non riesco a dormire bene la notte.",
+            "parole_min": 30,
+            "parole_max": 50
+          },
+          "soluzione": {
+            "criteri": [
+              "Descrive almeno due sintomi usando avere mal di o fare male",
+              "Usa correttamente almeno un verbo modale (dovere, potere o volere)"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     }

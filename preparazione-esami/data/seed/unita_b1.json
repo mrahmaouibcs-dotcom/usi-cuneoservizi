@@ -2,277 +2,3280 @@
   "unita": [
     {
       "livello": "B1",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 1,
-      "titolo": "Il congiuntivo presente",
-      "descrizione": "Uso del congiuntivo presente dopo verbi ed espressioni di opinione, desiderio e necessità (penso che, è importante che, spero che).",
+      "titolo": "Il congiuntivo presente: opinioni e desideri",
+      "tema": "Esprimere opinioni, dubbi, desideri e stati d'animo",
+      "descrizione": "Usare il congiuntivo presente, regolare e irregolare, dopo i verbi e le espressioni che introducono opinione, desiderio, dubbio o emozione.",
       "obiettivi_cefr": [
-        "Usare il congiuntivo presente dopo verbi di opinione, desiderio e necessità",
-        "Esprimere dubbi, opinioni e auspici"
+        "Sa esprimere opinioni, dubbi e desideri usando il congiuntivo presente",
+        "Sa coniugare i verbi regolari e i principali irregolari al congiuntivo presente",
+        "Sa riconoscere le espressioni e i connettivi che reggono il congiuntivo"
+      ],
+      "lezione": {
+        "introduzione": "Il congiuntivo presente è il modo della soggettività: si usa nelle frasi secondarie per esprimere opinioni, dubbi, desideri, speranze e stati d'animo. A differenza dell'indicativo, che presenta i fatti come certi, il congiuntivo presenta ciò che è incerto, voluto o solo immaginato. Compare quasi sempre dopo 'che' e dopo alcune congiunzioni come 'benché' o 'affinché'.",
+        "sezioni": [
+          {
+            "titolo": "Il congiuntivo presente regolare",
+            "testo": "Per i verbi regolari si toglie la desinenza dell'infinito (-are, -ere, -ire) e si aggiungono le terminazioni del congiuntivo. Le prime tre persone (io, tu, lui/lei) hanno la stessa forma, perciò di solito si usa il pronome per evitare ambiguità. I verbi in -ire come 'finire' inseriscono '-isc-' come al presente indicativo.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "parlare",
+                "prendere",
+                "dormire",
+                "finire"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "parli",
+                  "prenda",
+                  "dorma",
+                  "finisca"
+                ],
+                [
+                  "tu",
+                  "parli",
+                  "prenda",
+                  "dorma",
+                  "finisca"
+                ],
+                [
+                  "lui/lei",
+                  "parli",
+                  "prenda",
+                  "dorma",
+                  "finisca"
+                ],
+                [
+                  "noi",
+                  "parliamo",
+                  "prendiamo",
+                  "dormiamo",
+                  "finiamo"
+                ],
+                [
+                  "voi",
+                  "parliate",
+                  "prendiate",
+                  "dormiate",
+                  "finiate"
+                ],
+                [
+                  "loro",
+                  "parlino",
+                  "prendano",
+                  "dormano",
+                  "finiscano"
+                ]
+              ]
+            },
+            "esempi": [
+              "Penso che Marco parli troppo in fretta.",
+              "È importante che voi finiate il lavoro entro venerdì."
+            ]
+          },
+          {
+            "titolo": "I principali verbi irregolari",
+            "testo": "Molti verbi di uso frequente sono irregolari al congiuntivo presente. La radice irregolare resta uguale per io, tu e lui/lei, mentre 'noi' e 'voi' tornano spesso vicini alla forma dell'indicativo. Conviene impararli a memoria perché ricorrono di continuo.",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "essere",
+                "avere",
+                "fare",
+                "andare",
+                "potere",
+                "volere"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "sia",
+                  "abbia",
+                  "faccia",
+                  "vada",
+                  "possa",
+                  "voglia"
+                ],
+                [
+                  "tu",
+                  "sia",
+                  "abbia",
+                  "faccia",
+                  "vada",
+                  "possa",
+                  "voglia"
+                ],
+                [
+                  "lui/lei",
+                  "sia",
+                  "abbia",
+                  "faccia",
+                  "vada",
+                  "possa",
+                  "voglia"
+                ],
+                [
+                  "noi",
+                  "siamo",
+                  "abbiamo",
+                  "facciamo",
+                  "andiamo",
+                  "possiamo",
+                  "vogliamo"
+                ],
+                [
+                  "voi",
+                  "siate",
+                  "abbiate",
+                  "facciate",
+                  "andiate",
+                  "possiate",
+                  "vogliate"
+                ],
+                [
+                  "loro",
+                  "siano",
+                  "abbiano",
+                  "facciano",
+                  "vadano",
+                  "possano",
+                  "vogliano"
+                ]
+              ]
+            },
+            "esempi": [
+              "Credo che lei sia la persona giusta per questo ruolo.",
+              "Voglio che tu vada dal medico al più presto."
+            ]
+          },
+          {
+            "titolo": "Quando si usa il congiuntivo",
+            "testo": "Il congiuntivo si usa nella frase secondaria introdotta da 'che' dopo verbi di opinione (pensare, credere, ritenere), di desiderio o volontà (volere, desiderare, sperare), di dubbio o timore (dubitare, temere) e dopo espressioni impersonali come 'è importante che', 'è probabile che', 'bisogna che'. Si usa anche dopo alcune congiunzioni come 'benché', 'sebbene', 'affinché', 'a meno che'. Attenzione: il soggetto della secondaria deve essere diverso da quello della principale; se è lo stesso, si usa 'di' + infinito (Penso di avere ragione).",
+            "esempi": [
+              "Benché sia stanco, esce con gli amici.",
+              "È probabile che domani piova, quindi prendi l'ombrello."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "pensare che",
+          "traduzione": "to think that",
+          "esempio": "Penso che questa idea sia ottima."
+        },
+        {
+          "parola": "credere che",
+          "traduzione": "to believe that",
+          "esempio": "Credo che loro abbiano ragione."
+        },
+        {
+          "parola": "desiderare che",
+          "traduzione": "to wish that",
+          "esempio": "Desidero che tu sia felice."
+        },
+        {
+          "parola": "sperare che",
+          "traduzione": "to hope that",
+          "esempio": "Spero che faccia bel tempo domenica."
+        },
+        {
+          "parola": "dubitare che",
+          "traduzione": "to doubt that",
+          "esempio": "Dubito che lui voglia venire alla festa."
+        },
+        {
+          "parola": "è importante che",
+          "traduzione": "it is important that",
+          "esempio": "È importante che voi arriviate puntuali."
+        },
+        {
+          "parola": "benché",
+          "traduzione": "although",
+          "esempio": "Benché piova, andiamo al mercato."
+        },
+        {
+          "parola": "affinché",
+          "traduzione": "so that / in order that",
+          "esempio": "Ti scrivo tutto affinché tu capisca bene."
+        }
       ],
       "ordine": 1,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
-          "titolo": "Dopo un verbo di opinione",
-          "istruzioni": "Scegli la forma corretta del verbo.",
+          "abilita": "grammatica",
+          "titolo": "Verbo di opinione + congiuntivo",
+          "istruzioni": "Scegli la forma corretta del congiuntivo presente.",
           "contenuto": {
-            "domanda": "Penso che lui _____ ragione su questo punto.",
-            "opzioni": ["abbia", "ha", "avrà", "aveva"]
+            "domanda": "Penso che Luca _____ la verità.",
+            "opzioni": [
+              "dica",
+              "dice",
+              "dirà",
+              "diceva"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MCQ",
-          "titolo": "Dopo un'espressione impersonale",
-          "istruzioni": "Scegli la forma corretta del verbo.",
+          "abilita": "grammatica",
+          "titolo": "Irregolare: essere",
+          "istruzioni": "Scegli la forma corretta del congiuntivo presente.",
           "contenuto": {
-            "domanda": "È importante che voi _____ puntuali alla riunione.",
-            "opzioni": ["siate", "siete", "sarete", "eravate"]
+            "domanda": "Credo che loro _____ già a casa.",
+            "opzioni": [
+              "siano",
+              "sono",
+              "siamo",
+              "saranno"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "FILL",
-          "titolo": "Completa con il congiuntivo",
-          "istruzioni": "Scegli la forma corretta del congiuntivo presente.",
+          "abilita": "grammatica",
+          "titolo": "Desideri e volontà",
+          "istruzioni": "Completa con la forma corretta del congiuntivo presente.",
           "contenuto": {
-            "testo_template": "Spero che tu {0} bene e che {1} venire alla riunione.",
+            "testo_template": "Voglio che tu {0} dal medico e che poi mi {1} come stai.",
             "lacune": [
-              { "opzioni": ["stia", "stai", "starai"] },
-              { "opzioni": ["possa", "puoi", "potrai"] }
+              {
+                "opzioni": [
+                  "vada",
+                  "vai",
+                  "andrai"
+                ]
+              },
+              {
+                "opzioni": [
+                  "dica",
+                  "dici",
+                  "dirai"
+                ]
+              }
             ]
           },
-          "soluzione": { "risposte": ["stia", "possa"] },
-          "punteggio_max": 10
-        },
-        {
-          "tipo": "REORDER",
-          "titolo": "Rimetti in ordine",
-          "istruzioni": "Ordina le parole per formare una frase corretta con il congiuntivo.",
-          "contenuto": {
-            "parole": ["Credo", "che", "questa", "sia", "la", "scelta", "giusta"]
-          },
-          "soluzione": { "frase": "Credo che questa sia la scelta giusta" },
-          "punteggio_max": 10
-        },
-        {
-          "tipo": "TRUE_FALSE",
-          "titolo": "Vero, falso o non detto?",
-          "istruzioni": "Leggi il testo e valuta le affermazioni.",
-          "contenuto": {
-            "testo": "Molti pensano che il lavoro da casa sia più comodo. Tuttavia, alcuni credono che riduca i rapporti tra colleghi. È probabile che in futuro le aziende offrano soluzioni miste.",
-            "affermazioni": [
-              "Tutti pensano che il telelavoro sia comodo.",
-              "Alcuni temono che diminuiscano i rapporti tra colleghi.",
-              "Secondo il testo, è probabile che in futuro ci siano soluzioni miste.",
-              "Le aziende hanno già deciso di abolire l'ufficio."
+          "soluzione": {
+            "risposte": [
+              "vada",
+              "dica"
             ]
           },
-          "soluzione": { "risposte": ["falso", "vero", "vero", "non_detto"] },
           "punteggio_max": 10
         },
         {
           "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
           "titolo": "Trova l'errore",
-          "istruzioni": "Tocca la parola sbagliata nella frase (il verbo dovrebbe essere al congiuntivo).",
+          "istruzioni": "Individua la parola sbagliata: il verbo dopo 'è importante che' deve essere al congiuntivo.",
           "contenuto": {
-            "parole": ["Voglio", "che", "tu", "vieni", "con", "me", "domani"],
-            "frase": "Voglio che tu vieni con me domani."
+            "parole": [
+              "È",
+              "importante",
+              "che",
+              "voi",
+              "arrivate",
+              "in",
+              "orario"
+            ],
+            "frase": "È importante che voi arrivate in orario"
           },
           "soluzione": {
-            "indici_errati": [3],
-            "correzioni": { "3": "venga" }
+            "indici_errati": [
+              4
+            ],
+            "correzioni": {
+              "4": "arriviate"
+            }
           },
           "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta con il congiuntivo.",
+          "contenuto": {
+            "parole": [
+              "Spero",
+              "che",
+              "domani",
+              "faccia",
+              "bel",
+              "tempo"
+            ]
+          },
+          "soluzione": {
+            "frase": "Spero che domani faccia bel tempo",
+            "accettate": [
+              "Spero che faccia bel tempo domani"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: espressioni e significato",
+          "istruzioni": "Collega ogni espressione italiana alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "pensare che",
+              "sperare che",
+              "dubitare che",
+              "benché",
+              "affinché"
+            ],
+            "colonna_b": [
+              "to think that",
+              "to hope that",
+              "to doubt that",
+              "although",
+              "so that"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 4
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: la decisione di Giulia",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Giulia sta pensando di cambiare lavoro. Crede che il suo capo non apprezzi abbastanza il suo impegno e spera che una nuova azienda le offra più responsabilità. I suoi amici pensano che faccia bene a cercare qualcosa di nuovo, benché lasciare un posto sicuro la spaventi un po'.",
+            "affermazioni": [
+              "Giulia vuole cambiare lavoro.",
+              "Giulia crede che il suo capo apprezzi molto il suo impegno.",
+              "Gli amici pensano che faccia bene a cercare un nuovo lavoro.",
+              "Giulia ha già firmato un contratto con una nuova azienda."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: il consiglio di un amico",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Senti, penso che tu debba parlare con il professore prima dell'esame. Credo che sia una persona disponibile e sono sicuro che ti aiuterà a capire meglio gli argomenti difficili. È importante che tu non rimanga con i dubbi. Benché tu sia bravo, un chiarimento non fa mai male.",
+            "affermazioni": [
+              "L'amico consiglia di parlare con il professore.",
+              "L'amico pensa che il professore sia una persona disponibile.",
+              "L'amico dice di non studiare prima dell'esame."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: la tua opinione",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Esprimi la tua opinione in 50-70 parole su un tema che ti sta a cuore (per esempio l'ambiente, lo studio o il lavoro). Usa almeno tre espressioni che reggono il congiuntivo (penso che, credo che, è importante che, spero che, benché) e spiega anche un tuo desiderio per il futuro.",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente il congiuntivo presente dopo le espressioni richieste",
+              "Include almeno tre espressioni che reggono il congiuntivo",
+              "Esprime un'opinione chiara e un desiderio per il futuro",
+              "Testo coerente, coeso e comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: speranze e desideri",
+          "istruzioni": "Parla per circa un minuto. Il browser trascrive la tua risposta e il sistema la valuta.",
+          "contenuto": {
+            "prompt": "Racconta a voce quali sono le tue speranze e i tuoi desideri per il prossimo anno. Usa espressioni come 'spero che', 'voglio che', 'è importante che' e 'penso che' seguite dal congiuntivo presente.",
+            "traccia_modello": "Spero che il prossimo anno sia migliore di quello passato. Penso che sia importante avere degli obiettivi, perciò voglio che la mia famiglia stia bene e desidero che i miei progetti vadano in porto. È importante che io trovi più tempo per studiare le lingue. Benché il lavoro sia impegnativo, credo di poter raggiungere ciò che voglio.",
+            "parole_min": 40,
+            "parole_max": 80
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente il congiuntivo presente dopo le espressioni di speranza e desiderio",
+              "Esprime in modo chiaro almeno due speranze o desideri",
+              "Pronuncia ed esposizione comprensibili e scorrevoli"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     },
     {
       "livello": "B1",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 2,
       "titolo": "Il periodo ipotetico (I e II tipo)",
-      "descrizione": "Periodo ipotetico della realtà (se + presente → presente/futuro) e della possibilità (se + congiuntivo imperfetto → condizionale presente).",
+      "tema": "Ipotesi reali e possibili, condizioni e conseguenze",
+      "descrizione": "Esprimere ipotesi reali (periodo ipotetico della realtà) e ipotesi possibili (periodo ipotetico della possibilità), collegando una condizione alla sua conseguenza.",
       "obiettivi_cefr": [
-        "Costruire periodi ipotetici della realtà e della possibilità",
-        "Formulare ipotesi e descriverne le conseguenze"
+        "Sa esprimere ipotesi reali e probabili riferite al presente e al futuro",
+        "Sa formulare ipotesi possibili ma poco probabili usando congiuntivo imperfetto e condizionale presente",
+        "Sa distinguere e usare correttamente i connettivi della condizione"
+      ],
+      "lezione": {
+        "introduzione": "Il periodo ipotetico è formato da due parti: la subordinata introdotta da 'se' (la condizione) e la principale (la conseguenza). In italiano si distinguono tre tipi; in questa unità studiamo i primi due: il periodo ipotetico della realtà (I tipo) e quello della possibilità (II tipo). La scelta dei tempi e dei modi verbali dipende da quanto l'ipotesi è probabile.",
+        "sezioni": [
+          {
+            "titolo": "Il I tipo: la realtà",
+            "testo": "Il periodo ipotetico della realtà esprime una condizione reale o molto probabile, con una conseguenza certa. Nella subordinata si usa il presente indicativo (dopo 'se'); nella principale si usa il presente indicativo, il futuro semplice oppure l'imperativo. Si usa quando siamo sicuri che, se si verifica la condizione, si verifica anche la conseguenza.",
+            "tabella": {
+              "headers": [
+                "Tipo",
+                "Subordinata (Se...)",
+                "Principale",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "I tipo (realtà)",
+                  "Se + presente indicativo",
+                  "presente indicativo",
+                  "Se piove, resto a casa"
+                ],
+                [
+                  "I tipo (realtà)",
+                  "Se + presente indicativo",
+                  "futuro semplice",
+                  "Se piove, resterò a casa"
+                ],
+                [
+                  "I tipo (realtà)",
+                  "Se + presente indicativo",
+                  "imperativo",
+                  "Se piove, prendi l'ombrello"
+                ]
+              ]
+            },
+            "esempi": [
+              "Se studi con metodo, superi l'esame senza problemi.",
+              "Se domani fa bel tempo, andremo al mare."
+            ]
+          },
+          {
+            "titolo": "Il II tipo: la possibilità",
+            "testo": "Il periodo ipotetico della possibilità esprime una condizione possibile ma poco probabile o solo immaginata nel presente. Nella subordinata si usa il congiuntivo imperfetto (dopo 'se'); nella principale si usa il condizionale presente. È la struttura tipica per fare ipotesi, dare consigli o esprimere desideri irreali nel presente.",
+            "tabella": {
+              "headers": [
+                "Tipo",
+                "Subordinata (Se...)",
+                "Principale",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "II tipo (possibilità)",
+                  "Se + congiuntivo imperfetto",
+                  "condizionale presente",
+                  "Se avessi tempo, verrei con te"
+                ],
+                [
+                  "II tipo (possibilità)",
+                  "Se + congiuntivo imperfetto",
+                  "condizionale presente",
+                  "Se fossi ricco, comprerei una casa al mare"
+                ],
+                [
+                  "II tipo (possibilità)",
+                  "Se + congiuntivo imperfetto",
+                  "condizionale presente",
+                  "Se vincessi, farei un lungo viaggio"
+                ]
+              ]
+            },
+            "esempi": [
+              "Se potessi, ti aiuterei volentieri.",
+              "Se Marco studiasse di più, prenderebbe voti migliori."
+            ]
+          },
+          {
+            "titolo": "Confronto tra i due tipi",
+            "testo": "La differenza dipende dal grado di probabilità. Con il I tipo l'ipotesi è reale o molto probabile e usiamo l'indicativo (presente/futuro) nella principale. Con il II tipo l'ipotesi è solo possibile o immaginaria e usiamo il congiuntivo imperfetto nella subordinata e il condizionale presente nella principale. Attenzione: dopo 'se' del II tipo NON si usa mai il condizionale, ma il congiuntivo imperfetto.",
+            "tabella": {
+              "headers": [
+                "Aspetto",
+                "I tipo (realtà)",
+                "II tipo (possibilità)"
+              ],
+              "rows": [
+                [
+                  "Probabilità",
+                  "reale / molto probabile",
+                  "possibile / poco probabile"
+                ],
+                [
+                  "Verbo dopo 'se'",
+                  "presente indicativo",
+                  "congiuntivo imperfetto"
+                ],
+                [
+                  "Verbo nella principale",
+                  "presente o futuro indicativo",
+                  "condizionale presente"
+                ],
+                [
+                  "Esempio",
+                  "Se ho tempo, ti chiamo",
+                  "Se avessi tempo, ti chiamerei"
+                ]
+              ]
+            },
+            "esempi": [
+              "Se mangi troppo, stai male. (realtà)",
+              "Se mangiassi meno dolci, ti sentiresti meglio. (possibilità)"
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "se",
+          "traduzione": "if",
+          "esempio": "Se vuoi, possiamo uscire stasera."
+        },
+        {
+          "parola": "la condizione",
+          "traduzione": "the condition",
+          "esempio": "La condizione per partire è avere il passaporto."
+        },
+        {
+          "parola": "la conseguenza",
+          "traduzione": "the consequence",
+          "esempio": "Ogni scelta ha una conseguenza."
+        },
+        {
+          "parola": "l'ipotesi",
+          "traduzione": "the hypothesis",
+          "esempio": "Facciamo un'ipotesi: e se vincessimo alla lotteria?"
+        },
+        {
+          "parola": "a meno che",
+          "traduzione": "unless",
+          "esempio": "Verrò alla festa, a meno che non piova."
+        },
+        {
+          "parola": "nel caso in cui",
+          "traduzione": "in case",
+          "esempio": "Nel caso in cui tu non possa venire, avvisami."
+        },
+        {
+          "parola": "purché",
+          "traduzione": "provided that",
+          "esempio": "Ti presto il libro, purché tu me lo restituisca presto."
+        },
+        {
+          "parola": "altrimenti",
+          "traduzione": "otherwise",
+          "esempio": "Sbrigati, altrimenti perdiamo il treno."
+        }
       ],
       "ordine": 2,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
-          "titolo": "Ipotesi reale",
-          "istruzioni": "Scegli la forma corretta.",
+          "abilita": "grammatica",
+          "titolo": "Periodo ipotetico della possibilità",
+          "istruzioni": "Scegli la forma corretta della principale.",
           "contenuto": {
-            "domanda": "Se _____ tempo, vengo volentieri alla festa.",
-            "opzioni": ["ho", "avessi", "avrei", "abbia"]
+            "domanda": "Se avessi tempo, _____ volentieri alla tua festa.",
+            "opzioni": [
+              "verrei",
+              "verrò",
+              "vengo",
+              "venissi"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MCQ",
-          "titolo": "Ipotesi possibile",
-          "istruzioni": "Scegli la forma corretta.",
+          "abilita": "grammatica",
+          "titolo": "Periodo ipotetico della realtà",
+          "istruzioni": "Scegli la forma corretta della subordinata.",
           "contenuto": {
-            "domanda": "Se _____ più soldi, comprerei una casa al mare.",
-            "opzioni": ["avessi", "ho", "avrò", "abbia"]
+            "domanda": "Se domani _____ bel tempo, andremo in montagna.",
+            "opzioni": [
+              "fa",
+              "facesse",
+              "farebbe",
+              "faceva"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il verbo dopo 'se' (II tipo)",
+          "istruzioni": "Scegli la forma corretta dopo 'se' nel periodo ipotetico della possibilità.",
+          "contenuto": {
+            "domanda": "Se io _____ ricco, comprerei una casa in campagna.",
+            "opzioni": [
+              "fossi",
+              "sono",
+              "sarei",
+              "ero"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "FILL",
-          "titolo": "Completa il periodo ipotetico",
-          "istruzioni": "Completa con congiuntivo imperfetto e condizionale presente.",
+          "abilita": "grammatica",
+          "titolo": "Completa i due tipi",
+          "istruzioni": "Completa scegliendo le forme corrette: la prima frase è di realtà, la seconda di possibilità.",
           "contenuto": {
-            "testo_template": "Se tu {0} più tempo libero, cosa {1}?",
+            "testo_template": "Se {0} adesso, prendi ancora l'autobus. Se invece {1} più tardi, lo perderesti.",
             "lacune": [
-              { "opzioni": ["avessi", "hai", "avrai"] },
-              { "opzioni": ["faresti", "fai", "farai"] }
+              {
+                "opzioni": [
+                  "esci",
+                  "uscissi",
+                  "usciresti"
+                ]
+              },
+              {
+                "opzioni": [
+                  "uscissi",
+                  "esci",
+                  "uscirai"
+                ]
+              }
             ]
           },
-          "soluzione": { "risposte": ["avessi", "faresti"] },
+          "soluzione": {
+            "risposte": [
+              "esci",
+              "uscissi"
+            ]
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "REORDER",
-          "titolo": "Rimetti in ordine",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine (II tipo)",
           "istruzioni": "Ordina le parole per formare un periodo ipotetico della possibilità.",
           "contenuto": {
-            "parole": ["Se", "studiassi", "di", "più", "passeresti", "l'esame"]
+            "parole": [
+              "Se",
+              "studiassi",
+              "di",
+              "più",
+              "prenderesti",
+              "voti",
+              "migliori"
+            ]
           },
-          "soluzione": { "frase": "Se studiassi di più passeresti l'esame" },
+          "soluzione": {
+            "frase": "Se studiassi di più prenderesti voti migliori"
+          },
           "punteggio_max": 10
         },
         {
-          "tipo": "MCQ",
-          "titolo": "Ipotesi reale (conseguenza)",
-          "istruzioni": "Scegli la forma corretta.",
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata: dopo 'se' nel periodo della possibilità non si usa il condizionale.",
           "contenuto": {
-            "domanda": "Se piove, _____ a casa a guardare un film.",
-            "opzioni": ["resto", "resterei", "restassi", "sia restato"]
+            "parole": [
+              "Se",
+              "avrei",
+              "soldi",
+              "viaggerei",
+              "in",
+              "tutto",
+              "il",
+              "mondo"
+            ],
+            "frase": "Se avrei soldi viaggerei in tutto il mondo"
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "indici_errati": [
+              1
+            ],
+            "correzioni": {
+              "1": "avessi"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: connettivi della condizione",
+          "istruzioni": "Collega ogni connettivo alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "se",
+              "a meno che",
+              "purché",
+              "altrimenti"
+            ],
+            "colonna_b": [
+              "if",
+              "unless",
+              "provided that",
+              "otherwise"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "TRUE_FALSE",
-          "titolo": "Vero, falso o non detto?",
-          "istruzioni": "Leggi il testo e valuta le affermazioni.",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: i progetti di Giulia",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
           "contenuto": {
-            "testo": "Se le persone usassero di più i mezzi pubblici, ci sarebbe meno traffico in città. Inoltre, se ognuno riciclasse correttamente, l'ambiente ne trarrebbe grande beneficio.",
+            "testo": "Giulia sogna di cambiare vita. Dice: 'Se avessi più coraggio, lascerei il mio lavoro in ufficio e aprirei una piccola libreria. Se il prossimo mese guadagno abbastanza, metterò da parte un po' di soldi per realizzare questo sogno. Per ora, però, è solo un'idea.'",
             "affermazioni": [
-              "Il testo descrive fatti reali già avvenuti.",
-              "Usare di più i mezzi pubblici ridurrebbe il traffico.",
-              "Un buon riciclo aiuterebbe l'ambiente."
+              "Giulia vorrebbe aprire una libreria.",
+              "Giulia ha già lasciato il suo lavoro in ufficio.",
+              "Giulia è sposata e ha due figli.",
+              "Se guadagnerà abbastanza, Giulia metterà da parte dei soldi."
             ]
           },
-          "soluzione": { "risposte": ["falso", "vero", "vero"] },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "non_detto",
+              "vero"
+            ]
+          },
           "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: cosa farei se...",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Ciao, sono Davide. Se avessi una settimana di vacanza, andrei subito in Sardegna, perché adoro il mare. Però se questo fine settimana piove, resterò semplicemente a casa a leggere. La verità è che, se potessi, lavorerei di meno e viaggerei molto di più.",
+            "affermazioni": [
+              "Se avesse una settimana libera, Davide andrebbe in Sardegna.",
+              "Davide odia il mare.",
+              "Se potesse, Davide viaggerebbe di più.",
+              "Davide ha due cani."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: se potessi cambiare qualcosa",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Immagina di poter cambiare una cosa della tua vita o della tua città. Scrivi 50-70 parole usando almeno un periodo ipotetico della realtà (Se + presente...) e almeno uno della possibilità (Se + congiuntivo imperfetto, condizionale).",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente almeno un periodo ipotetico della realtà",
+              "Usa correttamente almeno un periodo ipotetico della possibilità (congiuntivo imperfetto + condizionale)",
+              "Il testo è coerente, comprensibile e rispetta il numero di parole"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: e se vincessi alla lotteria?",
+          "istruzioni": "Parla per circa un minuto rispondendo alla consegna. Il sistema trascriverà e valuterà la tua risposta.",
+          "contenuto": {
+            "prompt": "Rispondi a voce alla domanda: 'Che cosa faresti se vincessi alla lotteria?'. Usa il periodo ipotetico della possibilità (Se + congiuntivo imperfetto, condizionale) e fai almeno tre esempi di cosa faresti.",
+            "traccia_modello": "Se vincessi alla lotteria, prima di tutto comprerei una casa grande con un giardino. Poi, se avessi abbastanza soldi, farei un lungo viaggio intorno al mondo con la mia famiglia. Aiuterei anche i miei amici e darei una parte del premio in beneficenza. Però continuerei a lavorare un po', perché senza lavoro mi annoierei.",
+            "parole_min": 40,
+            "parole_max": 80
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il periodo ipotetico della possibilità (congiuntivo imperfetto + condizionale)",
+              "Fornisce almeno tre esempi pertinenti",
+              "Pronuncia ed esposizione chiare e comprensibili"
+            ]
+          },
+          "punteggio_max": 20
         }
       ]
     },
     {
       "livello": "B1",
-      "sezione": "grammatica",
+      "sezione": "unità",
       "numero": 3,
       "titolo": "Connettivi e coesione testuale",
-      "descrizione": "Connettivi di causa, conseguenza, contrasto e aggiunta (perché, perciò, tuttavia, sebbene, inoltre) per collegare le frasi in modo coerente.",
+      "tema": "Collegare idee, organizzare un testo, esprimere causa, conseguenza e contrasto",
+      "descrizione": "Usare i connettivi per legare le frasi e costruire testi coesi, esprimendo causa, conseguenza, contrasto, aggiunta e tempo.",
       "obiettivi_cefr": [
-        "Usare i connettivi logici di causa, conseguenza, contrasto e aggiunta",
-        "Collegare le frasi e i paragrafi in modo coerente e coeso"
+        "Sa collegare idee e frasi usando i connettivi adeguati",
+        "Sa esprimere rapporti di causa, conseguenza e contrasto",
+        "Sa organizzare un testo scritto e orale in modo coeso e chiaro"
+      ],
+      "lezione": {
+        "introduzione": "I connettivi sono parole o espressioni che collegano frasi e idee, rendendo il testo coeso e logico. Ogni connettivo ha una funzione precisa: indicare la causa, la conseguenza, il contrasto, l'aggiunta o il tempo. Sceglierli bene aiuta chi legge o ascolta a seguire il ragionamento. In questa unità impariamo a classificarli e a usarli correttamente.",
+        "sezioni": [
+          {
+            "titolo": "Classificazione dei connettivi per funzione",
+            "testo": "Possiamo raggruppare i connettivi in base alla relazione logica che esprimono tra due idee. La tabella mostra le funzioni principali con i connettivi più comuni a livello B1.",
+            "tabella": {
+              "headers": [
+                "Funzione",
+                "Connettivi",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "Causa",
+                  "perché, poiché, siccome",
+                  "Resto a casa perché piove."
+                ],
+                [
+                  "Conseguenza",
+                  "quindi, perciò, dunque",
+                  "Piove, quindi resto a casa."
+                ],
+                [
+                  "Contrasto",
+                  "tuttavia, ma, sebbene",
+                  "È stanco, tuttavia continua a lavorare."
+                ],
+                [
+                  "Aggiunta",
+                  "inoltre, anche, infatti",
+                  "È intelligente; inoltre, è molto gentile."
+                ],
+                [
+                  "Tempo",
+                  "mentre, quando, prima che",
+                  "Leggo un libro mentre aspetto il treno."
+                ]
+              ]
+            },
+            "esempi": [
+              "Siccome era tardi, siamo tornati a casa.",
+              "Studio molto, perciò supererò l'esame."
+            ]
+          },
+          {
+            "titolo": "Causa e conseguenza: perché, poiché, quindi, perciò",
+            "testo": "I connettivi di causa introducono il motivo (perché, poiché). 'Poiché' è più formale e di solito apre la frase. I connettivi di conseguenza (quindi, perciò, dunque) introducono il risultato. Attenzione: 'perché' non si mette mai a inizio frase nel senso di causa.",
+            "esempi": [
+              "Poiché non avevo soldi, non ho comprato il biglietto.",
+              "Ho perso l'autobus, perciò sono arrivato in ritardo."
+            ]
+          },
+          {
+            "titolo": "Contrasto e concessione: tuttavia, mentre, sebbene",
+            "testo": "I connettivi di contrasto oppongono due idee. 'Tuttavia' introduce un'opposizione netta. 'Mentre' può indicare un contrasto tra due situazioni. 'Sebbene' (concessivo) richiede il congiuntivo e introduce un ostacolo che però non impedisce l'azione principale.",
+            "esempi": [
+              "Vorrei uscire; tuttavia, devo finire questo lavoro.",
+              "Sebbene fosse stanco, è venuto alla festa."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "poiché",
+          "traduzione": "since, because (formal)",
+          "esempio": "Poiché era malato, è rimasto a letto."
+        },
+        {
+          "parola": "perciò",
+          "traduzione": "therefore, for this reason",
+          "esempio": "Non ho studiato, perciò ho preso un brutto voto."
+        },
+        {
+          "parola": "quindi",
+          "traduzione": "so, therefore",
+          "esempio": "Ha smesso di piovere, quindi possiamo uscire."
+        },
+        {
+          "parola": "tuttavia",
+          "traduzione": "however, nevertheless",
+          "esempio": "Il film era lungo; tuttavia, mi è piaciuto molto."
+        },
+        {
+          "parola": "infatti",
+          "traduzione": "in fact, indeed",
+          "esempio": "Sembrava stanco; infatti, si è addormentato subito."
+        },
+        {
+          "parola": "inoltre",
+          "traduzione": "moreover, furthermore",
+          "esempio": "La casa è grande; inoltre, ha un bel giardino."
+        },
+        {
+          "parola": "sebbene",
+          "traduzione": "although (+ subjunctive)",
+          "esempio": "Sebbene piova, andiamo a fare una passeggiata."
+        },
+        {
+          "parola": "affinché",
+          "traduzione": "so that, in order that (+ subjunctive)",
+          "esempio": "Ti spiego tutto affinché tu capisca bene."
+        }
       ],
       "ordine": 3,
       "is_published": true,
       "esercizi": [
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Connettivo di causa",
-          "istruzioni": "Scegli il connettivo corretto.",
+          "istruzioni": "Scegli il connettivo corretto per esprimere la causa.",
           "contenuto": {
-            "domanda": "Non sono uscito _____ pioveva molto forte.",
-            "opzioni": ["perché", "quindi", "sebbene", "oppure"]
+            "domanda": "Non sono uscito _____ faceva troppo freddo.",
+            "opzioni": [
+              "perché",
+              "quindi",
+              "tuttavia",
+              "inoltre"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MCQ",
+          "abilita": "grammatica",
           "titolo": "Connettivo di conseguenza",
-          "istruzioni": "Scegli il connettivo corretto.",
+          "istruzioni": "Scegli il connettivo che introduce la conseguenza.",
           "contenuto": {
-            "domanda": "Ho studiato molto, _____ ho superato l'esame senza problemi.",
-            "opzioni": ["perciò", "perché", "nonostante", "mentre"]
+            "domanda": "Ho dimenticato le chiavi in ufficio, _____ non posso entrare in casa.",
+            "opzioni": [
+              "perciò",
+              "poiché",
+              "sebbene",
+              "mentre"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MCQ",
-          "titolo": "Connettivo di contrasto",
-          "istruzioni": "Scegli il connettivo corretto (richiede il congiuntivo).",
+          "abilita": "grammatica",
+          "titolo": "Connettivo concessivo",
+          "istruzioni": "Scegli il connettivo che richiede il congiuntivo e introduce una concessione.",
           "contenuto": {
-            "domanda": "_____ fosse molto stanco, ha continuato a lavorare fino a tardi.",
-            "opzioni": ["Sebbene", "Perché", "Quindi", "Poiché"]
+            "domanda": "_____ fosse molto stanco, ha finito tutto il lavoro.",
+            "opzioni": [
+              "Sebbene",
+              "Perché",
+              "Quindi",
+              "Infatti"
+            ]
           },
-          "soluzione": { "corretta": 0 },
+          "soluzione": {
+            "corretta": 0
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "FILL",
-          "titolo": "Completa con i connettivi",
-          "istruzioni": "Scegli il connettivo adatto per ogni spazio.",
+          "abilita": "grammatica",
+          "titolo": "Causa, contrasto e aggiunta",
+          "istruzioni": "Completa il testo scegliendo il connettivo adatto a ogni relazione logica.",
           "contenuto": {
-            "testo_template": "Mi piacerebbe viaggiare; {0}, non ho abbastanza tempo. {1}, cerco di fare brevi gite nel weekend.",
+            "testo_template": "Volevo andare al mare, {0} il tempo era brutto. {1} ho deciso di restare a casa; {2} ho approfittato per studiare.",
             "lacune": [
-              { "opzioni": ["tuttavia", "perciò", "poiché"] },
-              { "opzioni": ["Perciò", "Sebbene", "Mentre"] }
+              {
+                "opzioni": [
+                  "ma",
+                  "perché",
+                  "affinché"
+                ]
+              },
+              {
+                "opzioni": [
+                  "Quindi",
+                  "Sebbene",
+                  "Mentre"
+                ]
+              },
+              {
+                "opzioni": [
+                  "inoltre",
+                  "poiché",
+                  "tuttavia"
+                ]
+              }
             ]
           },
-          "soluzione": { "risposte": ["tuttavia", "Perciò"] },
+          "soluzione": {
+            "risposte": [
+              "ma",
+              "Quindi",
+              "inoltre"
+            ]
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "REORDER",
-          "titolo": "Rimetti in ordine",
-          "istruzioni": "Ordina le parole per formare una frase coerente con un connettivo di causa.",
+          "abilita": "grammatica",
+          "titolo": "Riordina la frase con il connettivo",
+          "istruzioni": "Ordina le parole per formare una frase corretta.",
           "contenuto": {
-            "parole": ["Mangio", "molta", "frutta", "perché", "fa", "bene", "alla", "salute"]
+            "parole": [
+              "Poiché",
+              "era",
+              "tardi",
+              "abbiamo",
+              "preso",
+              "un",
+              "taxi"
+            ]
           },
-          "soluzione": { "frase": "Mangio molta frutta perché fa bene alla salute" },
+          "soluzione": {
+            "frase": "Poiché era tardi abbiamo preso un taxi"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova il connettivo sbagliato",
+          "istruzioni": "Individua la parola sbagliata: il connettivo non esprime la relazione logica corretta.",
+          "contenuto": {
+            "parole": [
+              "Mangio",
+              "molta",
+              "frutta",
+              "perciò",
+              "fa",
+              "bene",
+              "alla",
+              "salute"
+            ],
+            "frase": "Mangio molta frutta perciò fa bene alla salute"
+          },
+          "soluzione": {
+            "indici_errati": [
+              3
+            ],
+            "correzioni": {
+              "3": "perché"
+            }
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "MATCH",
-          "titolo": "Abbina il connettivo alla funzione",
+          "abilita": "lessico",
+          "titolo": "Connettivo e funzione",
           "istruzioni": "Collega ogni connettivo alla sua funzione logica.",
           "contenuto": {
-            "colonna_a": ["perché", "quindi", "ma", "inoltre"],
-            "colonna_b": ["causa", "conseguenza", "contrasto", "aggiunta"]
+            "colonna_a": [
+              "poiché",
+              "quindi",
+              "tuttavia",
+              "inoltre",
+              "mentre"
+            ],
+            "colonna_b": [
+              "causa",
+              "conseguenza",
+              "contrasto",
+              "aggiunta",
+              "tempo"
+            ]
           },
-          "soluzione": { "mappa": { "0": 0, "1": 1, "2": 2, "3": 3 } },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3,
+              "4": 4
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: una decisione difficile",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Marta aveva ricevuto due offerte di lavoro. La prima era ben pagata; tuttavia, si trovava in un'altra città. La seconda offriva uno stipendio più basso, ma le permetteva di restare vicino alla famiglia. Poiché per lei gli affetti contano molto, ha scelto la seconda. Inoltre, l'azienda le ha promesso orari flessibili, perciò potrà studiare la sera.",
+            "affermazioni": [
+              "La prima offerta era ben pagata ma in un'altra città.",
+              "Marta ha scelto il lavoro più pagato.",
+              "Marta potrà studiare la sera grazie agli orari flessibili.",
+              "Marta ha tre figli."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: organizzare una gita",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Allora, ragazzi, organizziamo la gita di domenica. Volevo andare in montagna; tuttavia, le previsioni dicono che pioverà. Perciò ho pensato di andare al museo in città. Inoltre, poiché entra gratis chi ha meno di diciotto anni, spenderemo poco. Ci troviamo alla stazione alle nove, quindi mi raccomando, non fate tardi.",
+            "affermazioni": [
+              "All'inizio voleva andare in montagna.",
+              "Hanno deciso di andare al museo perché pioverà.",
+              "L'appuntamento è alla stazione alle nove.",
+              "Il museo è chiuso la domenica."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "vero",
+              "non_detto"
+            ]
+          },
           "punteggio_max": 10
         },
         {
           "tipo": "WRITE_FREE",
-          "titolo": "Esprimi la tua opinione",
-          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema (fase AI).",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: una scelta e i suoi motivi",
+          "istruzioni": "Scrivi un breve testo coeso. Sarà valutato dal sistema.",
           "contenuto": {
-            "prompt": "Scrivi un breve testo (60-80 parole) in cui esprimi la tua opinione sull'uso dello smartphone nella vita quotidiana. Usa almeno tre connettivi diversi (es. perché, tuttavia, inoltre).",
+            "prompt": "Racconta in 60-80 parole una decisione che hai preso di recente (un viaggio, un acquisto, uno studio). Spiega la causa, la conseguenza e un eventuale contrasto, usando almeno quattro connettivi diversi (per esempio: perché, quindi, tuttavia, inoltre).",
             "parole_min": 60,
             "parole_max": 80
           },
           "soluzione": {
             "criteri": [
-              "Uso corretto di almeno tre connettivi",
-              "Coerenza e coesione del testo",
-              "Registro adeguato e opinione chiara"
+              "Usa almeno quattro connettivi diversi in modo corretto",
+              "Esprime chiaramente causa, conseguenza ed eventuale contrasto",
+              "Il testo è coeso, coerente e rispetta il numero di parole"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: spiega una tua abitudine",
+          "istruzioni": "Parla per circa un minuto. Il browser trascriverà e il sistema valuterà.",
+          "contenuto": {
+            "prompt": "Descrivi una tua abitudine quotidiana e spiega perché la fai e quali conseguenze ha. Usa connettivi di causa (perché, poiché), conseguenza (quindi, perciò) e contrasto (tuttavia, sebbene). Parla per 60-90 parole.",
+            "traccia_modello": "Ogni mattina faccio una passeggiata, perché mi aiuta a svegliarmi. Cammino circa mezz'ora, quindi arrivo al lavoro più sveglio e di buon umore. A volte fa freddo; tuttavia, esco lo stesso, poiché l'aria fresca mi fa bene. Inoltre, durante la passeggiata ascolto un podcast, perciò imparo qualcosa di nuovo. Sebbene sia difficile alzarsi presto, non rinuncerei mai a questa abitudine.",
+            "parole_min": 60,
+            "parole_max": 90
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente connettivi di causa, conseguenza e contrasto",
+              "Il discorso è organizzato in modo logico e coeso"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "unità",
+      "numero": 4,
+      "titolo": "Il congiuntivo imperfetto e l'irrealtà",
+      "tema": "Desideri irrealizzabili, rimpianti e ipotesi sul presente irreale",
+      "descrizione": "Esprimere desideri impossibili, rimpianti e ipotesi irreali sul presente usando il congiuntivo imperfetto dopo 'vorrei che', 'se', 'magari' e 'come se'.",
+      "obiettivi_cefr": [
+        "Sa esprimere desideri e situazioni irreali con il congiuntivo imperfetto",
+        "Sa costruire il periodo ipotetico dell'irrealtà del presente (Se + congiuntivo imperfetto, + condizionale)",
+        "Sa usare 'magari' e 'come se' per esprimere desideri e paragoni irreali"
+      ],
+      "lezione": {
+        "introduzione": "Il congiuntivo imperfetto serve a esprimere ciò che non è reale: desideri impossibili, rimpianti e ipotesi sul presente che non corrispondono alla realtà. Lo troviamo dopo verbi di desiderio al condizionale ('vorrei che'), dopo 'se' nell'ipotesi irreale, e dopo 'magari' e 'come se'. È fondamentale per parlare di sogni e situazioni immaginarie.",
+        "sezioni": [
+          {
+            "titolo": "La coniugazione del congiuntivo imperfetto",
+            "testo": "Il congiuntivo imperfetto si forma dalla radice dell'infinito più le desinenze -assi, -essi, -issi. Le prime due persone singolari (io e tu) hanno la stessa forma, quindi spesso si usa il pronome per chiarezza. Attenzione ai verbi irregolari 'essere' (fossi) e 'fare' (facessi).",
+            "tabella": {
+              "headers": [
+                "Pronome",
+                "essere",
+                "avere",
+                "fare",
+                "andare",
+                "potere"
+              ],
+              "rows": [
+                [
+                  "io",
+                  "fossi",
+                  "avessi",
+                  "facessi",
+                  "andassi",
+                  "potessi"
+                ],
+                [
+                  "tu",
+                  "fossi",
+                  "avessi",
+                  "facessi",
+                  "andassi",
+                  "potessi"
+                ],
+                [
+                  "lui/lei",
+                  "fosse",
+                  "avesse",
+                  "facesse",
+                  "andasse",
+                  "potesse"
+                ],
+                [
+                  "noi",
+                  "fossimo",
+                  "avessimo",
+                  "facessimo",
+                  "andassimo",
+                  "potessimo"
+                ],
+                [
+                  "voi",
+                  "foste",
+                  "aveste",
+                  "faceste",
+                  "andaste",
+                  "poteste"
+                ],
+                [
+                  "loro",
+                  "fossero",
+                  "avessero",
+                  "facessero",
+                  "andassero",
+                  "potessero"
+                ]
+              ]
+            },
+            "esempi": [
+              "Vorrei che tu fossi più sincero con me.",
+              "Se potessi, farei un lungo viaggio in Asia."
+            ]
+          },
+          {
+            "titolo": "L'ipotesi irreale del presente: Se + congiuntivo imperfetto",
+            "testo": "Per fare un'ipotesi sul presente che è impossibile o contraria alla realtà, si usa 'se' + congiuntivo imperfetto nella prima parte (la condizione) e il condizionale presente nella seconda parte (la conseguenza). Significa che la situazione non è vera adesso.",
+            "tabella": {
+              "headers": [
+                "Condizione (Se + cong. imperfetto)",
+                "Conseguenza (condizionale)"
+              ],
+              "rows": [
+                [
+                  "Se fossi ricco,",
+                  "viaggerei in tutto il mondo."
+                ],
+                [
+                  "Se avessi tempo,",
+                  "imparerei a suonare il piano."
+                ],
+                [
+                  "Se potessi,",
+                  "ti aiuterei volentieri."
+                ],
+                [
+                  "Se vivessimo al mare,",
+                  "faremmo il bagno ogni giorno."
+                ]
+              ]
+            },
+            "esempi": [
+              "Se fossi ricco, viaggerei in tutto il mondo.",
+              "Se non lavorassi tanto, avrei più tempo per gli amici."
+            ]
+          },
+          {
+            "titolo": "Desideri e paragoni irreali: vorrei che, magari, come se",
+            "testo": "Dopo 'vorrei che' si usa il congiuntivo imperfetto per esprimere un desiderio. 'Magari' + congiuntivo imperfetto esprime un desiderio difficile da realizzare. 'Come se' introduce sempre un paragone irreale e richiede il congiuntivo imperfetto.",
+            "esempi": [
+              "Magari potessi tornare indietro nel tempo!",
+              "Parla come se sapesse tutto, ma in realtà non sa niente."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "il desiderio",
+          "traduzione": "the wish, desire",
+          "esempio": "Il mio più grande desiderio sarebbe vivere all'estero."
+        },
+        {
+          "parola": "il rimpianto",
+          "traduzione": "the regret",
+          "esempio": "Ho il rimpianto di non aver studiato di più."
+        },
+        {
+          "parola": "irrealizzabile",
+          "traduzione": "unattainable, impossible",
+          "esempio": "Sogno una vacanza irrealizzabile sulla Luna."
+        },
+        {
+          "parola": "magari",
+          "traduzione": "if only, maybe",
+          "esempio": "Magari potessi prendermi un anno di pausa!"
+        },
+        {
+          "parola": "come se",
+          "traduzione": "as if",
+          "esempio": "Si comporta come se fosse il capo."
+        },
+        {
+          "parola": "l'ipotesi",
+          "traduzione": "the hypothesis",
+          "esempio": "Facciamo l'ipotesi che tu avessi vinto la lotteria."
+        },
+        {
+          "parola": "sognare a occhi aperti",
+          "traduzione": "to daydream",
+          "esempio": "Passa le ore a sognare a occhi aperti."
+        },
+        {
+          "parola": "se solo",
+          "traduzione": "if only",
+          "esempio": "Se solo avessi più coraggio, glielo direi."
+        }
+      ],
+      "ordine": 4,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il verbo essere al congiuntivo imperfetto",
+          "istruzioni": "Scegli la forma corretta del congiuntivo imperfetto.",
+          "contenuto": {
+            "domanda": "Se io _____ al tuo posto, accetterei subito quel lavoro.",
+            "opzioni": [
+              "fossi",
+              "sarei",
+              "sono",
+              "ero"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il periodo ipotetico dell'irrealtà",
+          "istruzioni": "Scegli la forma corretta per completare la conseguenza.",
+          "contenuto": {
+            "domanda": "Se avessi più soldi, _____ una casa più grande.",
+            "opzioni": [
+              "comprerei",
+              "compro",
+              "comprassi",
+              "comprerò"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Desideri con 'vorrei che' e 'magari'",
+          "istruzioni": "Completa con il congiuntivo imperfetto corretto.",
+          "contenuto": {
+            "testo_template": "Vorrei che tu {0} più tempo libero, e magari noi {1} partire insieme.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "avessi",
+                  "avresti",
+                  "avrai"
+                ]
+              },
+              {
+                "opzioni": [
+                  "potessimo",
+                  "possiamo",
+                  "potremo"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "avessi",
+              "potessimo"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Costruisci l'ipotesi irreale",
+          "istruzioni": "Ordina le parole per formare un periodo ipotetico dell'irrealtà.",
+          "contenuto": {
+            "parole": [
+              "Se",
+              "fossi",
+              "ricco",
+              "viaggerei",
+              "in",
+              "tutto",
+              "il",
+              "mondo"
+            ]
+          },
+          "soluzione": {
+            "frase": "Se fossi ricco viaggerei in tutto il mondo"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore con 'come se'",
+          "istruzioni": "Trova la parola sbagliata: dopo 'come se' serve il congiuntivo imperfetto.",
+          "contenuto": {
+            "parole": [
+              "Lui",
+              "parla",
+              "come",
+              "se",
+              "sa",
+              "tutto",
+              "sulla",
+              "questione"
+            ],
+            "frase": "Lui parla come se sa tutto sulla questione"
+          },
+          "soluzione": {
+            "indici_errati": [
+              4
+            ],
+            "correzioni": {
+              "4": "sapesse"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: parole e traduzioni",
+          "istruzioni": "Collega ogni parola alla traduzione corretta in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "il desiderio",
+              "il rimpianto",
+              "irrealizzabile",
+              "come se"
+            ],
+            "colonna_b": [
+              "the wish",
+              "the regret",
+              "unattainable",
+              "as if"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: i sogni di Giulia",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Giulia lavora in banca da dieci anni, ma non è felice. Spesso pensa: 'Se non avessi paura, lascerei tutto e aprirei un piccolo ristorante in campagna.' Vorrebbe che la sua vita fosse più semplice e meno stressante. Magari potesse ricominciare da capo! Ma per ora resta al suo posto e continua a sognare a occhi aperti.",
+            "affermazioni": [
+              "Giulia è soddisfatta del suo lavoro in banca.",
+              "Giulia desidererebbe aprire un ristorante in campagna.",
+              "Giulia vorrebbe una vita più semplice.",
+              "Giulia ha già dato le dimissioni dalla banca."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "falso",
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: il sogno di Marco",
+          "istruzioni": "Ascolta il monologo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non dette.",
+          "contenuto": {
+            "testo": "Ciao, sono Marco. A volte penso che, se vivessi in una grande città come Roma, la mia vita sarebbe completamente diversa. Vorrei che il mio lavoro mi desse più soddisfazioni e magari potessi viaggiare di più per il mondo. Mia moglie invece è contenta qui in paese: parla come se questo fosse il posto perfetto per noi. Forse ha ragione lei.",
+            "affermazioni": [
+              "Marco pensa che la sua vita cambierebbe se vivesse in una grande città.",
+              "Marco vorrebbe viaggiare di più.",
+              "La moglie di Marco vuole trasferirsi a Roma.",
+              "Marco ha due figli."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: se la tua vita fosse diversa",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Immagina una vita diversa dalla tua. Scrivi 50-70 parole spiegando cosa faresti se fossi un'altra persona o se vivessi in un altro luogo. Usa almeno due periodi ipotetici dell'irrealtà (Se + congiuntivo imperfetto + condizionale) ed esprimi un desiderio con 'vorrei che' o 'magari'.",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente il congiuntivo imperfetto",
+              "Costruisce almeno due periodi ipotetici dell'irrealtà (Se + cong. imperfetto + condizionale)",
+              "Esprime un desiderio con 'vorrei che' o 'magari'",
+              "Testo coerente e adeguato al livello B1"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: i tuoi desideri irrealizzabili",
+          "istruzioni": "Parla per circa un minuto rispondendo alla consegna. Il sistema trascriverà e valuterà la tua risposta.",
+          "contenuto": {
+            "prompt": "Parla dei tuoi desideri e rimpianti. Cosa cambieresti della tua vita se potessi? Descrivi almeno due situazioni irreali usando 'Se + congiuntivo imperfetto + condizionale' ed esprimi un desiderio con 'magari' o 'vorrei che'.",
+            "traccia_modello": "Se avessi più tempo libero, imparerei a suonare la chitarra e studierei altre lingue. A volte penso che, se vivessi vicino al mare, sarei molto più tranquillo. Il mio più grande rimpianto è non aver viaggiato di più da giovane. Magari potessi ricominciare e fare scelte più coraggiose! Vorrei che il futuro mi portasse nuove occasioni per realizzare i miei sogni.",
+            "parole_min": 50,
+            "parole_max": 90
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il congiuntivo imperfetto in modo corretto",
+              "Costruisce almeno due ipotesi irreali del presente",
+              "Esprime un desiderio con 'magari' o 'vorrei che'"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "unità",
+      "numero": 5,
+      "titolo": "Il discorso indiretto",
+      "tema": "Riferire ciò che qualcuno ha detto, chiesto o ordinato",
+      "descrizione": "Trasformare il discorso diretto in discorso indiretto, adattando tempi verbali, pronomi e indicatori di tempo e di luogo.",
+      "obiettivi_cefr": [
+        "Sa riferire affermazioni, domande e ordini altrui",
+        "Sa trasformare il discorso diretto in indiretto adattando i tempi verbali",
+        "Sa modificare correttamente pronomi e indicatori di tempo e luogo"
+      ],
+      "lezione": {
+        "introduzione": "Il discorso indiretto serve a riferire le parole di un'altra persona senza citarle letteralmente. Quando il verbo che introduce (dire, chiedere, rispondere...) è al passato, di solito cambiano i tempi verbali, i pronomi e gli indicatori di tempo e di luogo. Se il verbo introduttivo è al presente, invece, i tempi restano quasi sempre invariati.",
+        "sezioni": [
+          {
+            "titolo": "La trasformazione dei tempi verbali",
+            "testo": "Con il verbo introduttivo al passato (ha detto, ha chiesto...) la frase riportata 'arretra' nel tempo: il presente diventa imperfetto, il passato prossimo diventa trapassato prossimo, il futuro diventa condizionale composto. Con il verbo introduttivo al presente (dice, chiede...) i tempi non cambiano.",
+            "tabella": {
+              "headers": [
+                "Discorso diretto",
+                "Discorso indiretto (verbo al passato)"
+              ],
+              "rows": [
+                [
+                  "presente: \"lavoro\"",
+                  "imperfetto: che lavorava"
+                ],
+                [
+                  "passato prossimo: \"ho lavorato\"",
+                  "trapassato prossimo: che aveva lavorato"
+                ],
+                [
+                  "imperfetto: \"lavoravo\"",
+                  "imperfetto: che lavorava"
+                ],
+                [
+                  "futuro semplice: \"lavorerò\"",
+                  "condizionale composto: che avrebbe lavorato"
+                ],
+                [
+                  "imperativo: \"lavora!\"",
+                  "di + infinito: di lavorare"
+                ]
+              ]
+            },
+            "esempi": [
+              "Diretto: Luca ha detto: \"Sono stanco\". Indiretto: Luca ha detto che era stanco.",
+              "Diretto: Anna ha promesso: \"Ti aiuterò\". Indiretto: Anna ha promesso che mi avrebbe aiutato."
+            ]
+          },
+          {
+            "titolo": "Pronomi e indicatori di tempo e di luogo",
+            "testo": "Passando al discorso indiretto cambiano anche i pronomi e gli aggettivi possessivi (io diventa lui/lei, mio diventa suo) e, quando il verbo introduttivo è al passato, gli indicatori di tempo e di luogo si adattano alla nuova prospettiva.",
+            "tabella": {
+              "headers": [
+                "Discorso diretto",
+                "Discorso indiretto"
+              ],
+              "rows": [
+                [
+                  "oggi",
+                  "quel giorno"
+                ],
+                [
+                  "ieri",
+                  "il giorno prima"
+                ],
+                [
+                  "domani",
+                  "il giorno dopo"
+                ],
+                [
+                  "qui / qua",
+                  "lì / là"
+                ],
+                [
+                  "questo",
+                  "quello"
+                ],
+                [
+                  "adesso / ora",
+                  "in quel momento / allora"
+                ]
+              ]
+            },
+            "esempi": [
+              "Diretto: Marco ha detto: \"Oggi resto qui\". Indiretto: Marco ha detto che quel giorno restava lì.",
+              "Diretto: Sara ha detto: \"Domani parto\". Indiretto: Sara ha detto che il giorno dopo sarebbe partita."
+            ]
+          },
+          {
+            "titolo": "Riferire domande e ordini",
+            "testo": "Le domande dirette si riferiscono con 'chiedere se' (domanda totale) oppure con la stessa parola interrogativa (dove, quando, perché...). Gli ordini e gli inviti si riferiscono con 'di + infinito'.",
+            "esempi": [
+              "Diretto: Mi ha chiesto: \"Vieni alla festa?\". Indiretto: Mi ha chiesto se venivo alla festa.",
+              "Diretto: Il professore ha detto: \"Aprite il libro!\". Indiretto: Il professore ci ha detto di aprire il libro."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "dire",
+          "traduzione": "to say / to tell",
+          "esempio": "Mi ha detto che sarebbe arrivato in ritardo."
+        },
+        {
+          "parola": "chiedere",
+          "traduzione": "to ask",
+          "esempio": "Le ho chiesto se voleva un caffè."
+        },
+        {
+          "parola": "rispondere",
+          "traduzione": "to answer / to reply",
+          "esempio": "Ha risposto che non lo sapeva."
+        },
+        {
+          "parola": "affermare",
+          "traduzione": "to state / to claim",
+          "esempio": "Il testimone ha affermato di non aver visto nulla."
+        },
+        {
+          "parola": "promettere",
+          "traduzione": "to promise",
+          "esempio": "Mi aveva promesso che mi avrebbe scritto."
+        },
+        {
+          "parola": "raccontare",
+          "traduzione": "to tell / to recount",
+          "esempio": "Ci ha raccontato che aveva vissuto a Parigi."
+        },
+        {
+          "parola": "spiegare",
+          "traduzione": "to explain",
+          "esempio": "L'insegnante ha spiegato che la regola era semplice."
+        },
+        {
+          "parola": "ordinare",
+          "traduzione": "to order",
+          "esempio": "Il capo ci ha ordinato di finire il lavoro."
+        }
+      ],
+      "ordine": 5,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Dal presente all'imperfetto",
+          "istruzioni": "Scegli la forma corretta del discorso indiretto.",
+          "contenuto": {
+            "domanda": "Diretto: Paolo ha detto: \"Studio l'italiano\". Indiretto: Paolo ha detto che _____ l'italiano.",
+            "opzioni": [
+              "studiava",
+              "studia",
+              "studierà",
+              "ha studiato"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il futuro nel discorso indiretto",
+          "istruzioni": "Scegli la forma corretta.",
+          "contenuto": {
+            "domanda": "Diretto: Anna ha promesso: \"Ti telefonerò\". Indiretto: Anna ha promesso che mi _____.",
+            "opzioni": [
+              "avrebbe telefonato",
+              "telefonerà",
+              "telefonava",
+              "ha telefonato"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Tempi e indicatori",
+          "istruzioni": "Completa la trasformazione al discorso indiretto scegliendo le forme corrette.",
+          "contenuto": {
+            "testo_template": "Diretto: Marco ha detto: \"Ieri ho lavorato molto\". Indiretto: Marco ha detto che {0} {1} molto.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "il giorno prima",
+                  "ieri",
+                  "domani"
+                ]
+              },
+              {
+                "opzioni": [
+                  "aveva lavorato",
+                  "ha lavorato",
+                  "lavorava"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "il giorno prima",
+              "aveva lavorato"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Indicatori di tempo e luogo",
+          "istruzioni": "Collega ogni espressione del discorso diretto alla forma del discorso indiretto.",
+          "contenuto": {
+            "colonna_a": [
+              "oggi",
+              "domani",
+              "qui",
+              "questo"
+            ],
+            "colonna_b": [
+              "quel giorno",
+              "il giorno dopo",
+              "lì",
+              "quello"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "La frase al discorso indiretto contiene un verbo sbagliato. Indica la parola errata.",
+          "contenuto": {
+            "parole": [
+              "Luca",
+              "ha",
+              "detto",
+              "che",
+              "oggi",
+              "era",
+              "stanco"
+            ],
+            "frase": "Luca ha detto che oggi era stanco"
+          },
+          "soluzione": {
+            "indici_errati": [
+              4
+            ],
+            "correzioni": {
+              "4": "quel giorno"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: i verbi del riferire",
+          "istruzioni": "Collega ogni verbo alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "chiedere",
+              "rispondere",
+              "promettere",
+              "spiegare"
+            ],
+            "colonna_b": [
+              "to ask",
+              "to answer",
+              "to promise",
+              "to explain"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: un messaggio riferito",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Ieri ho incontrato Giulia. Mi ha detto che era appena tornata da un viaggio in Spagna e che si era divertita molto. Mi ha chiesto se volevo vedere le foto e ha promesso che il giorno dopo me le avrebbe mandate. Poi mi ha spiegato che presto sarebbe ripartita per lavoro.",
+            "affermazioni": [
+              "Giulia era appena tornata dalla Spagna.",
+              "Giulia ha detto che si era annoiata durante il viaggio.",
+              "Giulia ha promesso di mandare le foto il giorno dopo.",
+              "Giulia ha viaggiato in aereo."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: cosa ha detto il collega",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non dette.",
+          "contenuto": {
+            "testo": "Stamattina il mio collega Davide mi ha fermato in corridoio. Mi ha detto che la riunione era stata rimandata e mi ha chiesto se potevo avvisare gli altri. Poi ha aggiunto che il direttore sarebbe arrivato il giorno dopo e mi ha raccomandato di preparare i documenti.",
+            "affermazioni": [
+              "Davide ha detto che la riunione era stata rimandata.",
+              "Davide ha chiesto di avvisare gli altri colleghi.",
+              "Il direttore era già arrivato quella mattina."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: riferisci una conversazione",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Immagina di aver parlato con un amico ieri. Riferisci la conversazione usando il discorso indiretto in 50-70 parole: racconta che cosa ti ha detto, che cosa ti ha chiesto e che cosa ti ha promesso. Usa verbi come dire, chiedere, promettere e adatta tempi verbali e indicatori di tempo.",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente il discorso indiretto con verbi al passato",
+              "Trasforma correttamente i tempi verbali (presente -> imperfetto, futuro -> condizionale composto)",
+              "Adatta pronomi e indicatori di tempo (oggi -> quel giorno, domani -> il giorno dopo)",
+              "Testo coerente e comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: riferisci un messaggio",
+          "istruzioni": "Leggi la consegna, poi registra la tua risposta. Il sistema trascriverà e valuterà.",
+          "contenuto": {
+            "prompt": "Un amico ti ha lasciato questo messaggio: \"Domani non posso venire alla festa perché devo lavorare, ma ti chiamerò la sera. Mi dispiace!\". Riferisci a un'altra persona ciò che il tuo amico ha detto, usando il discorso indiretto (Il mio amico ha detto che...). Parla per circa 40-60 parole.",
+            "traccia_modello": "Il mio amico mi ha detto che il giorno dopo non poteva venire alla festa perché doveva lavorare. Ha aggiunto che però mi avrebbe chiamato la sera. Alla fine si è scusato e ha detto che gli dispiaceva molto di non poter essere presente.",
+            "parole_min": 40,
+            "parole_max": 60
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il discorso indiretto introdotto da un verbo al passato",
+              "Trasforma correttamente tempi verbali e indicatori di tempo (domani -> il giorno dopo)",
+              "Risposta chiara, pronuncia comprensibile e coerente con il messaggio"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "unità",
+      "numero": 6,
+      "titolo": "La forma passiva e il 'si' impersonale",
+      "tema": "Descrivere processi, regole e procedure; il linguaggio delle notizie e delle istruzioni",
+      "descrizione": "Usare la forma passiva (con essere e con venire) e il 'si' impersonale e passivante per descrivere azioni in modo impersonale, tipico di notizie, regolamenti e istruzioni.",
+      "obiettivi_cefr": [
+        "Sa trasformare frasi dalla forma attiva a quella passiva",
+        "Sa usare il 'si' impersonale e il 'si' passivante",
+        "Sa comprendere e produrre testi di tipo regolativo e informativo"
+      ],
+      "lezione": {
+        "introduzione": "Quando vogliamo mettere in primo piano l'azione o il suo risultato, e non chi la compie, usiamo la forma passiva o il 'si' impersonale. Sono costruzioni molto frequenti nelle notizie, nelle regole e nelle istruzioni. In questa unità impariamo a formarle e a distinguerne gli usi.",
+        "sezioni": [
+          {
+            "titolo": "Dalla forma attiva alla forma passiva",
+            "testo": "Nella forma attiva il soggetto compie l'azione; nella forma passiva il soggetto la subisce. Il passivo si forma con 'essere' + participio passato, e chi compie l'azione (il complemento d'agente) è introdotto da 'da'. Il participio passato concorda in genere e numero con il soggetto. Nei tempi semplici si può usare anche 'venire' al posto di 'essere'.",
+            "tabella": {
+              "headers": [
+                "Forma attiva",
+                "Forma passiva (essere)",
+                "Forma passiva (venire)"
+              ],
+              "rows": [
+                [
+                  "Il giornalista scrive l'articolo.",
+                  "L'articolo è scritto dal giornalista.",
+                  "L'articolo viene scritto dal giornalista."
+                ],
+                [
+                  "I lettori comprano il giornale.",
+                  "Il giornale è comprato dai lettori.",
+                  "Il giornale viene comprato dai lettori."
+                ],
+                [
+                  "La giuria premia gli studenti.",
+                  "Gli studenti sono premiati dalla giuria.",
+                  "Gli studenti vengono premiati dalla giuria."
+                ],
+                [
+                  "Il direttore approva la regola.",
+                  "La regola è approvata dal direttore.",
+                  "La regola viene approvata dal direttore."
+                ]
+              ]
+            },
+            "esempi": [
+              "Il telegiornale è seguito da milioni di persone ogni sera.",
+              "Le nuove norme vengono applicate da tutti gli uffici."
+            ]
+          },
+          {
+            "titolo": "Il 'si' passivante",
+            "testo": "Con il 'si' passivante esprimiamo un'azione passiva senza dire chi la compie. Si forma con 'si' + verbo alla terza persona. Il verbo è singolare se l'oggetto è singolare, plurale se l'oggetto è plurale. È molto usato negli annunci, nelle ricette e nelle istruzioni.",
+            "tabella": {
+              "headers": [
+                "Frase con il 'si'",
+                "Numero del verbo",
+                "Equivalente passivo"
+              ],
+              "rows": [
+                [
+                  "Si vende un appartamento.",
+                  "singolare",
+                  "Un appartamento è venduto."
+                ],
+                [
+                  "Si vendono libri usati.",
+                  "plurale",
+                  "Libri usati sono venduti."
+                ],
+                [
+                  "Si cerca un cameriere.",
+                  "singolare",
+                  "Un cameriere è cercato."
+                ],
+                [
+                  "Si affittano stanze agli studenti.",
+                  "plurale",
+                  "Stanze sono affittate agli studenti."
+                ]
+              ]
+            },
+            "esempi": [
+              "In questo negozio si riparano telefoni e computer.",
+              "Si cercano volontari per l'evento di sabato."
+            ]
+          },
+          {
+            "titolo": "Il 'si' impersonale",
+            "testo": "Il 'si' impersonale serve a parlare di un soggetto generico ('la gente', 'le persone in generale') e si usa con verbi senza oggetto diretto. Il verbo resta sempre alla terza persona singolare. È tipico delle affermazioni generali e dei consigli.",
+            "esempi": [
+              "In Italia si mangia bene e si beve un buon caffè.",
+              "Quando si studia, si impara meglio in un luogo tranquillo."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "la procedura",
+          "traduzione": "the procedure",
+          "esempio": "La procedura per iscriversi è spiegata sul sito."
+        },
+        {
+          "parola": "la norma",
+          "traduzione": "the rule / regulation",
+          "esempio": "Le norme di sicurezza vengono rispettate da tutti."
+        },
+        {
+          "parola": "il regolamento",
+          "traduzione": "the regulations / rulebook",
+          "esempio": "Il nuovo regolamento è stato approvato ieri."
+        },
+        {
+          "parola": "l'annuncio",
+          "traduzione": "the advertisement / announcement",
+          "esempio": "Ho letto un annuncio: si affitta una stanza in centro."
+        },
+        {
+          "parola": "vietare",
+          "traduzione": "to forbid / to ban",
+          "esempio": "In questo locale è vietato fumare."
+        },
+        {
+          "parola": "consentire",
+          "traduzione": "to allow / to permit",
+          "esempio": "L'ingresso è consentito solo con il biglietto."
+        },
+        {
+          "parola": "il complemento d'agente",
+          "traduzione": "the agent (in a passive sentence)",
+          "esempio": "Nella frase passiva il complemento d'agente è introdotto da 'da'."
+        },
+        {
+          "parola": "la notizia",
+          "traduzione": "the news (item)",
+          "esempio": "La notizia è stata pubblicata da tutti i giornali."
+        }
+      ],
+      "ordine": 6,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il complemento d'agente",
+          "istruzioni": "Scegli la forma passiva corretta.",
+          "contenuto": {
+            "domanda": "Il premio _____ dal sindaco durante la cerimonia.",
+            "opzioni": [
+              "è stato consegnato",
+              "ha consegnato",
+              "si consegna",
+              "consegna"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Il 'si' passivante",
+          "istruzioni": "Scegli la forma corretta con il 'si' passivante.",
+          "contenuto": {
+            "domanda": "In quella libreria _____ libri usati a buon prezzo.",
+            "opzioni": [
+              "si vendono",
+              "si vende",
+              "è venduto",
+              "vende"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Singolare o plurale con il 'si'",
+          "istruzioni": "Completa scegliendo la forma corretta del verbo dopo il 'si' passivante.",
+          "contenuto": {
+            "testo_template": "In questo ristorante {0} pizze ottime e {1} anche un dolce della casa.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "si preparano",
+                  "si prepara",
+                  "si è preparato"
+                ]
+              },
+              {
+                "opzioni": [
+                  "si offre",
+                  "si offrono",
+                  "si offrivano"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "si preparano",
+              "si offre"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Costruisci la frase passiva",
+          "istruzioni": "Ordina le parole per formare una frase passiva corretta.",
+          "contenuto": {
+            "parole": [
+              "La",
+              "notizia",
+              "è",
+              "stata",
+              "pubblicata",
+              "da",
+              "tutti",
+              "i",
+              "giornali"
+            ]
+          },
+          "soluzione": {
+            "frase": "La notizia è stata pubblicata da tutti i giornali"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore nel passivo",
+          "istruzioni": "Trova la parola sbagliata: il participio passato deve concordare con il soggetto.",
+          "contenuto": {
+            "parole": [
+              "Le",
+              "regole",
+              "sono",
+              "stato",
+              "approvate",
+              "dal",
+              "direttore"
+            ],
+            "frase": "Le regole sono stato approvate dal direttore"
+          },
+          "soluzione": {
+            "indici_errati": [
+              3
+            ],
+            "correzioni": {
+              "3": "state"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: parole e traduzioni",
+          "istruzioni": "Collega ogni parola alla sua traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "la norma",
+              "vietare",
+              "l'annuncio",
+              "consentire"
+            ],
+            "colonna_b": [
+              "the rule / regulation",
+              "to forbid / to ban",
+              "the advertisement / announcement",
+              "to allow / to permit"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: il regolamento della biblioteca",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Nella biblioteca comunale si possono prendere in prestito fino a cinque libri alla volta. I libri vanno restituiti entro un mese. All'interno delle sale non è consentito mangiare né parlare ad alta voce. Il servizio di prestito viene gestito dal personale al primo piano.",
+            "affermazioni": [
+              "Si possono prendere in prestito al massimo cinque libri.",
+              "I libri devono essere restituiti entro una settimana.",
+              "Nelle sale non è permesso mangiare.",
+              "La biblioteca è aperta anche la domenica."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: un notiziario locale",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non dette.",
+          "contenuto": {
+            "testo": "Buonasera e benvenuti al notiziario. Da lunedì prossimo il centro storico sarà chiuso al traffico delle automobili. La decisione è stata presa dal comune per ridurre l'inquinamento. I residenti potranno comunque entrare con il permesso. In piazza Garibaldi verrà inaugurato un nuovo parco con alberi e panchine.",
+            "affermazioni": [
+              "Il centro storico sarà chiuso alle automobili da lunedì.",
+              "La decisione è stata presa per ridurre l'inquinamento.",
+              "I residenti non potranno mai entrare in centro.",
+              "Il nuovo parco costerà due milioni di euro."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "vero",
+              "falso",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: le regole di un luogo",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Scrivi il regolamento di un luogo che conosci (palestra, ufficio, scuola) in 50-70 parole. Spiega cosa si può e cosa non si può fare, usando il 'si' impersonale/passivante e la forma passiva (per esempio: 'non si può fumare', 'le scarpe vanno tolte', 'è vietato...').",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente la forma passiva e/o il 'si' impersonale o passivante",
+              "Descrive in modo chiaro regole e divieti del luogo scelto",
+              "Testo coerente, ordinato e adeguato al registro regolativo"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: come si prepara un piatto",
+          "istruzioni": "Parla per circa un minuto. La tua risposta sarà trascritta e valutata.",
+          "contenuto": {
+            "prompt": "Spiega come si prepara un piatto tipico del tuo Paese, descrivendo i passaggi con il 'si' impersonale/passivante (per esempio: 'prima si tagliano le verdure', 'poi si aggiunge il sale', 'si cuoce per dieci minuti').",
+            "traccia_modello": "Oggi vi spiego come si prepara la pasta al pomodoro. Prima si mette l'acqua a bollire e si aggiunge un po' di sale. Intanto si prepara il sugo: si taglia la cipolla, si fa soffriggere e poi si aggiunge il pomodoro. Quando l'acqua bolle, si butta la pasta e si cuoce per circa dieci minuti. Alla fine si scola la pasta, si mescola con il sugo e si serve calda.",
+            "parole_min": 40,
+            "parole_max": 90
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il 'si' impersonale/passivante per descrivere i passaggi",
+              "Presenta i passaggi in ordine logico e in modo comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "unità",
+      "numero": 7,
+      "titolo": "I pronomi relativi",
+      "tema": "Unire frasi e dare informazioni aggiuntive su persone e cose",
+      "descrizione": "Usare i pronomi relativi che, cui e il quale per collegare due frasi e fornire informazioni aggiuntive su persone e cose senza ripetizioni.",
+      "obiettivi_cefr": [
+        "Sa collegare due frasi usando i pronomi relativi che e cui",
+        "Sa usare cui preceduto da preposizione (a cui, di cui, in cui, con cui)",
+        "Sa riconoscere e usare la forma il quale/la quale/i quali/le quali"
+      ],
+      "lezione": {
+        "introduzione": "I pronomi relativi servono a unire due frasi evitando di ripetere un nome. Il pronome più comune è che, che vale sia come soggetto sia come oggetto. Quando serve una preposizione si usa cui (a cui, di cui, in cui, con cui). La forma il quale è più formale e si usa soprattutto per evitare ambiguità.",
+        "sezioni": [
+          {
+            "titolo": "Il pronome che (soggetto e oggetto)",
+            "testo": "Che è invariabile e può sostituire una persona o una cosa. Funziona come soggetto (\"chi compie l'azione\") o come oggetto diretto (\"chi/che cosa subisce l'azione\"). Non si usa mai dopo una preposizione.",
+            "esempi": [
+              "Il ragazzo che parla è mio fratello.",
+              "Il libro che ho letto era molto interessante."
+            ]
+          },
+          {
+            "titolo": "Il pronome cui con le preposizioni",
+            "testo": "Quando il verbo o l'espressione richiede una preposizione, non si usa che ma cui, preceduto dalla preposizione adatta. Cui è invariabile. Le combinazioni più frequenti sono: a cui (= al quale), di cui (= del quale), in cui (= nel quale), con cui (= con il quale).",
+            "tabella": {
+              "headers": [
+                "Preposizione + cui",
+                "Significato",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "a cui",
+                  "complemento di termine (a chi/a che cosa)",
+                  "L'amico a cui ho scritto vive a Torino."
+                ],
+                [
+                  "di cui",
+                  "argomento o possesso (di chi/di che cosa)",
+                  "Il film di cui parli è famoso."
+                ],
+                [
+                  "in cui",
+                  "luogo o tempo (dove/quando)",
+                  "La città in cui vivo è tranquilla."
+                ],
+                [
+                  "con cui",
+                  "compagnia o mezzo (con chi/con che cosa)",
+                  "La penna con cui scrivo è rossa."
+                ],
+                [
+                  "da cui",
+                  "origine o provenienza (da dove/da chi)",
+                  "Il paese da cui vengo è in Sicilia."
+                ]
+              ]
+            },
+            "esempi": [
+              "Questa è la collega con cui lavoro ogni giorno.",
+              "Il motivo per cui sono in ritardo è il traffico."
+            ]
+          },
+          {
+            "titolo": "La forma il quale/la quale",
+            "testo": "Il quale, la quale, i quali, le quali è una forma più formale ed elegante. Concorda in genere e numero con il nome a cui si riferisce e si usa soprattutto per evitare ambiguità o dopo una preposizione (al quale, del quale, nel quale). Come soggetto/oggetto è più comune usare che.",
+            "tabella": {
+              "headers": [
+                "Maschile sing.",
+                "Femminile sing.",
+                "Maschile plur.",
+                "Femminile plur."
+              ],
+              "rows": [
+                [
+                  "il quale",
+                  "la quale",
+                  "i quali",
+                  "le quali"
+                ],
+                [
+                  "al quale",
+                  "alla quale",
+                  "ai quali",
+                  "alle quali"
+                ],
+                [
+                  "del quale",
+                  "della quale",
+                  "dei quali",
+                  "delle quali"
+                ]
+              ]
+            },
+            "esempi": [
+              "Ho parlato con il direttore, il quale mi ha dato ragione.",
+              "La professoressa, alla quale ho chiesto aiuto, è stata gentile."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "il motivo",
+          "traduzione": "the reason",
+          "esempio": "Il motivo per cui studio italiano è il lavoro."
+        },
+        {
+          "parola": "collegare",
+          "traduzione": "to connect, to link",
+          "esempio": "I pronomi relativi servono a collegare due frasi."
+        },
+        {
+          "parola": "aggiuntivo",
+          "traduzione": "additional",
+          "esempio": "La frase relativa dà un'informazione aggiuntiva."
+        },
+        {
+          "parola": "riferirsi a",
+          "traduzione": "to refer to",
+          "esempio": "Il pronome che si riferisce alla persona di cui parlo."
+        },
+        {
+          "parola": "il quartiere",
+          "traduzione": "the neighbourhood",
+          "esempio": "Il quartiere in cui abito è molto vivace."
+        },
+        {
+          "parola": "fidarsi di",
+          "traduzione": "to trust",
+          "esempio": "Lei è una persona di cui mi fido completamente."
+        },
+        {
+          "parola": "il vicino",
+          "traduzione": "the neighbour",
+          "esempio": "Il vicino con cui parlo spesso è simpatico."
+        },
+        {
+          "parola": "evitare",
+          "traduzione": "to avoid",
+          "esempio": "I relativi aiutano a evitare le ripetizioni."
+        }
+      ],
+      "ordine": 7,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Che soggetto o oggetto",
+          "istruzioni": "Scegli il pronome relativo corretto.",
+          "contenuto": {
+            "domanda": "Questo è il treno _____ va a Milano.",
+            "opzioni": [
+              "che",
+              "cui",
+              "chi",
+              "dove"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "La preposizione giusta con cui",
+          "istruzioni": "Scegli la combinazione corretta di preposizione e cui.",
+          "contenuto": {
+            "domanda": "La casa _____ abito è vicino alla stazione.",
+            "opzioni": [
+              "in cui",
+              "a cui",
+              "di cui",
+              "con cui"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Che o cui",
+          "istruzioni": "Completa ogni frase con il pronome relativo corretto.",
+          "contenuto": {
+            "testo_template": "L'amica {0} ho incontrato ieri è la ragazza {1} ti ho parlato la settimana scorsa.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "che",
+                  "cui",
+                  "con cui"
+                ]
+              },
+              {
+                "opzioni": [
+                  "di cui",
+                  "che",
+                  "a cui"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "che",
+              "di cui"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "grammatica",
+          "titolo": "Abbina preposizione e cui al significato",
+          "istruzioni": "Collega ogni espressione con cui al suo significato.",
+          "contenuto": {
+            "colonna_a": [
+              "a cui",
+              "di cui",
+              "in cui",
+              "con cui"
+            ],
+            "colonna_b": [
+              "complemento di termine (a qualcuno)",
+              "argomento (parlare di qualcosa)",
+              "luogo o tempo (dove/quando)",
+              "compagnia (insieme a qualcuno)"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta con il pronome relativo.",
+          "contenuto": {
+            "parole": [
+              "Il",
+              "ragazzo",
+              "con",
+              "cui",
+              "studio",
+              "è",
+              "francese"
+            ]
+          },
+          "soluzione": {
+            "frase": "Il ragazzo con cui studio è francese"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Trova la parola sbagliata: dopo una preposizione non si usa che.",
+          "contenuto": {
+            "parole": [
+              "Questo",
+              "è",
+              "il",
+              "libro",
+              "di",
+              "che",
+              "ti",
+              "ho",
+              "parlato"
+            ],
+            "frase": "Questo è il libro di che ti ho parlato"
+          },
+          "soluzione": {
+            "indici_errati": [
+              5
+            ],
+            "correzioni": {
+              "5": "cui"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico dell'unità",
+          "istruzioni": "Collega ogni parola alla traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "il motivo",
+              "collegare",
+              "il quartiere",
+              "evitare"
+            ],
+            "colonna_b": [
+              "the reason",
+              "to connect",
+              "the neighbourhood",
+              "to avoid"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: una nuova amica",
+          "istruzioni": "Leggi il testo e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Ti presento Sofia, la ragazza con cui condivido l'appartamento. È una persona di cui mi fido molto. Il quartiere in cui viviamo è tranquillo e pieno di parchi. Sofia lavora in una libreria che si trova vicino a casa.",
+            "affermazioni": [
+              "Sofia è la ragazza con cui chi parla condivide l'appartamento.",
+              "Il quartiere in cui vivono è rumoroso.",
+              "Sofia lavora in una libreria vicino a casa.",
+              "Sofia e l'autrice si conoscono da dieci anni."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: il collega di lavoro",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non dette.",
+          "contenuto": {
+            "testo": "Marco è il collega con cui lavoro tutti i giorni. È la persona a cui chiedo sempre consiglio quando ho un problema. L'ufficio in cui lavoriamo è nel centro della città. Il progetto di cui ci occupiamo adesso è molto importante per l'azienda.",
+            "affermazioni": [
+              "Marco è il collega con cui lavora chi parla.",
+              "L'ufficio in cui lavorano è in periferia.",
+              "Il progetto di cui si occupano è importante."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: una persona importante per te",
+          "istruzioni": "Scrivi un breve testo. Sarà valutato dal sistema.",
+          "contenuto": {
+            "prompt": "Descrivi in 50-70 parole una persona importante per te (un amico, un parente o un collega). Usa almeno tre pronomi relativi diversi (per esempio: che, con cui, di cui, a cui). Spiega chi è, perché è importante e che cosa fate insieme.",
+            "parole_min": 50,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente almeno tre pronomi relativi diversi (che, cui con preposizione)",
+              "Descrive la persona e spiega perché è importante",
+              "Testo coerente, comprensibile e adeguato al livello B1"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: il luogo in cui vivi",
+          "istruzioni": "Parla per circa un minuto. Il browser trascrive e il sistema valuta la tua risposta.",
+          "contenuto": {
+            "prompt": "Descrivi il quartiere o la città in cui vivi. Usa i pronomi relativi (per esempio: in cui, che, di cui) per parlare dei luoghi che ti piacciono, delle persone con cui passi il tempo e dei posti di cui sei orgoglioso.",
+            "traccia_modello": "Vivo in un quartiere che mi piace molto. È un posto in cui ci sono tanti negozi e un parco in cui vado a correre la mattina. Le persone con cui passo il tempo libero sono i miei vicini, di cui mi fido molto. Il locale di cui sono più orgoglioso è una piccola pizzeria che fa la pizza migliore della città.",
+            "parole_min": 40,
+            "parole_max": 80
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa correttamente i pronomi relativi che, cui e le preposizioni adatte",
+              "Descrive il luogo in modo chiaro e coerente con pronuncia comprensibile"
+            ]
+          },
+          "punteggio_max": 20
+        }
+      ]
+    },
+    {
+      "livello": "B1",
+      "sezione": "unità",
+      "numero": 8,
+      "titolo": "Esprimere opinioni e argomentare",
+      "tema": "Dibattere, sostenere una tesi e scrivere in registro formale",
+      "descrizione": "Esprimere e motivare un'opinione, manifestare accordo o disaccordo e usare il registro formale per scrivere un'email o una lettera.",
+      "obiettivi_cefr": [
+        "Sa esprimere e motivare la propria opinione su argomenti di attualità",
+        "Sa manifestare accordo e disaccordo in modo appropriato",
+        "Sa usare il congiuntivo dopo verbi di opinione e i principali connettivi argomentativi",
+        "Sa distinguere il registro formale da quello informale e scrivere un'email formale"
+      ],
+      "lezione": {
+        "introduzione": "Per argomentare bene non basta dire cosa pensiamo: bisogna introdurre l'opinione, sostenerla con ragioni e organizzare le idee con i connettivi giusti. In italiano molti verbi di opinione (penso, credo, sono convinto) reggono il congiuntivo. Inoltre, quando scriviamo a una persona che non conosciamo o a un ente, dobbiamo passare al registro formale.",
+        "sezioni": [
+          {
+            "titolo": "Esprimere opinione, accordo e disaccordo",
+            "testo": "Per introdurre un'opinione usiamo espressioni come 'secondo me' e 'a mio parere', seguite dall'indicativo, oppure 'penso che', 'credo che' e 'sono convinto che', seguite dal congiuntivo. Per organizzare un ragionamento con due aspetti usiamo 'da un lato... dall'altro'. La tabella raccoglie le formule più utili divise per funzione.",
+            "tabella": {
+              "headers": [
+                "Funzione",
+                "Espressione",
+                "Esempio"
+              ],
+              "rows": [
+                [
+                  "Opinione (indicativo)",
+                  "secondo me / a mio parere",
+                  "Secondo me questa proposta è giusta."
+                ],
+                [
+                  "Opinione (congiuntivo)",
+                  "penso che / sono convinto che",
+                  "Sono convinto che sia la scelta migliore."
+                ],
+                [
+                  "Accordo",
+                  "sono d'accordo / hai ragione",
+                  "Sono d'accordo con te su questo punto."
+                ],
+                [
+                  "Disaccordo",
+                  "non sono d'accordo / non credo che",
+                  "Non credo che sia una buona idea."
+                ],
+                [
+                  "Contrapporre idee",
+                  "da un lato... dall'altro",
+                  "Da un lato è comodo, dall'altro costa troppo."
+                ]
+              ]
+            },
+            "esempi": [
+              "A mio parere vale la pena di provare questa soluzione.",
+              "Da un lato il progetto è interessante, dall'altro richiede molto tempo."
+            ]
+          },
+          {
+            "titolo": "Verbi di opinione e congiuntivo",
+            "testo": "Dopo i verbi che esprimono opinione, dubbio o convinzione personale si usa il congiuntivo presente. Le espressioni 'secondo me' e 'a mio parere', invece, sono seguite dall'indicativo. Confronta le due costruzioni nella tabella.",
+            "tabella": {
+              "headers": [
+                "Introduzione",
+                "Modo del verbo",
+                "Frase"
+              ],
+              "rows": [
+                [
+                  "Penso che",
+                  "congiuntivo",
+                  "Penso che tu abbia ragione."
+                ],
+                [
+                  "Credo che",
+                  "congiuntivo",
+                  "Credo che il prezzo sia troppo alto."
+                ],
+                [
+                  "Sono convinto che",
+                  "congiuntivo",
+                  "Sono convinto che valga la pena."
+                ],
+                [
+                  "Secondo me",
+                  "indicativo",
+                  "Secondo me hai ragione."
+                ],
+                [
+                  "A mio parere",
+                  "indicativo",
+                  "A mio parere il prezzo è troppo alto."
+                ]
+              ]
+            },
+            "esempi": [
+              "Credo che questa legge sia necessaria.",
+              "Secondo me la città è troppo caotica."
+            ]
+          },
+          {
+            "titolo": "Il registro formale",
+            "testo": "Quando scriviamo a un ente, a un'azienda o a una persona che non conosciamo, usiamo il registro formale: il pronome di cortesia 'Lei', formule di apertura e chiusura fisse e un lessico più sorvegliato. Nel registro informale, invece, usiamo 'tu' e formule colloquiali. La tabella mette a confronto le due situazioni.",
+            "tabella": {
+              "headers": [
+                "Funzione",
+                "Formale",
+                "Informale"
+              ],
+              "rows": [
+                [
+                  "Apertura",
+                  "Gentile Direttore,",
+                  "Ciao Marco,"
+                ],
+                [
+                  "Richiesta",
+                  "Le sarei grato se potesse...",
+                  "Mi fai sapere se puoi...?"
+                ],
+                [
+                  "Ringraziamento",
+                  "La ringrazio per la cortese attenzione.",
+                  "Grazie mille!"
+                ],
+                [
+                  "Chiusura",
+                  "Distinti saluti",
+                  "Un abbraccio"
+                ]
+              ]
+            },
+            "esempi": [
+              "Gentile Dottoressa, Le scrivo per chiederLe un'informazione.",
+              "La ringrazio anticipatamente e Le porgo distinti saluti."
+            ]
+          }
+        ]
+      },
+      "lessico": [
+        {
+          "parola": "a mio parere",
+          "traduzione": "in my opinion",
+          "esempio": "A mio parere è una decisione sbagliata."
+        },
+        {
+          "parola": "sostenere una tesi",
+          "traduzione": "to defend an argument/thesis",
+          "esempio": "Durante il dibattito ha sostenuto la sua tesi con dati precisi."
+        },
+        {
+          "parola": "vale la pena di",
+          "traduzione": "it is worth (doing)",
+          "esempio": "Vale la pena di leggere questo libro fino in fondo."
+        },
+        {
+          "parola": "da un lato... dall'altro",
+          "traduzione": "on the one hand... on the other",
+          "esempio": "Da un lato vorrei accettare, dall'altro ho paura di sbagliare."
+        },
+        {
+          "parola": "essere d'accordo",
+          "traduzione": "to agree",
+          "esempio": "Su questo punto sono pienamente d'accordo con te."
+        },
+        {
+          "parola": "obiettare",
+          "traduzione": "to object",
+          "esempio": "Nessuno ha avuto niente da obiettare alla proposta."
+        },
+        {
+          "parola": "in conclusione",
+          "traduzione": "in conclusion",
+          "esempio": "In conclusione, credo che sia la scelta migliore."
+        },
+        {
+          "parola": "tuttavia",
+          "traduzione": "however",
+          "esempio": "L'idea è buona; tuttavia, costa troppo."
+        }
+      ],
+      "ordine": 8,
+      "is_published": true,
+      "esercizi": [
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Opinione e congiuntivo",
+          "istruzioni": "Scegli la forma corretta del verbo.",
+          "contenuto": {
+            "domanda": "Sono convinto che questa proposta _____ la soluzione migliore.",
+            "opzioni": [
+              "sia",
+              "è",
+              "era",
+              "sarà"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MCQ",
+          "abilita": "grammatica",
+          "titolo": "Secondo me + indicativo",
+          "istruzioni": "Scegli la forma corretta del verbo.",
+          "contenuto": {
+            "domanda": "Secondo me questo film _____ noioso.",
+            "opzioni": [
+              "è",
+              "sia",
+              "fosse",
+              "sarebbe stato"
+            ]
+          },
+          "soluzione": {
+            "corretta": 0
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "FILL",
+          "abilita": "grammatica",
+          "titolo": "Argomentare con i connettivi",
+          "istruzioni": "Completa con i connettivi e la forma verbale corretti.",
+          "contenuto": {
+            "testo_template": "{0} il lavoro da casa è comodo, {1} fa sentire più soli. Penso comunque che {2} la pena di provarlo.",
+            "lacune": [
+              {
+                "opzioni": [
+                  "Da un lato",
+                  "Dall'altro",
+                  "Tuttavia"
+                ]
+              },
+              {
+                "opzioni": [
+                  "dall'altro",
+                  "da un lato",
+                  "secondo me"
+                ]
+              },
+              {
+                "opzioni": [
+                  "valga",
+                  "vale",
+                  "varrà"
+                ]
+              }
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "Da un lato",
+              "dall'altro",
+              "valga"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "ERROR_FIND",
+          "abilita": "grammatica",
+          "titolo": "Trova l'errore",
+          "istruzioni": "Individua la parola sbagliata: dopo 'credo che' serve il congiuntivo.",
+          "contenuto": {
+            "parole": [
+              "Credo",
+              "che",
+              "tu",
+              "hai",
+              "ragione",
+              "su",
+              "questo",
+              "punto"
+            ],
+            "frase": "Credo che tu hai ragione su questo punto"
+          },
+          "soluzione": {
+            "indici_errati": [
+              3
+            ],
+            "correzioni": {
+              "3": "abbia"
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "MATCH",
+          "abilita": "lessico",
+          "titolo": "Lessico: espressioni e significato",
+          "istruzioni": "Collega ogni espressione argomentativa alla sua traduzione in inglese.",
+          "contenuto": {
+            "colonna_a": [
+              "a mio parere",
+              "vale la pena di",
+              "essere d'accordo",
+              "tuttavia"
+            ],
+            "colonna_b": [
+              "in my opinion",
+              "it is worth",
+              "to agree",
+              "however"
+            ]
+          },
+          "soluzione": {
+            "mappa": {
+              "0": 0,
+              "1": 1,
+              "2": 2,
+              "3": 3
+            }
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "REORDER",
+          "abilita": "grammatica",
+          "titolo": "Rimetti in ordine",
+          "istruzioni": "Ordina le parole per formare una frase corretta con il congiuntivo.",
+          "contenuto": {
+            "parole": [
+              "Penso",
+              "che",
+              "valga",
+              "la",
+              "pena",
+              "di",
+              "discutere",
+              "la",
+              "proposta"
+            ]
+          },
+          "soluzione": {
+            "frase": "Penso che valga la pena di discutere la proposta"
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_scritta",
+          "titolo": "Lettura: un'email formale",
+          "istruzioni": "Leggi l'email e indica se ogni affermazione è vera, falsa o non presente nel testo.",
+          "contenuto": {
+            "testo": "Gentile Direttore, Le scrivo per esprimere la mia opinione sul nuovo orario della biblioteca. A mio parere la chiusura alle 18 penalizza gli studenti che lavorano. Sono convinto che prolungare l'apertura fino alle 21, almeno tre giorni a settimana, sarebbe una scelta utile per tutti. La ringrazio per l'attenzione e Le porgo distinti saluti. Marco Bianchi.",
+            "affermazioni": [
+              "Marco scrive per lamentarsi del nuovo orario di chiusura.",
+              "Marco propone di chiudere la biblioteca prima delle 18.",
+              "Marco vorrebbe l'apertura fino alle 21 alcuni giorni a settimana.",
+              "Marco è uno studente universitario al primo anno."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "TRUE_FALSE",
+          "abilita": "comprensione_orale",
+          "titolo": "Ascolto: un dibattito",
+          "istruzioni": "Ascolta il testo (tocca il pulsante audio) e indica se le affermazioni sono vere, false o non presenti.",
+          "contenuto": {
+            "testo": "Secondo me le auto dovrebbero essere vietate nel centro storico. Da un lato l'aria sarebbe più pulita, dall'altro la gente camminerebbe di più. Capisco chi non è d'accordo, ma sono convinto che ne valga la pena. Tuttavia, prima bisognerebbe potenziare gli autobus.",
+            "affermazioni": [
+              "Chi parla vuole vietare le auto nel centro storico.",
+              "Secondo chi parla l'aria resterebbe uguale.",
+              "Chi parla pensa che prima bisognerebbe potenziare gli autobus.",
+              "Chi parla propone di costruire un nuovo parcheggio sotterraneo."
+            ]
+          },
+          "soluzione": {
+            "risposte": [
+              "vero",
+              "falso",
+              "vero",
+              "non_detto"
+            ]
+          },
+          "punteggio_max": 10
+        },
+        {
+          "tipo": "WRITE_FREE",
+          "abilita": "produzione_scritta",
+          "titolo": "Scrivi: un'email formale",
+          "istruzioni": "Scrivi un'email formale. Sarà valutata dal sistema.",
+          "contenuto": {
+            "prompt": "Scrivi un'email formale (60-90 parole) al sindaco della tua città per esprimere la tua opinione su un problema (per esempio il traffico, i parchi o i trasporti). Usa una formula di apertura, esponi la tua opinione con almeno una ragione, fai una proposta e concludi con una formula di chiusura formale.",
+            "parole_min": 60,
+            "parole_max": 90
+          },
+          "soluzione": {
+            "criteri": [
+              "Usa il registro formale (Lei, formule di apertura e chiusura adeguate)",
+              "Esprime un'opinione e la motiva con almeno una ragione",
+              "Include una proposta concreta e usa connettivi argomentativi",
+              "Testo coerente, coeso e grammaticalmente corretto"
+            ]
+          },
+          "punteggio_max": 20
+        },
+        {
+          "tipo": "SPEAK_SIM",
+          "abilita": "produzione_orale",
+          "titolo": "Parla: sostieni la tua opinione",
+          "istruzioni": "Rispondi a voce. Il sistema trascriverà e valuterà il tuo intervento.",
+          "contenuto": {
+            "prompt": "Esprimi la tua opinione (40-70 parole) su questa affermazione: 'I telefoni dovrebbero essere vietati a scuola'. Di' se sei d'accordo o no, dai almeno due ragioni usando connettivi (da un lato... dall'altro, tuttavia) ed espressioni di opinione (secondo me, sono convinto che).",
+            "traccia_modello": "Secondo me i telefoni non dovrebbero essere vietati del tutto a scuola. Da un lato è vero che distraggono durante le lezioni, dall'altro possono essere strumenti utili per studiare e cercare informazioni. Sono convinto che la soluzione migliore sia stabilire regole chiare: usarli solo quando lo dice l'insegnante. Tuttavia, durante le verifiche è giusto tenerli spenti.",
+            "parole_min": 40,
+            "parole_max": 70
+          },
+          "soluzione": {
+            "criteri": [
+              "Esprime chiaramente la propria opinione con formule adeguate",
+              "Fornisce almeno due ragioni usando connettivi argomentativi",
+              "Discorso fluido, comprensibile e coerente"
             ]
           },
           "punteggio_max": 20

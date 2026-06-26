@@ -96,6 +96,22 @@ class WriteFreeSoluzione(BaseModel):
     criteri: list[str] = Field(default_factory=list)  # spunti per la valutazione AI
 
 
+class SpeakSimContenuto(BaseModel):
+    """Produzione orale: il candidato ascolta la consegna e un modello, poi parla.
+
+    Il parlato viene trascritto dal browser (riconoscimento vocale it-IT) e
+    valutato dall'AI come per la produzione scritta.
+    """
+    prompt: str
+    traccia_modello: str = ""  # risposta esempio, ascoltabile con 🔊
+    parole_min: int = 0
+    parole_max: int = 0
+
+
+class SpeakSimSoluzione(BaseModel):
+    criteri: list[str] = Field(default_factory=list)  # spunti per la valutazione AI
+
+
 class ErrorFindContenuto(BaseModel):
     parole: list[str] = Field(min_length=2)  # frase tokenizzata
     frase: str | None = None
@@ -113,6 +129,7 @@ _CONTENT_MODELS: dict[ExerciseType, type[BaseModel]] = {
     ExerciseType.REORDER: ReorderContenuto,
     ExerciseType.MATCH: MatchContenuto,
     ExerciseType.WRITE_FREE: WriteFreeContenuto,
+    ExerciseType.SPEAK_SIM: SpeakSimContenuto,
     ExerciseType.ERROR_FIND: ErrorFindContenuto,
 }
 _SOLUTION_MODELS: dict[ExerciseType, type[BaseModel]] = {
@@ -122,6 +139,7 @@ _SOLUTION_MODELS: dict[ExerciseType, type[BaseModel]] = {
     ExerciseType.REORDER: ReorderSoluzione,
     ExerciseType.MATCH: MatchSoluzione,
     ExerciseType.WRITE_FREE: WriteFreeSoluzione,
+    ExerciseType.SPEAK_SIM: SpeakSimSoluzione,
     ExerciseType.ERROR_FIND: ErrorFindSoluzione,
 }
 

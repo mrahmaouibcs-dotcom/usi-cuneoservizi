@@ -219,7 +219,51 @@
       </div>`;
   }
 
-  const WIDGETS = { MCQ: WMcq, TRUE_FALSE: WTrueFalse, FILL: WFill, REORDER: WReorder, MATCH: WMatch, ERROR_FIND: WErrorFind, WRITE_FREE: WWrite };
+  /* riconoscimento vocale (browser) per la produzione orale */
+  const SR = typeof window !== "undefined" && (window.SpeechRecognition || window.webkitSpeechRecognition);
+  function WSpeak({ ex, answer, setAnswer, locked }) {
+    const testo = (answer && answer.testo) || "";
+    const [stato, setStato] = useState("idle"); // idle | ascolto | errore
+    const n = testo.trim() ? testo.trim().split(/\s+/).length : 0;
+    const modello = ex.contenuto.traccia_modello;
+    const ascolta = () => {
+      if (!SR || locked) return;
+      try {
+        const r = new SR();
+        r.lang = "it-IT"; r.interimResults = false; r.maxAlternatives = 1;
+        setStato("ascolto");
+        r.onresult = (e) => {
+          const t = Array.from(e.results).map((x) => x[0].transcript).join(" ").trim();
+          setAnswer({ testo: (testo ? testo + " " : "") + t });
+          setStato("idle");
+        };
+        r.onerror = () => setStato("errore");
+        r.onend = () => setStato((s) => (s === "ascolto" ? "idle" : s));
+        r.start();
+      } catch (e) { setStato("errore"); }
+    };
+    return html`
+      <div>
+        <p class="domanda">${ex.contenuto.prompt}</p>
+        ${modello ? html`<div class="audio-riga">
+          <${Speak} text=${modello} label="Ascolta un esempio di risposta" variant="grande" />
+          <span>Ascolta un esempio, poi prova tu.</span></div>` : null}
+        ${SR ? html`
+          <button type="button" class=${"btn " + (stato === "ascolto" ? "btn--primary" : "btn--blu")}
+            disabled=${locked} onClick=${ascolta}>
+            ${stato === "ascolto" ? "🎤 Sto ascoltando… parla ora" : (testo ? "🎤 Registra di nuovo" : "🎤 Parla")}
+          </button>
+          ${stato === "errore" ? html`<p class="progress-label" style=${{ color: "var(--rosso)" }}>Non sono riuscito a sentirti. Riprova o scrivi qui sotto.</p>` : null}
+          <p class="progress-label" style=${{ marginTop: "10px" }}>Quello che hai detto (puoi correggerlo):</p>
+        ` : html`<p class="progress-label">Il microfono non è disponibile su questo browser: scrivi quello che diresti.</p>`}
+        <textarea class="write" disabled=${locked} value=${testo}
+          onInput=${(e) => setAnswer({ testo: e.target.value })}
+          placeholder="Qui appare il tuo parlato…"></textarea>
+        <p class="progress-label">${n} parole ${ex.contenuto.parole_min ? `(consigliate ${ex.contenuto.parole_min}-${ex.contenuto.parole_max})` : ""}</p>
+      </div>`;
+  }
+
+  const WIDGETS = { MCQ: WMcq, TRUE_FALSE: WTrueFalse, FILL: WFill, REORDER: WReorder, MATCH: WMatch, ERROR_FIND: WErrorFind, WRITE_FREE: WWrite, SPEAK_SIM: WSpeak };
 
   function answerPronta(tipo, answer) {
     if (!answer) return false;
@@ -229,7 +273,7 @@
     if (tipo === "REORDER") return (answer._ids || []).length > 0;
     if (tipo === "MATCH") return Object.keys(answer.mappa || {}).length > 0;
     if (tipo === "ERROR_FIND") return (answer.indici || []).length > 0;
-    if (tipo === "WRITE_FREE") return (answer.testo || "").trim().length > 0;
+    if (tipo === "WRITE_FREE" || tipo === "SPEAK_SIM") return (answer.testo || "").trim().length > 0;
     return false;
   }
 
@@ -352,7 +396,7 @@
   }
 
   function tipoLabel(t) {
-    return { MCQ: "Scelta multipla", FILL: "Completa", REORDER: "Riordina", MATCH: "Abbina", TRUE_FALSE: "Vero/Falso", ERROR_FIND: "Trova l'errore", WRITE_FREE: "Scrittura" }[t] || t;
+    return { MCQ: "Scelta multipla", FILL: "Completa", REORDER: "Riordina", MATCH: "Abbina", TRUE_FALSE: "Vero/Falso", ERROR_FIND: "Trova l'errore", WRITE_FREE: "Scrittura", SPEAK_SIM: "Parlato 🎤" }[t] || t;
   }
   function abilitaLabel(a) {
     return {
@@ -461,7 +505,7 @@
     if (!ex) return html`<div class="main"><${Spinner} /></div>`;
     const W = WIDGETS[ex.tipo];
     const locked = !!ris;
-    const aiType = ex.tipo === "WRITE_FREE";
+    const aiType = ex.tipo === "WRITE_FREE" || ex.tipo === "SPEAK_SIM";
     return html`
       <div class="main fade">
         <button class="back" onClick=${() => go("unita", { id: unitaId })}>‹ Esci dall'esercizio</button>
