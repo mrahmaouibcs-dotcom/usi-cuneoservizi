@@ -297,6 +297,43 @@ button { font-family: inherit; cursor: pointer; }
 .vocab-row__cat { font-size: 11px; color: var(--verde-salvia); font-style: italic; }
 
 /* ============================================================================
+   Pulsante audio (sintesi vocale)
+   ========================================================================== */
+.speak-btn {
+  flex: 0 0 auto;
+  width: 40px; height: 40px;
+  display: inline-grid; place-items: center;
+  border: 1.5px solid rgba(82,121,111,0.35);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--verde-salvia);
+  transition: transform .1s ease, background .15s ease, color .15s ease;
+}
+.speak-btn svg { width: 20px; height: 20px; }
+.speak-btn:hover { background: var(--verde-bosco-soft); color: var(--verde-bosco); }
+.speak-btn:active { transform: scale(0.9); }
+
+/* variante grande sulla flashcard (fronte) */
+.speak-btn--big {
+  width: 52px; height: 52px;
+  margin-top: 14px;
+  border-color: var(--oro-grano);
+  color: #8a5a1f;
+  background: var(--oro-soft);
+}
+.speak-btn--big svg { width: 26px; height: 26px; }
+.speak-btn--big:hover { background: var(--oro-grano); color: #2a1b08; }
+
+/* variante su sfondo scuro (retro flashcard) */
+.speak-btn--ondark {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.5);
+  color: #fff;
+}
+.speak-btn--ondark:hover { background: rgba(255,255,255,0.28); color: #fff; }
+
+/* ============================================================================
    Flashcard (flip 3D)
    ========================================================================== */
 .flash-area { display: flex; flex-direction: column; align-items: center; }

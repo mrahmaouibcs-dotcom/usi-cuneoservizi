@@ -45,6 +45,57 @@
   const Flag = () => html`<span class="flag-chip" role="img" aria-label="bandiera italiana"></span>`;
 
   /* ---------------------------------------------------------------------- */
+  /*  Sintesi vocale italiana (Web Speech API)                               */
+  /* ---------------------------------------------------------------------- */
+  const speechOK = typeof window !== "undefined" && "speechSynthesis" in window;
+
+  function pickItalianVoice() {
+    if (!speechOK) return null;
+    const voices = window.speechSynthesis.getVoices() || [];
+    return (
+      voices.find((v) => v.lang === "it-IT") ||
+      voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("it")) ||
+      null
+    );
+  }
+
+  // Pre-carica l'elenco voci (su alcuni browser è asincrono).
+  function primeVoices() {
+    if (!speechOK) return;
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+
+  function speak(text) {
+    if (!speechOK || !text) return;
+    const synth = window.speechSynthesis;
+    try {
+      synth.cancel(); // interrompe eventuale pronuncia in corso
+      const u = new SpeechSynthesisUtterance(String(text));
+      u.lang = "it-IT";
+      const v = pickItalianVoice();
+      if (v) u.voice = v;
+      u.rate = 0.95;
+      u.pitch = 1;
+      synth.speak(u);
+    } catch (e) { /* ignora errori di sintesi */ }
+  }
+
+  const SpeakerIcon = (p) => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ...${p}><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8 8 0 0 1 0 12"/></svg>`;
+
+  // Pulsante 🔊 riutilizzabile. Non propaga il click (per non girare la flashcard).
+  function SpeakButton({ text, label, variant }) {
+    if (!speechOK) return null;
+    const cls = "speak-btn" + (variant ? " speak-btn--" + variant : "");
+    return html`
+      <button type="button" class=${cls}
+        aria-label=${label || ("Ascolta: " + text)} title="Ascolta"
+        onClick=${(e) => { e.stopPropagation(); speak(text); }}>
+        <${SpeakerIcon} />
+      </button>`;
+  }
+
+  /* ---------------------------------------------------------------------- */
   /*  Helper                                                                 */
   /* ---------------------------------------------------------------------- */
   function starsFor(score, total) {
@@ -257,12 +308,14 @@
             <div class="flash__face flash__face--front">
               <div class="flash__emoji">${card.emoji || "📘"}</div>
               <div class="flash__word">${card.it || card.word}</div>
+              <${SpeakButton} text=${card.it || card.word} label="Ascolta la parola" variant="big" />
               ${card.category ? html`<div class="flash__cat">${card.category}</div>` : null}
               <div class="flash__hint">Tocca per girare ↻</div>
             </div>
             <div class="flash__face flash__face--back">
               <div class="flash__translation">${card.en || card.translation}</div>
               ${(card.example) ? html`<div class="flash__example">“${card.example}”</div>` : null}
+              ${(card.example) ? html`<${SpeakButton} text=${card.example} label="Ascolta la frase" variant="ondark" />` : null}
               <div class="flash__hint" style=${{ color: "rgba(255,255,255,0.7)" }}>Tocca per girare ↻</div>
             </div>
           </div>
@@ -486,6 +539,7 @@
                     <span class="vocab-row__it">${v.it}</span> — <span class="vocab-row__en">${v.en}</span>
                     <span class="vocab-row__cat" style=${{ display: "block" }}>${v.category} · “${v.example}”</span>
                   </span>
+                  <${SpeakButton} text=${v.it} label=${"Ascolta " + v.it} />
                 </div>`)}
             </div>
           </div>
@@ -636,6 +690,9 @@
       window.addEventListener("beforeinstallprompt", onBip);
       return () => window.removeEventListener("beforeinstallprompt", onBip);
     }, []);
+
+    // Pre-carica le voci per la sintesi vocale italiana
+    useEffect(() => { primeVoices(); }, []);
 
     function dispatch(action) {
       setState((s) => reducer(s, action));
