@@ -72,6 +72,8 @@ class ReorderContenuto(BaseModel):
 
 class ReorderSoluzione(BaseModel):
     frase: str
+    # eventuali ordini alternativi ugualmente corretti (equità di correzione)
+    accettate: list[str] = Field(default_factory=list)
 
 
 class MatchContenuto(BaseModel):

@@ -45,7 +45,10 @@
           "contenuto": {
             "parole": ["Noi", "andiamo", "al", "cinema", "il", "sabato"]
           },
-          "soluzione": { "frase": "Noi andiamo al cinema il sabato" },
+          "soluzione": {
+            "frase": "Noi andiamo al cinema il sabato",
+            "accettate": ["Il sabato noi andiamo al cinema"]
+          },
           "punteggio_max": 10
         },
         {
@@ -66,7 +69,7 @@
         },
         {
           "tipo": "MCQ",
-          "titolo": "Verbi irregolari",
+          "titolo": "Terza persona plurale",
           "istruzioni": "Seleziona la forma corretta.",
           "contenuto": {
             "domanda": "I miei amici _____ molto bene l'italiano.",

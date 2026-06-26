@@ -110,7 +110,7 @@
           "istruzioni": "Scegli la forma corretta.",
           "contenuto": {
             "domanda": "Se _____ tempo, vengo volentieri alla festa.",
-            "opzioni": ["ho", "avessi", "avrò", "abbia"]
+            "opzioni": ["ho", "avessi", "avrei", "abbia"]
           },
           "soluzione": { "corretta": 0 },
           "punteggio_max": 10

@@ -62,10 +62,12 @@ def correggi(
 
     if tipo == ExerciseType.REORDER:
         attesa = soluzione.get("frase", "")
+        accettate = [attesa, *soluzione.get("accettate", [])]
         data = risposta.get("frase")
         if data is None and isinstance(risposta.get("ordine"), list):
             data = " ".join(risposta["ordine"])
-        ok = _norm_frase(data or "") == _norm_frase(attesa)
+        norm = _norm_frase(data or "")
+        ok = any(norm == _norm_frase(a) for a in accettate)
         return Risultato(punteggio_max if ok else 0, punteggio_max, ok, {"attesa": attesa})
 
     if tipo == ExerciseType.MATCH:
