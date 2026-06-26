@@ -4,6 +4,8 @@ import os
 # Deve avvenire PRIMA di importare i moduli dell'app: l'engine viene creato
 # a import-time e altrimenti tenterebbe di usare il driver PostgreSQL.
 os.environ.setdefault("DATABASE_URL", "sqlite+aiosqlite://")
+# limite di rate alto nei test: la suite condivide IP e finestra di 60s
+os.environ.setdefault("RATE_LIMIT_IP_PER_MIN", "100000")
 
 import pytest_asyncio
 from httpx import ASGITransport, AsyncClient

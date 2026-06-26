@@ -2,7 +2,7 @@
    Pensata per principianti: poche scelte per schermata, pulsanti grandi. */
 (function () {
   "use strict";
-  const { useState, useEffect } = React;
+  const { useState, useEffect, useRef } = React;
   const html = htm.bind(React.createElement);
 
   /* ---------- icone nav ---------- */
@@ -11,6 +11,7 @@
     libro: () => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M18 3v16"/></svg>`,
     grafico: () => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M13 16V8M18 16v-7"/></svg>`,
     esci: () => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>`,
+    esame: () => html`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5"/><path d="M9 2h6M5 5l2-2M19 5l-2-2"/></svg>`,
   };
   const Flag = () => html`<span class="flag" role="img" aria-label="bandiera italiana"></span>`;
   const Spinner = () => html`<div class="spinner"></div>`;
@@ -573,8 +574,154 @@
       </div>`;
   }
 
+  /* =======================================================================
+     SIMULAZIONE D'ESAME
+     ======================================================================= */
+  function fmtTempo(sec) {
+    sec = Math.max(0, sec | 0);
+    const m = Math.floor(sec / 60), s = sec % 60;
+    return m + ":" + String(s).padStart(2, "0");
+  }
+  function esitoChip(esito) {
+    if (esito === "superato") return html`<span class="chip-esito chip-esito--ok">Superato</span>`;
+    if (esito === "non_superato") return html`<span class="chip-esito chip-esito--no">Non superato</span>`;
+    if (esito === "in_attesa_valutazione") return html`<span class="chip-esito chip-esito--wait">In valutazione</span>`;
+    return null;
+  }
+
+  function EsameHome({ candidato, go }) {
+    const [storico, setStorico] = useState(null);
+    const [busy, setBusy] = useState(false);
+    const [err, setErr] = useState("");
+    useEffect(() => { API.esameStorico().then(setStorico).catch(() => setStorico([])); }, []);
+    const inizia = async () => {
+      setBusy(true); setErr("");
+      try { const s = await API.esameInizia(); go("esame_prova", { sessione: s }); }
+      catch (e) { setErr(e.detail); setBusy(false); }
+    };
+    const durata = candidato.livello === "B1" ? 70 : 60;
+    const fatte = (storico || []).filter((x) => x.consegnata_at);
+    return html`<div class="main fade">
+      <${Header} candidato=${candidato} titolo=${"Simulazione d'esame"} sub=${"Allenati come il giorno della prova"} />
+      <div class="card card--hero">
+        <h2>Prova d'esame ${candidato.livello || ""}</h2>
+        <p>Una prova a tempo (${durata} minuti) con tutte le parti: ascolto, lettura, strutture, lessico e produzione. Alla fine ricevi il punteggio su 100 (si supera con 60).</p>
+        <button class="btn btn--ghost" disabled=${busy} onClick=${inizia}>${busy ? "Preparazione…" : "Inizia la simulazione ▸"}</button>
+      </div>
+      ${err ? html`<div class="alert alert--err">${err}</div>` : null}
+      <div class="card">
+        <strong>Come funziona</strong>
+        <ul style=${{ margin: "8px 0 0 18px", paddingLeft: 0 }}>
+          <li>In alto vedi il conto alla rovescia: il tempo scorre.</li>
+          <li>Rispondi alle domande e spostati con “Avanti” e “Indietro”.</li>
+          <li>Alla fine tocca “Consegna”: le risposte si inviano tutte insieme.</li>
+        </ul>
+      </div>
+      ${fatte.length ? html`<div class="sezione-tit">Prove precedenti</div>
+        ${fatte.map((x) => html`<div key=${x.id} class="card">
+          <div style=${{ display: "flex", alignItems: "center", gap: "8px" }}>
+            <strong style=${{ flex: 1 }}>${(x.iniziata_at || "").slice(0, 10)}</strong>
+            ${x.punteggio != null ? html`<span class="badge">${x.punteggio}/100</span>` : null}
+            ${esitoChip(x.esito)}
+          </div></div>`)}` : null}
+    </div>`;
+  }
+
+  function EsameProva({ candidato, sessione, go }) {
+    const lista = sessione.esercizi || [];
+    const [idx, setIdx] = useState(0);
+    const [answers, setAnswers] = useState({});
+    const [rim, setRim] = useState(sessione.tempo_rimanente_sec || 0);
+    const [busy, setBusy] = useState(false);
+    const [err, setErr] = useState("");
+    const [conferma, setConferma] = useState(false);
+    const inviato = useRef(false);
+
+    const consegna = async () => {
+      if (inviato.current) return;
+      inviato.current = true; setBusy(true); setErr("");
+      try {
+        const risposte = Object.keys(answers).map((k) => ({ esercizio_id: k, risposta: answers[k] }));
+        const rep = await API.esameConsegna(sessione.id, risposte);
+        go("esame_report", { report: rep });
+      } catch (e) { setErr(e.detail); setBusy(false); inviato.current = false; }
+    };
+
+    useEffect(() => {
+      const t = setInterval(() => {
+        setRim((r) => { if (r <= 1) { clearInterval(t); consegna(); return 0; } return r - 1; });
+      }, 1000);
+      return () => clearInterval(t);
+    }, []);
+
+    if (!lista.length) return html`<div class="main fade"><div class="alert alert--err">Prova non disponibile.</div></div>`;
+    const ex = lista[idx];
+    const W = WIDGETS[ex.tipo];
+    const setAnswer = (payload) => setAnswers((a) => ({ ...a, [ex.id]: payload }));
+    const risposte = lista.filter((e) => answerPronta(e.tipo, answers[e.id])).length;
+    const mostraAudioTop = testoEsercizio(ex) && ex.abilita !== "comprensione_orale";
+
+    return html`<div class="main fade">
+      <div class="esame-bar">
+        <div class=${"esame-timer" + (rim <= 60 ? " esame-timer--alert" : "")}>⏱ ${fmtTempo(rim)}</div>
+        <div class="esame-bar__lbl">Domanda ${idx + 1}/${lista.length} · ${risposte} risposte</div>
+      </div>
+      <div class="progress" style=${{ marginBottom: "6px" }}>
+        <div class="progress__fill" style=${{ width: Math.round(((idx + 1) / lista.length) * 100) + "%" }}></div>
+      </div>
+      <p class="progress-label" style=${{ marginBottom: "8px" }}>${abilitaLabel(ex.abilita)} · ${tipoLabel(ex.tipo)}</p>
+      <h3 style=${{ margin: "0 0 4px" }}>${ex.titolo}</h3>
+      ${ex.istruzioni ? html`<p class="progress-label" style=${{ marginTop: 0 }}>${ex.istruzioni}</p>` : null}
+      ${mostraAudioTop ? html`<div class="audio-riga"><${Speak} text=${testoEsercizio(ex)} label="Ascolta" variant="grande" /><span>Ascolta la pronuncia</span></div>` : null}
+      ${W ? html`<${W} ex=${ex} answer=${answers[ex.id]} setAnswer=${setAnswer} locked=${false} />`
+          : html`<div class="alert alert--err">Tipo di esercizio non supportato.</div>`}
+      ${err ? html`<div class="alert alert--err" style=${{ marginTop: "12px" }}>${err}</div>` : null}
+      <div class="esame-nav">
+        <button class="btn btn--light" disabled=${idx === 0} onClick=${() => setIdx(idx - 1)}>‹ Indietro</button>
+        ${idx + 1 < lista.length
+          ? html`<button class="btn btn--blu" onClick=${() => setIdx(idx + 1)}>Avanti ›</button>`
+          : html`<button class="btn btn--primary" onClick=${() => setConferma(true)}>Consegna ✓</button>`}
+      </div>
+      <button class="btn btn--light" style=${{ marginTop: "10px" }} onClick=${() => setConferma(true)}>Consegna la prova</button>
+      ${conferma ? html`<div class="card" style=${{ marginTop: "12px", border: "2px solid var(--blu)" }}>
+        <strong>Consegnare la prova?</strong>
+        <p class="progress-label">Hai risposto a ${risposte} domande su ${lista.length}. Dopo la consegna non potrai più modificare.</p>
+        <div style=${{ display: "flex", gap: "8px" }}>
+          <button class="btn btn--light" onClick=${() => setConferma(false)}>Annulla</button>
+          <button class="btn btn--primary" disabled=${busy} onClick=${consegna}>${busy ? "Invio…" : "Sì, consegna"}</button>
+        </div></div>` : null}
+    </div>`;
+  }
+
+  function EsameReport({ candidato, report, go }) {
+    const sup = report.superato;
+    const cls = sup === true ? "esame-esito--ok" : sup === false ? "esame-esito--no" : "esame-esito--wait";
+    const lbl = sup === true ? "Superato 🎉" : sup === false ? "Non superato" : "In attesa di valutazione";
+    return html`<div class="main fade">
+      <${Header} candidato=${candidato} titolo=${"Risultato della prova"} sub=${"Livello " + (report.livello || "")} />
+      <div class=${"card esame-esito " + cls}>
+        <div class="esame-punteggio">${report.punteggio != null ? report.punteggio : "–"}<span>/100</span></div>
+        <div class="esame-esito__lbl">${lbl}</div>
+        <div class="progress-label">Soglia di superamento: ${report.soglia}/100</div>
+      </div>
+      ${report.produzioni_in_attesa ? html`<div class="alert alert--ok">Le parti di produzione (scritta e orale) saranno valutate a parte: il punteggio qui sopra riguarda le sezioni a correzione automatica.</div>` : null}
+      <div class="sezione-tit">Dettaglio per sezione</div>
+      ${(report.sezioni || []).map((s, i) => {
+        const perc = s.massimo ? Math.round((s.ottenuto / s.massimo) * 100) : 0;
+        return html`<div key=${i} class="card">
+          <div style=${{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "6px" }}>
+            <strong style=${{ flex: 1 }}>${s.etichetta}</strong>
+            ${s.valutata ? html`<span>${s.ottenuto}/${s.massimo}</span>` : html`<span class="progress-label">da valutare</span>`}
+          </div>
+          ${s.valutata ? html`<div class="progress"><div class="progress__fill" style=${{ width: perc + "%" }}></div></div>` : null}
+        </div>`;
+      })}
+      <button class="btn btn--blu" style=${{ marginTop: "12px" }} onClick=${() => go("esame")}>Torna alle simulazioni</button>
+    </div>`;
+  }
+
   function Nav({ tab, go, onEsci }) {
-    const items = [["home", "Home", Ico.home], ["percorso", "Esercizi", Ico.libro], ["progressi", "Progressi", Ico.grafico]];
+    const items = [["home", "Home", Ico.home], ["percorso", "Esercizi", Ico.libro], ["esame", "Esame", Ico.esame], ["progressi", "Progressi", Ico.grafico]];
     return html`<nav class="nav">
       ${items.map(([k, l, I]) => html`<button key=${k} class=${tab === k ? "active" : ""} onClick=${() => go(k)}>
         <${I} /><span>${l}</span></button>`)}
@@ -750,6 +897,9 @@
     else if (screen.name === "percorso") { view = html`<${Home} candidato=${candidato} go=${go} />`; tab = "percorso"; }
     else if (screen.name === "unita") { view = html`<${UnitaView} candidato=${candidato} unitaId=${screen.params.id} go=${go} />`; tab = "percorso"; }
     else if (screen.name === "esercizio") { view = html`<${Esercizio} candidato=${candidato} ...${screen.params} go=${go} />`; tab = "percorso"; }
+    else if (screen.name === "esame") { view = html`<${EsameHome} candidato=${candidato} go=${go} />`; tab = "esame"; }
+    else if (screen.name === "esame_prova") { view = html`<${EsameProva} candidato=${candidato} sessione=${screen.params.sessione} go=${go} />`; tab = "esame"; }
+    else if (screen.name === "esame_report") { view = html`<${EsameReport} candidato=${candidato} report=${screen.params.report} go=${go} />`; tab = "esame"; }
     else if (screen.name === "progressi") view = html`<${Progressi} candidato=${candidato} go=${go} />`;
     else view = html`<${Home} candidato=${candidato} go=${go} />`;
 

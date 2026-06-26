@@ -75,6 +75,25 @@ uvicorn app.main:app --reload
 4. Il candidato apre il link, sceglie la password, **installa l'app** sul
    telefono ("Aggiungi a schermata Home") e si allena.
 
+## Contenuti e simulazione d'esame
+
+- **Programma completo A2 e B1**: 16 unità (8 per livello), 166 esercizi
+  originali allineati al QCER e al formato degli enti (CILS/CELI/PLIDA/IT).
+  Ogni unità ha una **lezione** (teoria con tabelle ed esempi), il **lessico**
+  con pronuncia e esercizi su **tutte e 6 le abilità**: grammatica, lessico,
+  comprensione scritta, comprensione orale, produzione scritta e orale.
+- **Audio**: pronuncia tramite la sintesi vocale italiana del browser (nessun
+  file audio da gestire). La comprensione orale nasconde il testo: si ascolta.
+- **Produzione orale** (`SPEAK_SIM`): il browser trascrive il parlato
+  (riconoscimento vocale `it-IT`, con fallback a testo) e la risposta è valutata
+  come la produzione scritta.
+- **Simulazione d'esame** (`/api/v1/esame/*`): prova a tempo gestita dal server
+  (A2 60′, B1 70′), composta dal pool del livello secondo un blueprint per
+  sezioni (ascolto, lettura, strutture, lessico, produzione). Le risposte si
+  inviano **in blocco** alla consegna; punteggio normalizzato su **100** con
+  **soglia 60**. Report finale per sezione; le produzioni, se manca la chiave
+  AI, restano "da valutare".
+
 ## Test
 
 ```bash
@@ -100,7 +119,8 @@ pytest -q          # SQLite in memoria, nessun servizio esterno
 - [x] **Fase 4** — PWA candidato installabile (E2E verificata)
 - [x] **Fase 5** — Feedback AI (Claude) per la scrittura libera (richiede `ANTHROPIC_API_KEY`)
 - [x] **Fase 6** — Admin: candidati, import CSV, statistiche + pannello grafico nella PWA
-- [ ] Opzionale: simulazione esame cronometrata, esercizi audio (ascolto/dettato con S3)
+- [x] **Fase 7** — Programma completo A2/B1 (166 esercizi, 6 abilità) + audio + produzione orale
+- [x] **Fase 8** — Simulazione d'esame cronometrata (formato enti), report su 100, soglia 60
 
 ## Note GDPR
 

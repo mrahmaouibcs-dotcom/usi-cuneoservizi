@@ -7,7 +7,7 @@ from fastapi.staticfiles import StaticFiles
 
 from .core.config import get_settings
 from .middleware.rate_limiter import RateLimiterMiddleware
-from .routers import admin, auth, candidato, percorso, progressi
+from .routers import admin, auth, candidato, esame, percorso, progressi
 
 settings = get_settings()
 
@@ -25,6 +25,7 @@ app.add_middleware(RateLimiterMiddleware)
 app.include_router(auth.router, prefix=settings.api_v1_prefix)
 app.include_router(candidato.router, prefix=settings.api_v1_prefix)
 app.include_router(percorso.router, prefix=settings.api_v1_prefix)
+app.include_router(esame.router, prefix=settings.api_v1_prefix)
 app.include_router(progressi.router, prefix=settings.api_v1_prefix)
 app.include_router(admin.router, prefix=settings.api_v1_prefix)
 

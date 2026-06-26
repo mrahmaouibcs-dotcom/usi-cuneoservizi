@@ -77,6 +77,15 @@
     progressi() { return request("/me/progressi"); },
     statistiche() { return request("/me/statistiche"); },
 
+    // --- Simulazione d'esame ---
+    esameInizia() { return request("/esame/inizia", { method: "POST" }); },
+    esameStato(id) { return request("/esame/sessione/" + id); },
+    esameConsegna(id, risposte) {
+      return request("/esame/sessione/" + id + "/consegna", { method: "POST", body: { risposte } });
+    },
+    esameReport(id) { return request("/esame/sessione/" + id + "/report"); },
+    esameStorico() { return request("/esame/storico"); },
+
     // --- Admin ---
     adminStats() { return request("/admin/statistiche/globali"); },
     adminCandidati(livello) { return request("/admin/candidati" + (livello ? "?livello=" + livello : "")); },
