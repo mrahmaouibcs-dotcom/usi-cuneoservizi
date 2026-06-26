@@ -76,6 +76,25 @@
     },
     progressi() { return request("/me/progressi"); },
     statistiche() { return request("/me/statistiche"); },
+
+    // --- Admin ---
+    adminStats() { return request("/admin/statistiche/globali"); },
+    adminCandidati(livello) { return request("/admin/candidati" + (livello ? "?livello=" + livello : "")); },
+    adminCrea(dati) { return request("/admin/candidati", { method: "POST", body: dati }); },
+    adminRigenera(id) { return request("/admin/candidati/" + id + "/attivazione", { method: "POST" }); },
+    adminElimina(id) { return request("/admin/candidati/" + id, { method: "DELETE" }); },
+    async adminImport(file) {
+      const fd = new FormData();
+      fd.append("file", file);
+      const headers = {};
+      if (getToken()) headers["Authorization"] = "Bearer " + getToken();
+      let res;
+      try { res = await fetch(BASE + "/admin/candidati/import", { method: "POST", headers, body: fd }); }
+      catch (e) { throw { status: 0, detail: "Connessione assente." }; }
+      let data = null; try { data = await res.json(); } catch (e) {}
+      if (!res.ok) throw { status: res.status, detail: (data && data.detail) || "Errore import" };
+      return data;
+    },
   };
 
   window.API = API;

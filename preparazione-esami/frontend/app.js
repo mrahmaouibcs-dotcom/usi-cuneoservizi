@@ -416,6 +416,135 @@
   }
 
   /* =======================================================================
+     PANNELLO ADMIN
+     ======================================================================= */
+  function CopyLink({ url }) {
+    const [done, setDone] = useState(false);
+    return html`<div class="card" style=${{ background: "var(--blu-soft)" }}>
+      <div style=${{ fontSize: "13px", wordBreak: "break-all", marginBottom: "10px" }}>${url}</div>
+      <button class="btn btn--light" onClick=${async () => { try { await navigator.clipboard.writeText(url); setDone(true); setTimeout(() => setDone(false), 1500); } catch (e) {} }}>
+        ${done ? "Copiato! ✓" : "Copia link di attivazione"}</button>
+    </div>`;
+  }
+
+  function AdminStats() {
+    const [s, setS] = useState(null);
+    const [err, setErr] = useState("");
+    useEffect(() => { API.adminStats().then(setS).catch((e) => setErr(e.detail)); }, []);
+    if (err) return html`<div class="main fade"><div class="alert alert--err">${err}</div></div>`;
+    if (!s) return html`<div class="main"><${Spinner} /></div>`;
+    return html`<div class="main fade">
+      <header class="header"><div><h1>Statistiche</h1><p>Quadro generale</p></div><${Flag} /></header>
+      <div class="stat-row">
+        <div class="stat"><div class="stat__n">${s.candidati_totali}</div><div class="stat__l">Candidati</div></div>
+        <div class="stat"><div class="stat__n">${s.candidati_attivi}</div><div class="stat__l">Attivi</div></div>
+        <div class="stat"><div class="stat__n">${s.candidati_in_attesa}</div><div class="stat__l">In attesa</div></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="stat__n">${s.candidati_a2}</div><div class="stat__l">Livello A2</div></div>
+        <div class="stat"><div class="stat__n">${s.candidati_b1}</div><div class="stat__l">Livello B1</div></div>
+        <div class="stat"><div class="stat__n">${s.tentativi_totali}</div><div class="stat__l">Esercizi svolti</div></div>
+      </div>
+      <div class="card"><strong>Contenuti disponibili</strong>
+        <p class="progress-label">${s.unita_disponibili} unità · ${s.esercizi_disponibili} esercizi</p></div>
+    </div>`;
+  }
+
+  function AdminLista() {
+    const [lista, setLista] = useState(null);
+    const [err, setErr] = useState("");
+    const [link, setLink] = useState(null);
+    const carica = () => API.adminCandidati().then(setLista).catch((e) => setErr(e.detail));
+    useEffect(() => { carica(); }, []);
+    const rigenera = async (id) => { try { const r = await API.adminRigenera(id); setLink(r.activation_url); } catch (e) { setErr(e.detail); } };
+    const elimina = async (id) => { if (!window.confirm("Eliminare questo candidato e i suoi dati?")) return; try { await API.adminElimina(id); setLista(null); carica(); } catch (e) { setErr(e.detail); } };
+    if (err) return html`<div class="main fade"><div class="alert alert--err">${err}</div></div>`;
+    if (!lista) return html`<div class="main"><${Spinner} /></div>`;
+    return html`<div class="main fade">
+      <header class="header"><div><h1>Candidati</h1><p>${lista.length} iscritti</p></div><${Flag} /></header>
+      ${link ? html`<div><div class="alert alert--ok">Link di attivazione generato. Invialo al candidato.</div><${CopyLink} url=${link} /><button class="btn btn--light" style=${{ marginBottom: "14px" }} onClick=${() => setLink(null)}>Chiudi</button></div>` : null}
+      ${lista.length === 0 ? html`<div class="card">Nessun candidato. Vai su "Nuovo" per crearne.</div>` : null}
+      ${lista.map((c) => html`<div key=${c.id} class="card">
+        <div style=${{ display: "flex", alignItems: "center", gap: "8px" }}>
+          <strong style=${{ flex: 1 }}>${c.nome} ${c.cognome}</strong>
+          <span class="badge">${c.livello || "-"}</span>
+        </div>
+        <div class="item__sub" style=${{ margin: "4px 0 10px" }}>${c.email} · ${c.stato_account === "attivo" ? "✅ attivo" : c.stato_account === "in_attesa" ? "⏳ in attesa" : "⛔ sospeso"}</div>
+        <div style=${{ display: "flex", gap: "8px" }}>
+          ${c.stato_account !== "attivo" ? html`<button class="btn btn--light" style=${{ minHeight: "44px", fontSize: "15px" }} onClick=${() => rigenera(c.id)}>Link attivazione</button>` : null}
+          <button class="btn btn--light" style=${{ minHeight: "44px", fontSize: "15px", color: "var(--rosso)", borderColor: "var(--rosso)" }} onClick=${() => elimina(c.id)}>Elimina</button>
+        </div>
+      </div>`)}
+    </div>`;
+  }
+
+  function AdminNuovo() {
+    const [f, setF] = useState({ nome: "", cognome: "", email: "", livello: "A2", ente_certificatore: "CILS", data_esame: "" });
+    const [res, setRes] = useState(null);
+    const [err, setErr] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [imp, setImp] = useState(null);
+    const set = (k, v) => setF((s) => ({ ...s, [k]: v }));
+    const crea = async (e) => {
+      e.preventDefault(); setErr(""); setBusy(true);
+      try {
+        const body = { ...f }; if (!body.data_esame) delete body.data_esame;
+        const r = await API.adminCrea(body); setRes(r);
+        setF({ nome: "", cognome: "", email: "", livello: f.livello, ente_certificatore: f.ente_certificatore, data_esame: "" });
+      } catch (ex) { setErr(ex.detail); }
+      setBusy(false);
+    };
+    const importa = async (e) => {
+      const file = e.target.files && e.target.files[0]; if (!file) return;
+      setErr(""); setImp(null);
+      try { setImp(await API.adminImport(file)); } catch (ex) { setErr(ex.detail); }
+    };
+    return html`<div class="main fade">
+      <header class="header"><div><h1>Nuovo candidato</h1><p>Crea un iscritto</p></div><${Flag} /></header>
+      ${err ? html`<div class="alert alert--err">${err}</div>` : null}
+      ${res ? html`<div><div class="alert alert--ok">Candidato creato: ${res.candidato.nome} ${res.candidato.cognome}</div><${CopyLink} url=${res.activation_url} /><button class="btn btn--light" style=${{ marginBottom: "16px" }} onClick=${() => setRes(null)}>Crea un altro</button></div>` : html`
+      <form onSubmit=${crea}>
+        <div class="field"><label>Nome</label><input value=${f.nome} onInput=${(e) => set("nome", e.target.value)} required /></div>
+        <div class="field"><label>Cognome</label><input value=${f.cognome} onInput=${(e) => set("cognome", e.target.value)} required /></div>
+        <div class="field"><label>Email</label><input type="email" value=${f.email} onInput=${(e) => set("email", e.target.value)} required /></div>
+        <div class="field"><label>Livello</label>
+          <select class="fill-sel" value=${f.livello} onChange=${(e) => set("livello", e.target.value)}>
+            <option value="A2">A2</option><option value="B1">B1</option></select></div>
+        <div class="field"><label>Ente certificatore</label>
+          <select class="fill-sel" value=${f.ente_certificatore} onChange=${(e) => set("ente_certificatore", e.target.value)}>
+            ${["CILS", "CELI", "PLIDA", "IT"].map((x) => html`<option key=${x} value=${x}>${x}</option>`)}</select></div>
+        <div class="field"><label>Data esame (facoltativa)</label><input type="date" value=${f.data_esame} onInput=${(e) => set("data_esame", e.target.value)} /></div>
+        <button class="btn btn--blu" type="submit" disabled=${busy}>${busy ? "Creazione…" : "Crea candidato"}</button>
+      </form>`}
+
+      <div class="sezione-tit" style=${{ marginTop: "24px" }}>Oppure importa un CSV</div>
+      <div class="card">
+        <p class="progress-label" style=${{ marginTop: 0 }}>Colonne: email, nome, cognome, livello, ente_certificatore, data_esame</p>
+        <input type="file" accept=".csv,text/csv" onChange=${importa} />
+        ${imp ? html`<div class="alert alert--ok" style=${{ marginTop: "12px" }}>Creati: ${imp.creati} · Falliti: ${imp.falliti}</div>
+          ${imp.errori.length ? html`<div class="alert alert--err">${imp.errori.map((e) => html`<div key=${e.riga}>Riga ${e.riga} (${e.email || "?"}): ${e.errore}</div>`)}</div>` : null}` : null}
+      </div>
+    </div>`;
+  }
+
+  function AdminApp({ candidato, onEsci }) {
+    const [screen, setScreen] = useState("stats");
+    let view;
+    if (screen === "stats") view = html`<${AdminStats} />`;
+    else if (screen === "lista") view = html`<${AdminLista} />`;
+    else view = html`<${AdminNuovo} />`;
+    return html`<div class="app">
+      ${view}
+      <nav class="nav">
+        <button class=${screen === "stats" ? "active" : ""} onClick=${() => setScreen("stats")}><${Ico.grafico} /><span>Statistiche</span></button>
+        <button class=${screen === "lista" ? "active" : ""} onClick=${() => setScreen("lista")}><${Ico.libro} /><span>Candidati</span></button>
+        <button class=${screen === "nuovo" ? "active" : ""} onClick=${() => setScreen("nuovo")}><${Ico.home} /><span>Nuovo</span></button>
+        <button onClick=${onEsci}><${Ico.esci} /><span>Esci</span></button>
+      </nav>
+    </div>`;
+  }
+
+  /* =======================================================================
      APP ROOT
      ======================================================================= */
   function App() {
@@ -445,6 +574,7 @@
     if (boot) return html`<div class="app"><div class="main"><${Spinner} /></div></div>`;
     if (attivaToken) return html`<div class="app"><${Attiva} token=${attivaToken} onLogged=${onLogged} /></div>`;
     if (!candidato) return html`<div class="app"><${Login} onLogged=${onLogged} /></div>`;
+    if (candidato.ruolo === "admin") return html`<${AdminApp} candidato=${candidato} onEsci=${onEsci} />`;
 
     let view, tab = screen.name;
     if (screen.name === "home") view = html`<${Home} candidato=${candidato} go=${go} />`;

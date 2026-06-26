@@ -118,6 +118,25 @@ async def test_admin_statistiche_globali(client, session_factory):
     assert s["candidati_a2"] >= 1
 
 
+async def test_admin_rigenera_attivazione(client, session_factory):
+    tok = await _utente(session_factory, "admin6@example.com", Ruolo.admin)
+    r = await client.post(
+        "/api/v1/admin/candidati",
+        headers=_auth(tok),
+        json={"email": "rig@e.com", "nome": "R", "cognome": "G", "livello": "A2", "ente_certificatore": "CILS"},
+    )
+    cid = r.json()["candidato"]["id"]
+    r = await client.post(f"/api/v1/admin/candidati/{cid}/attivazione", headers=_auth(tok))
+    assert r.status_code == 200
+    nuovo = r.json()["activation_token"]
+    # il nuovo token funziona
+    r = await client.post(f"/api/v1/auth/attiva/{nuovo}", json={"password": "Password123"})
+    assert r.status_code == 200
+    # ora è attivo: rigenerare dà 400
+    r = await client.post(f"/api/v1/admin/candidati/{cid}/attivazione", headers=_auth(tok))
+    assert r.status_code == 400
+
+
 async def test_admin_elimina_candidato(client, session_factory):
     tok = await _utente(session_factory, "admin5@example.com", Ruolo.admin)
     r = await client.post(

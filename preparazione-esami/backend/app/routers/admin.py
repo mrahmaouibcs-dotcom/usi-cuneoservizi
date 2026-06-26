@@ -1,13 +1,16 @@
 """Router amministratore: gestione candidati, import CSV, statistiche."""
 import uuid
+from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile, status
 from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from ..core.config import get_settings
 from ..core.database import get_db
 from ..core.deps import require_roles
-from ..models.candidato import Candidato
+from ..core.security import generate_activation_token
+from ..models.candidato import ActivationToken, Candidato
 from ..models.contenuti import Esercizio, Unita
 from ..models.enums import Livello, Ruolo, StatoAccount
 from ..models.progresso import TentativoEsercizio
@@ -26,6 +29,7 @@ from ..services.email import build_activation_url, invia_link_attivazione
 from ..services.importazione import importa_csv
 from ..services.progresso import statistiche_candidato
 
+settings = get_settings()
 router = APIRouter(prefix="/admin", tags=["admin"], dependencies=[Depends(require_roles(Ruolo.admin))])
 
 
@@ -82,6 +86,26 @@ async def import_candidati(file: UploadFile = File(...), db: AsyncSession = Depe
         errori=errori,
         candidati=[_creato(c, t.token) for c, t in creati],
     )
+
+
+@router.post("/candidati/{candidato_id}/attivazione", response_model=CandidatoCreatoAdmin)
+async def rigenera_attivazione(candidato_id: uuid.UUID, db: AsyncSession = Depends(get_db)):
+    """Genera un nuovo link di attivazione per un candidato non ancora attivo."""
+    cand = await db.get(Candidato, candidato_id)
+    if cand is None:
+        raise HTTPException(status_code=404, detail="Candidato non trovato")
+    if cand.stato_account == StatoAccount.attivo:
+        raise HTTPException(status_code=400, detail="Il candidato è già attivo")
+    tok = ActivationToken(
+        token=generate_activation_token(),
+        candidato_id=cand.id,
+        expires_at=datetime.now(timezone.utc)
+        + timedelta(hours=settings.activation_token_expire_hours),
+    )
+    db.add(tok)
+    await db.commit()
+    await invia_link_attivazione(cand.email, tok.token)
+    return _creato(cand, tok.token)
 
 
 @router.patch("/candidati/{candidato_id}", response_model=CandidatoAdminOut)
