@@ -34,7 +34,7 @@ export default function BookingCTA({ dict, lang }: { dict: Dictionary; lang: Loc
         </div>
         <div className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-sm text-white/95">
           <span>{t("cta.pay")}</span>
-          <span className="font-semibold text-white">{site.paymentMethods}</span>
+          <span className="font-semibold text-white">{t("cta.payMethods")}</span>
         </div>
       </div>
     </section>

@@ -12,5 +12,6 @@ export const site = {
     "https://www.google.com/maps/search/?api=1&query=Piazzale%20della%20Libert%C3%A0%2C%207%2C%2012100%20Cuneo%20CN",
   taxCode: "96324390580",
   usicons: "USICONS A.P.S. — Associazione di Promozione Sociale iscritta al RUNTS",
-  paymentMethods: "Visa · Mastercard · PayPal · Apple Pay · Google Pay · SEPA · Bonifico",
+  // I metodi di pagamento vivono ora nei dizionari (chiave "cta.payMethods"),
+  // così sono tradotti come tutto il resto. Il pagamento avviene IN SEDE.
 };

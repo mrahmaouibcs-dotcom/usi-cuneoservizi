@@ -20,11 +20,11 @@ export default async function AdminPage({
   searchParams,
 }: {
   params: Promise<{ lang: string }>;
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; err?: string }>;
 }) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
-  const { error } = await searchParams;
+  const { error, err } = await searchParams;
 
   // ---- LOGIN ----
   if (!(await isAdmin())) {
@@ -99,6 +99,14 @@ export default async function AdminPage({
       </header>
 
       <main className="max-w-7xl mx-auto px-4 py-8">
+        {err === "occupato" && (
+          <div className="mb-6 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+            <strong>Non ho potuto ripristinare quella prenotazione.</strong> Nel frattempo la sua
+            fascia oraria è stata occupata da un altro appuntamento. Libera prima l&apos;altro,
+            oppure concorda con il cliente un orario diverso.
+          </div>
+        )}
+
         <div className="grid grid-cols-3 gap-4 mb-6 max-w-md">
           <Stat n={counts.pending} label="In attesa" cls="text-amber-600" />
           <Stat n={counts.confirmed} label="Confermate" cls="text-ita-green" />

@@ -86,7 +86,7 @@ export default function MobileNav({
 
             <div className="px-4 py-4 border-t border-slate-200 flex flex-col gap-3">
               <a
-                href="#"
+                href={`/${lang}/admin`}
                 onClick={() => setOpen(false)}
                 className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-lg bg-ink-900 hover:bg-ink-800 text-white font-bold transition"
               >

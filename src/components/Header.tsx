@@ -58,7 +58,7 @@ export default function Header({ dict, lang }: { dict: Dictionary; lang: Locale 
         <div className="flex items-center gap-2 shrink-0">
           <LanguageSwitcher current={lang} />
           <a
-            href="#"
+            href={`/${lang}/admin`}
             className="btn-sheen hidden lg:inline-flex items-center gap-1.5 px-5 py-3 rounded-lg bg-ink-900 hover:bg-ink-800 text-white text-sm font-bold whitespace-nowrap transition shadow-lg shadow-ink-900/30"
           >
             <User className="w-4 h-4 shrink-0" />

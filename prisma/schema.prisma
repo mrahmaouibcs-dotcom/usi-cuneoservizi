@@ -1,6 +1,5 @@
 // Schema del database — USI CUNEOServizi
-// SQLite in locale (file dev.db). Per la produzione si può passare a PostgreSQL
-// cambiando solo "provider" e DATABASE_URL.
+// PostgreSQL (in produzione sulla VPS, vedi DEPLOY-ARUBA.md).
 
 generator client {
   provider = "prisma-client-js"
@@ -13,9 +12,9 @@ datasource db {
 
 model Booking {
   id        String   @id @default(cuid())
-  service   String // id servizio: caf, patr, sind, lang, immig, legal
+  service   String // id servizio: caf, patr, sind, lang, immig, legal, tutela
   date      String // giorno AAAA-MM-GG
-  time      String // orario HH:MM
+  time      String // orario di inizio HH:MM
   firstName String
   lastName  String
   email     String
@@ -25,6 +24,33 @@ model Booking {
   status    String   @default("pending") // pending | confirmed | cancelled
   createdAt DateTime @default(now())
 
+  // Le caselle di agenda occupate da questo appuntamento.
+  slots BookingSlot[]
+
   @@index([date])
   @@index([email])
+}
+
+/// Griglia di occupazione dell'agenda: UNA riga per ogni casella da 30 minuti occupata.
+///
+/// A cosa serve: `key` è la chiave primaria, quindi è il DATABASE a garantire che
+/// due appuntamenti non possano occupare la stessa casella — anche se due persone
+/// confermano nello stesso identico istante. Un controllo solo nel codice non
+/// basterebbe: fra "ho verificato che è libero" e "salvo" può passare un attimo,
+/// e in quell'attimo l'altro salva.
+///
+/// Un appuntamento occupa più caselle se dura più di 30 minuti
+/// (60 min alle 10:00 → righe "2026-07-29T10:00" e "2026-07-29T10:30").
+///
+/// Quando una prenotazione viene annullata o cancellata, le sue righe spariscono
+/// (onDelete: Cascade) e la casella torna libera.
+model BookingSlot {
+  key       String  @id // "AAAA-MM-GGTHH:MM"
+  date      String // giorno AAAA-MM-GG, per interrogare in fretta l'agenda del giorno
+  time      String // orario della casella HH:MM
+  bookingId String
+  booking   Booking @relation(fields: [bookingId], references: [id], onDelete: Cascade)
+
+  @@index([date])
+  @@index([bookingId])
 }

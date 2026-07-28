@@ -1,12 +1,12 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Dictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/locales";
 import { site } from "@/lib/site";
 import { serviceIds, serviceDuration, isServiceId, type ServiceId } from "@/lib/services";
-import { getSlots, hasAnySlot, isPastDay, isWeekend, dateKey } from "@/lib/booking";
+import { isPastDay, dateKey, type Slot } from "@/lib/booking";
 import {
   ArrowRight,
   Calendar,
@@ -58,6 +58,69 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
   const [submitError, setSubmitError] = useState("");
   const [bookingId, setBookingId] = useState("");
 
+  // ---- Disponibilità REALE: arriva dal server, non si inventa più ----
+  const [monthDays, setMonthDays] = useState<Record<string, boolean> | null>(null);
+  const [daySlots, setDaySlots] = useState<Slot[] | null>(null);
+
+  const monthKey = `${viewMonth.getFullYear()}-${String(viewMonth.getMonth() + 1).padStart(2, "0")}`;
+
+  // "Che cosa stiamo chiedendo al server": cambia quando cambia servizio, mese
+  // o giorno. Confrontandola con quella già arrivata sappiamo se siamo in attesa,
+  // senza dover tenere un interruttore "sto caricando" scritto a mano.
+  const monthReq = service ? `${service}|${monthKey}` : null;
+  const dayReq = service && date ? `${service}|${dateKey(date)}` : null;
+  const [monthLoaded, setMonthLoaded] = useState<string | null>(null);
+  const [dayLoaded, setDayLoaded] = useState<string | null>(null);
+
+  const loadingMonth = !!monthReq && monthLoaded !== monthReq;
+  const loadingDay = !!dayReq && dayLoaded !== dayReq;
+
+  // Quali giorni del mese hanno almeno un orario libero per QUESTO servizio
+  // (dipende dal servizio: un appuntamento da 60 minuti entra in meno posti).
+  useEffect(() => {
+    if (!monthReq) return;
+    let annullato = false;
+    fetch(`/api/availability?service=${service}&month=${monthKey}`, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("ko"))))
+      .then((d) => {
+        if (annullato) return;
+        setMonthDays(d.days ?? {});
+        setMonthLoaded(monthReq);
+      })
+      .catch(() => {
+        // Se il server non risponde non inventiamo: nessun giorno prenotabile.
+        if (annullato) return;
+        setMonthDays({});
+        setMonthLoaded(monthReq);
+      });
+    return () => {
+      annullato = true;
+    };
+  }, [monthReq, service, monthKey]);
+
+  // Gli orari del giorno scelto. Richiamabile a mano: se qualcuno ci soffia lo
+  // slot mentre compiliamo i dati, ricarichiamo e mostriamo la situazione vera.
+  const loadDay = useCallback(() => {
+    if (!dayReq || !service || !date) return;
+    fetch(`/api/availability?service=${service}&date=${dateKey(date)}`, { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error("ko"))))
+      .then((d) => {
+        const slots: Slot[] = d.slots ?? [];
+        setDaySlots(slots);
+        setDayLoaded(dayReq);
+        // Se l'orario scelto non è più libero, lo togliamo invece di illudere.
+        setTime((cur) => (cur && slots.some((s) => s.time === cur && s.available) ? cur : null));
+      })
+      .catch(() => {
+        setDaySlots([]);
+        setDayLoaded(dayReq);
+      });
+  }, [dayReq, service, date]);
+
+  useEffect(() => {
+    loadDay();
+  }, [loadDay]);
+
   // ---- Calendario ----
   const weekdayLabels = useMemo(() => {
     // Lun..Dom localizzati
@@ -82,8 +145,8 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
     return cells;
   }, [viewMonth]);
 
-  const morning = date ? getSlots(date, "morning") : [];
-  const afternoon = date ? getSlots(date, "afternoon") : [];
+  const morning = (daySlots ?? []).filter((s) => s.part === "morning");
+  const afternoon = (daySlots ?? []).filter((s) => s.part === "afternoon");
 
   const canPrevMonth = startOfMonth(viewMonth).getTime() > startOfMonth(new Date()).getTime();
 
@@ -142,6 +205,14 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
           locale: lang,
         }),
       });
+      if (res.status === 409) {
+        // Qualcuno ha preso quell'orario mentre compilavamo i dati.
+        // Diciamo la verità e riportiamo l'utente a scegliere, con orari aggiornati.
+        setSubmitError(t("booking.slotTaken"));
+        setStep(2);
+        loadDay();
+        return;
+      }
       if (!res.ok) throw new Error("request_failed");
       const data = await res.json();
       setBookingId(data.id as string);
@@ -240,7 +311,13 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
                 return (
                   <button
                     key={id}
-                    onClick={() => setService(id)}
+                    onClick={() => {
+                      // Servizi diversi durano diversamente: la scelta di data e
+                      // ora fatta prima potrebbe non essere più valida.
+                      setService(id);
+                      setDate(null);
+                      setTime(null);
+                    }}
                     className={`flex items-start gap-3 text-start p-4 rounded-xl border transition ${
                       selected
                         ? "border-ita-green bg-green-50/60 ring-2 ring-ita-green/30"
@@ -294,7 +371,11 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
               <div className="grid grid-cols-7 gap-1">
                 {days.map((d, i) => {
                   if (!d) return <span key={i} />;
-                  const disabled = isPastDay(d) || isWeekend(d) || !hasAnySlot(d);
+                  // Un giorno è cliccabile solo se il SERVER dice che ha posto.
+                  // Finché la risposta non arriva resta spento: meglio "non lo so
+                  // ancora" che mostrare libero un giorno pieno.
+                  const disabled =
+                    loadingMonth || isPastDay(d) || !monthDays || monthDays[dateKey(d)] !== true;
                   const selected = date && dateKey(date) === dateKey(d);
                   return (
                     <button
@@ -317,12 +398,17 @@ export default function BookingWizard({ dict, lang }: { dict: Dictionary; lang: 
                   );
                 })}
               </div>
+              {loadingMonth && (
+                <p className="mt-3 text-xs text-ink-700">{t("booking.loadingDays")}</p>
+              )}
             </div>
 
             <div>
               <h2 className="font-serif text-xl font-bold text-ink-900 mb-4">{t("booking.chooseTime")}</h2>
               {!date ? (
                 <p className="text-sm text-ink-700">{t("booking.selectDateFirst")}</p>
+              ) : loadingDay ? (
+                <p className="text-sm text-ink-700">{t("booking.loadingSlots")}</p>
               ) : morning.length === 0 && afternoon.length === 0 ? (
                 <p className="text-sm text-ink-700">{t("booking.noSlots")}</p>
               ) : (
