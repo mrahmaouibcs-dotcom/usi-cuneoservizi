@@ -131,7 +131,12 @@ Sul server, da utente `usi`:
 cd /opt/usi/usi-cuneoservizi
 bash deploy/deploy.sh
 ```
-Lo script fa tutto: `git pull` → installa → aggiorna DB → build → riavvio.
+Lo script fa tutto: `git pull` → installa → aggiorna DB → **ricostruisce le caselle di agenda** →
+build → riavvio.
+
+> **Perché "caselle di agenda":** ogni appuntamento occupa una o più caselle da 30 minuti
+> (tabella `BookingSlot`). È il database, tramite quelle caselle, a impedire che due persone
+> prenotino lo stesso orario. Il passaggio è ripetibile: dalla seconda volta in poi non fa nulla.
 
 ## Manutenzione (leggera)
 - **Aggiornamenti di sicurezza** del sistema, ogni tanto: `sudo apt update && sudo apt upgrade -y`.
